@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Libro III · Personajes, bestiario y jefes — Códice del Velador</title>
+<meta name="description" content="Códice del Velador: el lore, el arsenal, el bestiario y la guía de Vigilia de Ceniza, soulslike pixel art para iPhone, iPad y Android.">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="sitio.css">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="barra">
+<button class="menu-btn" id="menu-btn" aria-label="Menú">☰ Índice</button>
+<a class="titulo" href="index.html">Códice del Velador</a>
+<span class="sub">Vigilia de Ceniza · edición pública</span>
+<div class="buscar"><input id="buscar" type="search" placeholder="Buscar en el Códice…" autocomplete="off" aria-label="Buscar"><div class="resultados" id="resultados"></div></div>
+</header>
+<div class="velo" id="velo"></div>
+<nav class="lateral" aria-label="Capítulos">
+<h2>Libros</h2><ul>
+<li><a href="index.html" data-cap="00">Portada e índice</a></li>
+<li><a href="01_lore.html" data-cap="01">Libro I · Lore y mundo</a></li>
+<li><a href="01b_cronica.html" data-cap="01b">Libro I·b · Crónica y atlas de Hondavela</a></li>
+<li><a href="02_arsenal.html" data-cap="02">Libro II · Arsenal y objetos</a></li>
+<li><a href="03_personajes_y_bestiario.html" data-cap="03" class="actual">Libro III · Personajes, bestiario y jefes</a></li>
+<li><a href="04_guia.html" data-cap="04">Libro IV · Guía del Insomne</a></li>
+</ul>
+<h2>El juego</h2><ul><li><a href="privacy.html">Política de privacidad</a></li><li><a href="support.html">Soporte</a></li></ul><h2>En esta página</h2><ul class="secciones"><li><a class="n2" href="#los-que-aún-hablan">Los que aún hablan</a></li><li><a class="n3" href="#ilse-la-campanera">Ilse, la Campanera</a></li><li><a class="n3" href="#hermana-lumbre">Hermana Lumbre</a></li><li><a class="n3" href="#odo-el-sepulturero">Odo el Sepulturero</a></li><li><a class="n3" href="#la-buhonera">La Buhonera</a></li><li><a class="n3" href="#anselmo-el-fundidor">Anselmo el Fundidor</a></li><li><a class="n2" href="#bestiario">Bestiario</a></li><li><a class="n3" href="#desvelado">Desvelado</a></li><li><a class="n3" href="#centinela-de-hueso">Centinela de Hueso</a></li><li><a class="n3" href="#roedor-de-fosas">Roedor de Fosas</a></li><li><a class="n3" href="#ceniciento">Ceniciento</a></li><li><a class="n3" href="#perro-de-hueso">Perro de Hueso</a></li><li><a class="n3" href="#vela-encendida">Vela Encendida</a></li><li><a class="n3" href="#vela-viva">Vela Viva</a></li><li><a class="n3" href="#ahogado">Ahogado</a></li><li><a class="n3" href="#aparecido">Aparecido</a></li><li><a class="n3" href="#ballestero-de-la-guardia">Ballestero de la Guardia</a></li><li><a class="n3" href="#guardia-del-relevo">Guardia del Relevo</a></li><li><a class="n3" href="#rezadora">Rezadora</a></li><li><a class="n3" href="#tejedora">Tejedora</a></li><li><a class="n3" href="#arañuela">Arañuela</a></li><li><a class="n3" href="#pesadilla">Pesadilla</a></li><li><a class="n3" href="#sombra-del-insomne">Sombra del Insomne</a></li><li><a class="n3" href="#los-del-tutorial-la-pira-del-velador">Los del Tutorial (La Pira del Velador)</a></li><li><a class="n3" href="#élites">Élites</a></li><li><a class="n2" href="#jefes">Jefes</a></li><li><a class="n3" href="#cómo-leer-a-un-jefe">Cómo leer a un jefe</a></li><li><a class="n3" href="#el-precipitado-de-la-retorta">El Precipitado de la Retorta</a></li><li><a class="n3" href="#ser-aldric-rey-del-túmulo">Ser Aldric, Rey del Túmulo</a></li><li><a class="n3" href="#el-campanero-ahorcado">El Campanero Ahorcado</a></li><li><a class="n3" href="#el-sabueso-de-las-piras">El Sabueso de las Piras</a></li><li><a class="n3" href="#odo-el-enterrado">Odo el Enterrado</a></li><li><a class="n3" href="#la-plañidera-mayor">La Plañidera Mayor</a></li><li><a class="n3" href="#la-madre-de-las-charcas">La Madre de las Charcas</a></li><li><a class="n3" href="#el-cerero-mayor">El Cerero Mayor</a></li><li><a class="n3" href="#el-capitán-del-relevo">El Capitán del Relevo</a></li><li><a class="n3" href="#el-alado-de-hollín">El Alado de Hollín</a></li><li><a class="n3" href="#ysolde-la-durmiente">Ysolde, la Durmiente</a></li></ul>
+<p class="pie-menu">Edición pública: sin desenlaces ni finales. <em>Vigilia de Ceniza</em> © 2026 NCS Gaming.</p>
+</nav>
+<main class="contenido">
+<section class="capitulo">
+<h1 id="libro-iii--personajes-bestiario-y-jefes">Libro III · Personajes, bestiario y jefes</h1>
+<blockquote class="epigrafe"><p>«Aquí quemábamos a los que no podían dormir. Yo atizaba. Tú también, Velador: te he visto las manos.» — Hermana Lumbre</p></blockquote>
+<p>Hondavela no está vacía. Quedan unos pocos que todavía hablan, muchos que ya solo golpean y algunos, grandes y tristes, que guardan una puerta que nadie les pidió guardar. Este capítulo los reúne a todos.</p>
+<hr>
+<h2 id="los-que-aún-hablan">Los que aún hablan</h2>
+<p>Hablar con alguien es acercarse y pulsar <strong>USAR</strong> (en pantalla, el botón cambia a <strong>HABLAR</strong> cuando hay un NPC al lado). Cada vez que vuelves a hablarles dicen otra cosa: los secretos se dan a trozos.</p>
+<article class="ficha ficha-bestia">
+<h3 id="ilse-la-campanera">Ilse, la Campanera</h3>
+<figure class="retrato"><img src="img/sprites_ilse_rotations_south_hd.png" alt="Ilse, la Campanera" class="sprite" data-src="../assets/sprites/ilse/rotations/south.png" loading="lazy"><figcaption>Ilse, la Campanera</figcaption></figure>
+<p><em>«No te duermas. ¿Lo oyes? Mientras suene, no viene.»</em></p>
+<ul><li><strong>Dónde:</strong> el <strong>Campanario Hendido</strong>, junto a la cuerda de la campana grande.</li><li><strong>Quién es:</strong> una niña que toca la campana toda la noche para no dormirse. Su madre le dijo que dormir era como apagar una vela. Tiene las manos en carne viva.</li><li><strong>Qué pide:</strong> el <strong>Badajo Perdido</strong>, el corazón de hierro de la campana grande. Alguien lo arrancó y lo bajó a los muertos para que la torre callara. Está en un cadáver del <strong>Osario</strong>.</li><li><strong>Qué da:</strong> la <strong>Campanilla de Ilse</strong> a cambio del badajo. Además, con la campana grande otra vez sonando, el <strong>muro que vibra</strong> del Campanario cede y abre un camino nuevo.</li></ul>
+</article>
+<article class="ficha ficha-bestia">
+<h3 id="hermana-lumbre">Hermana Lumbre</h3>
+<figure class="retrato"><img src="img/sprites_lumbre_rotations_south_hd.png" alt="Hermana Lumbre" class="sprite" data-src="../assets/sprites/lumbre/rotations/south.png" loading="lazy"><figcaption>Hermana Lumbre</figcaption></figure>
+<p><em>«Otra vela más que no quiere arder. Siéntate. El fuego no pregunta de dónde viene la leña.»</em></p>
+<ul><li><strong>Dónde:</strong> la plaza del <strong>Barrio de los Veladores</strong>, atizando la hoguera de las piras.</li><li><strong>Quién es:</strong> una Veladora que atizaba las piras donde se quemaba a los Insomnes. Habla de ello sin bajar la voz.</li><li><strong>Qué pide:</strong> <strong>Cera de Vigilia</strong>, tres gotas, para que su hoguera no se apague. Las hay en el Barrio, el Osario y el Campanario.</li><li><strong>Qué da:</strong> con las tres, la <strong>Hoguera Avivada</strong> («Calienta, ¿verdad? Siempre calentamos»).</li><li>Tras la caída del <strong>Rey del Túmulo</strong> tiene algo que confesar. Vuelve a hablar con ella.</li></ul>
+</article>
+<h3 id="odo-el-sepulturero">Odo el Sepulturero</h3>
+<p><em>«Bajo tierra no hay campanas. Bajo tierra hay que dormir, ¿no? Alguna vez.»</em></p>
+<ul><li><strong>Dónde:</strong> en el <strong>Camposanto del Relevo</strong>, entre las tumbas.</li><li><strong>Quién es:</strong> enterraba lo que quedaba de las piras. Creía que bajo tierra, a oscuras, por fin dormirían. A algunos los metía vivos.</li><li><strong>Qué pide:</strong> <strong>Lápidas sin Nombre</strong>, losas lisas sin una sola letra. Hay tres: en el Camposanto, el Barrio y el Osario.</li><li><strong>Qué da:</strong> 200 de Ceniza por cada lápida.</li></ul>
+<h3 id="la-buhonera">La Buhonera</h3>
+<p><em>«Compra, compra. La Ceniza no se lleva a la tumba… bueno, tú sí te la llevas, pero luego vuelves a por ella.»</em></p>
+<ul><li><strong>Dónde:</strong> en el <strong>Camposanto del Relevo</strong>.</li><li><strong>Qué ofrece:</strong> vende lo que encuentra en los muertos. Su surtido crece a medida que caen los jefes.</li></ul>
+<table class="cols-2"><thead><tr><th>Mercancía</th><th>Desde</th></tr></thead><tbody><tr><td>Cuchillo de hueso, Incienso amargo</td><td>siempre</td></tr><tr><td>Báculo de Vela (600 de Ceniza, uno)</td><td>siempre</td></tr><tr><td>Ceniza ávida (amuleto)</td><td>siempre</td></tr><tr><td>Musgo de tumba, Bomba de brea, Hueso de velador (3 como mucho)</td><td>tras el Rey del Túmulo</td></tr><tr><td>Hueso hueco (amuleto)</td><td>tras el Rey del Túmulo</td></tr><tr><td>Nana embotellada, Ascua viva, Esquirla de vasija (2 como mucho)</td><td>tras el Campanero Ahorcado</td></tr><tr><td>Lágrima espesa (amuleto)</td><td>tras el Campanero Ahorcado</td></tr><tr><td>Esquirla de reja (6 como mucho)</td><td>tras la Plañidera Mayor</td></tr></tbody></table>
+<h3 id="anselmo-el-fundidor">Anselmo el Fundidor</h3>
+<p><em>«Fundí las rejas de los dormitorios cuando la Durmiente aún dormía. Ahora fundo lo que me traigan.»</em></p>
+<ul><li><strong>Dónde:</strong> en el <strong>Osario</strong>, junto a su fragua. Está casi ciego: el calor se le llevó los ojos.</li><li><strong>Qué ofrece:</strong><ul><li><strong>Refundir armas</strong> hasta <strong>+5</strong> con <strong>Esquirlas de reja</strong> y Ceniza. Cada nivel pide una esquirla más que el anterior y 300 de Ceniza más: de +0 a +1, 1 esquirla y 300; de +4 a +5, 5 esquirlas y 1.500. Cada jefe deja dos esquirlas.</li><li><strong>Forjar con lo que dejaron</strong>: armas con la forma de los jefes caídos (Lanza de Aldric, Badajo del Campanero, Colmillo del Sabueso, Remo de la Madre, Cazo del Cerero, Espada del Capitán, Espada del Alado). Se detallan en el capítulo del arsenal.</li></ul></li></ul>
+<hr>
+<h2 id="bestiario">Bestiario</h2>
+<p>Los enemigos comunes vuelven a levantarse cada vez que descansas en una hoguera. Todos avisan antes de golpear: <strong>los ojos se encienden</strong>, una <strong>cuña</strong> se rellena en el suelo en la dirección del golpe y suena un <strong>chasquido</strong>. Si el aviso <strong>parpadea dos veces en ámbar</strong>, el golpe viene <strong>retrasado</strong>: espera antes de rodar.</p>
+<p><strong>Comportamientos que comparten:</strong></p>
+<ul><li><strong>Salto.</strong> Algunos saltan sobre ti desde lejos. Una <strong>sombra en el suelo</strong> marca dónde caerán: sal de ella.</li><li><strong>Giro.</strong> Otros giran sobre sí mismos con el arma. Un <strong>círculo de aviso</strong> dibuja el alcance: rueda hacia fuera.</li><li><strong>Furia.</strong> Malheridos, muchos <strong>rugen una vez</strong> y a partir de ahí atacan más rápido y encadenan embestidas. Si oyes el rugido, retrocede o remata ya.</li><li><strong>Memoria.</strong> Los Desvelados aprenden tus costumbres. Si siempre ruedas al mismo tiempo, empezarán a retrasar el golpe; si te curas cerca de ellos, te castigarán al beber. Descansar en una hoguera les hace olvidar un poco.</li><li><strong>Doce muertes.</strong> Un enemigo al que has matado doce veces en el mismo sitio ya no vuelve a levantarse.</li></ul>
+<p>En las tablas, la <strong>vida</strong> y el <strong>daño</strong> son los de base. En el Camposanto los enemigos tienen un 35 % menos de vida, y en cada <strong>ciclo</strong> nuevo (Nueva Partida+) suben.</p>
+<article class="ficha ficha-bestia">
+<h3 id="desvelado">Desvelado</h3>
+<figure class="retrato"><img src="img/sprites_desvelado_rotations_south_hd.png" alt="Desvelado" class="sprite" data-src="../assets/sprites/desvelado/rotations/south.png" loading="lazy"><figcaption>Desvelado</figcaption></figure>
+<blockquote><p>Antiguo vecino de Hondavela, consumido por la vigilia. Olvidó su nombre, luego su rostro, luego la razón de estar en pie. Solo recuerda cómo golpear.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>66</td><td>20</td><td>60</td><td>casi toda Hondavela</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> embestida corta tras un aviso claro. <strong>Salta</strong> desde media distancia. <strong>Furia</strong> al 35 % de vida.</li><li><strong>Consejo:</strong> el maestro de todo. Aprende con él el ritmo de su golpe: bloquear, desviar o rodar hacia un lado y castigar en la recuperación.</li></ul>
+</article>
+<h3 id="centinela-de-hueso">Centinela de Hueso</h3>
+<blockquote><p>Montó guardia en la muralla tanto tiempo que la carne se le cansó primero. Nadie vino a relevarlo.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>54</td><td>24</td><td>80</td><td>Camposanto, Osario, Campanario, Cisterna, Criptas, Desván, Dormitorio</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> lanza larga: ataca desde <strong>más lejos</strong> que nadie y tarda en cargar. <strong>Gira</strong> con la lanza. A veces está escondido en un <strong>ataúd de pie</strong>.</li><li><strong>Consejo:</strong> castiga a quien se queda a media distancia. O muy cerca, o muy lejos. Puede soltar <strong>Cuchillos de hueso</strong>.</li></ul>
+<h3 id="roedor-de-fosas">Roedor de Fosas</h3>
+<blockquote><p>Cavaba tumbas por un mendrugo de pan. Cuando los vivos dejaron de pagar, siguió cavando.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>44</td><td>16</td><td>70</td><td>Camposanto, Osario, Campanario</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> rápido y frágil. Embiste muy pronto y <strong>salta</strong>. Furia al 40 %.</li><li><strong>Consejo:</strong> no lo bloquees en bucle: esquiva <strong>hacia un lado</strong>, que la embestida es recta, y castígalo por detrás.</li></ul>
+<article class="ficha ficha-bestia">
+<h3 id="ceniciento">Ceniciento</h3>
+<figure class="retrato"><img src="img/sprites_ceniciento_rotations_south_hd.png" alt="Ceniciento" class="sprite" data-src="../assets/sprites/ceniciento/rotations/south.png" loading="lazy"><figcaption>Ceniciento</figcaption></figure>
+<blockquote><p>Lo que salió de la retorta antes del Precipitado. Ceniza de muertos amasada con azufre. No sienten el fuego: sienten el frío, y lo buscan en los vivos.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>72</td><td>20</td><td>70</td><td>camino del Laboratorio (Camposanto)</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> lento y duro. Agarra desde lejos.</li><li><strong>Consejo:</strong> el Precipitado de la Retorta los llama en su segunda fase. Practica con ellos antes de bajar.</li></ul>
+</article>
+<h3 id="perro-de-hueso">Perro de Hueso</h3>
+<blockquote><p>Los Veladores criaban perros para rastrear a los que nacían sin sueño. La carne se fue con el hambre. El olfato, no.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>36</td><td>14</td><td>60</td><td>Camposanto, Barrio, Horno</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> el más rápido de Hondavela. Caza <strong>en jauría</strong> y embiste <strong>casi sin aviso</strong>. Salta. Furia al 40 %.</li><li><strong>Consejo:</strong> retrocede a un pasillo para que vengan de uno en uno. Esquiva de lado y un solo golpe fuerte suele bastar.</li></ul>
+<article class="ficha ficha-bestia">
+<h3 id="vela-encendida">Vela Encendida</h3>
+<figure class="retrato"><img src="img/sprites_desvelado_rotations_south_hd.png" alt="Vela Encendida" class="sprite ardiente" data-src="../assets/sprites/desvelado/rotations/south.png" loading="lazy"><figcaption>Vela Encendida</figcaption></figure>
+<blockquote><p>Un Insomne que la pira no terminó de consumir. Abraza a quien se acerca: es el único calor que le queda.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>58</td><td>18</td><td>90</td><td>Barrio, Horno</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> su golpe <strong>te prende fuego</strong> (unos segundos de quemadura). <strong>Al morir estalla</strong>: tras un instante de brillo, una explosión alrededor.</li><li><strong>Consejo:</strong> cuando caiga, <strong>apártate</strong>. El <strong>Incienso amargo</strong> te protege del fuego. Puede soltar <strong>Bomba de brea</strong>.</li></ul>
+</article>
+<article class="ficha ficha-bestia">
+<h3 id="vela-viva">Vela Viva</h3>
+<figure class="retrato"><img src="img/sprites_desvelado_rotations_south_hd.png" alt="Vela Viva" class="sprite vela" data-src="../assets/sprites/desvelado/rotations/south.png" loading="lazy"><figcaption>Vela Viva</figcaption></figure>
+<blockquote><p>Insomne a medio fundir. La mecha aún le arde en la cabeza.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>150</td><td>24</td><td>180</td><td>Horno de Velas</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> lenta y muy dura. <strong>Gira</strong>, prende fuego y su cera <strong>estalla al morir</strong>, con más fuerza y más alcance que la Vela Encendida.</li><li><strong>Consejo:</strong> pelea sin prisa y lejos de los canales de cera. El Cerero Mayor la llama a su lado.</li></ul>
+</article>
+<h3 id="ahogado">Ahogado</h3>
+<blockquote><p>Se tumbó en la charca porque el agua, decían, no deja oír las campanas. No las oye. Tampoco oye nada más.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>110</td><td>26</td><td>140</td><td>charcas del Camposanto, Osario, Cisterna</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> lento fuera del agua, pero <strong>el agua no lo frena</strong> (a ti sí). Tras un aviso largo, <strong>agarra desde muy lejos</strong>. Gira.</li><li><strong>Consejo:</strong> sácalo a suelo seco. Su aviso es largo: espera a que se lance y rueda en el último momento.</li></ul>
+<h3 id="aparecido">Aparecido</h3>
+<blockquote><p>Soldado del relevo que nunca llegó. Volvió por su cuenta, años tarde, y encontró la guardia vacía. Ahora la monta él, contra cualquiera.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>150</td><td>25</td><td>260</td><td>Osario, Campanario, Horno, Cisterna, Criptas, Dormitorio</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> un soldado de verdad: rápido, encadena golpes y se recupera enseguida. Salta y gira. Furia al 40 %.</li><li><strong>Consejo:</strong> no lo enfrentes con el aguante a medias. Desviar su golpe es la forma más limpia de abrirlo. Suelta <strong>Esquirlas de reja</strong> y, a veces, <strong>Nana embotellada</strong>.</li></ul>
+<h3 id="ballestero-de-la-guardia">Ballestero de la Guardia</h3>
+<blockquote><p>Guardaba el adarve con la ballesta tensa. Sigue tensándola cada noche, por si alguien intenta salir del Camposanto. O entrar.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>60</td><td>18 (virote 22)</td><td>110</td><td>Camposanto, Osario, Campanario, Horno, Criptas</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> <strong>a distancia</strong>. Guarda las distancias, apunta (los ojos se le encienden) y dispara un <strong>virote</strong>. De cerca se defiende a culatazos.</li><li><strong>Consejo:</strong> el virote <strong>se bloquea</strong> y <strong>se desvía con parry</strong>. Acércate en zigzag, o tírale un Cuchillo de hueso.</li></ul>
+<article class="ficha ficha-bestia">
+<h3 id="guardia-del-relevo">Guardia del Relevo</h3>
+<figure class="retrato"><img src="img/sprites_desvelado_rotations_south_hd.png" alt="Guardia del Relevo" class="sprite guardia" data-src="../assets/sprites/desvelado/rotations/south.png" loading="lazy"><figcaption>Guardia del Relevo</figcaption></figure>
+<blockquote><p>Le dieron un escudo y una orden: que nadie pase mientras el relevo duerma. Nadie le dijo que ya podía bajarlo.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>90</td><td>22</td><td>130</td><td>Camposanto, Osario, Campanario, Criptas, Dormitorio</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> <strong>escudo</strong>: para los golpes <strong>de frente</strong>. Gira.</li><li><strong>Consejo:</strong> tres maneras. <strong>Rodéalo</strong> y pega por la espalda; <strong>rómpele el escudo</strong> con un golpe fuerte o con tres ligeros; o <strong>castígalo cuando ataque</strong>, que entonces baja el escudo.</li></ul>
+</article>
+<h3 id="rezadora">Rezadora</h3>
+<blockquote><p>Veladora que dejó de velar y empezó a rezar. No a los dioses: a la Durmiente, para que no despierte.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>70</td><td>14 (brasa 20)</td><td>120</td><td>Campanario, Criptas, Desván, Dormitorio</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> <strong>a distancia</strong>. Lanza <strong>brasas de rezo</strong>, lentas, que <strong>te persiguen</strong> y te quitan aguante. De cerca apenas se defiende.</li><li><strong>Consejo:</strong> la brasa se puede <strong>devolver con parry</strong>, y entonces la hiere a ella. Si no, ponle una columna delante o corre hacia la Rezadora.</li></ul>
+<h3 id="tejedora">Tejedora</h3>
+<blockquote><p>Teje en las vigas lo que la Casa del Párpado no quiso enterrar: Veladores enteros, envueltos para que no se enfríen. No caza por hambre. Guarda.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>64</td><td>17</td><td>130</td><td>Desván Tejido, y alguna suelta en Osario, Campanario, Criptas y Dormitorio</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> <strong>cuelga del techo y cae</strong> cuando pasas por debajo. <strong>Escupe tela</strong> que te enreda (te frena y no te deja rodar). <strong>Salta</strong>.</li><li><strong>Consejo:</strong> mira hacia arriba antes de pasar. Las <strong>telarañas</strong> del suelo hacen lo mismo que su tela: rodéalas.</li></ul>
+<h3 id="arañuela">Arañuela</h3>
+<blockquote><p>Cría de Tejedora. Nace sabiendo una sola cosa: que lo que se mueve no está dormido.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>14</td><td>7</td><td>25</td><td>Desván, Osario, Campanario, Criptas</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> frágil y muy rápida. Viene en <strong>enjambre</strong>.</li><li><strong>Consejo:</strong> golpes amplios, o una <strong>Bomba de brea</strong> en medio del enjambre.</li></ul>
+<h3 id="pesadilla">Pesadilla</h3>
+<blockquote><p>Lo que la Durmiente soñó por todos y no pudo retener. Tiene la forma de lo que temías de niño. No muerde: recuerda.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>34</td><td>15</td><td>50</td><td>Dormitorio Mayor</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> rápida y frágil. Salta.</li><li><strong>Consejo:</strong> cae de dos golpes. Ysolde las convoca durante su combate: límpialas antes de volver a por ella.</li></ul>
+<article class="ficha ficha-bestia">
+<h3 id="sombra-del-insomne">Sombra del Insomne</h3>
+<figure class="retrato"><img src="img/sprites_insomne_rotations_south_hd.png" alt="Sombra del Insomne" class="sprite sombra" data-src="../assets/sprites/insomne/rotations/south.png" loading="lazy"><figcaption>Sombra del Insomne</figcaption></figure>
+<blockquote><p>Otro como tú, de otro ciclo. Vino a por tu Ceniza porque la suya ya no le alcanza para recordar quién era.</p></blockquote>
+<table class="cols-4"><thead><tr><th>Vida</th><th>Daño</th><th>Ceniza</th><th>Dónde</th></tr></thead><tbody><tr><td>300 / 400</td><td>26 / 28</td><td>1.500 / 2.500</td><td>Horno de Velas / Dormitorio Mayor</td></tr></tbody></table>
+<ul><li><strong>Hace:</strong> una <strong>invasión</strong> única en cada uno de esos dos sitios. <strong>Rueda</strong> para esquivar tus golpes, <strong>bebe</strong> de su Vasija y castiga muy rápido. Se recupera casi tan deprisa como tú.</li><li><strong>Consejo:</strong> no le tires golpes a lo loco, porque los esquiva. Cuando beba, <strong>castígala</strong>: está tan quieta como tú cuando bebes. Deja el <strong>Reflejo de Velador</strong> (la del Horno) y la <strong>Ceniza propia</strong> (la del Dormitorio). Vencer a las dos da el logro <em>Ninguna sombra</em>.</li></ul>
+</article>
+<h3 id="los-del-tutorial-la-pira-del-velador">Los del Tutorial (La Pira del Velador)</h3>
+<table class="cols-2"><thead><tr><th>Nombre</th><th>Qué es</th></tr></thead><tbody><tr><td><strong>Muñeco de paja</strong></td><td>Paja vieja en ropa de Desvelado. No ataca: es para practicar ligeros y fuertes.</td></tr><tr><td><strong>Desvelado dormido</strong></td><td>Duerme de pie de cara al muro. Acércate <strong>por la espalda</strong> y apuñálalo.</td></tr><tr><td><strong>Centinela del Turno</strong></td><td>El instructor. Pega flojo y lento, y no muere: «quiere que aprendas, no que mueras».</td></tr><tr><td><strong>El Atizador</strong></td><td>Élite único que guarda la salida. Su golpe quema y estalla al morir. Da la Ceniza justa para un nivel y una Bomba de brea.</td></tr></tbody></table>
+<h3 id="élites">Élites</h3>
+<p>En sitios fijos de cada mapa puede levantarse un <strong>élite</strong> en lugar del enemigo de siempre: un 7 % de las veces, y un 5 % más con cada ciclo. Se reconocen al instante:</p>
+<ul><li><strong>Aura dorada</strong>, cuerpo algo mayor y <strong>rugido propio</strong> al verte.</li><li><strong>×2,7 de vida</strong>, <strong>×1,3 de daño</strong>, más rápidos, se recuperan antes y usan <strong>salto y giro</strong> aunque su especie no lo haga. Siempre entran en <strong>furia</strong>.</li><li>Su golpe <strong>suena distinto</strong>: aprende a oírlo.</li><li><strong>Recompensa:</strong> <strong>triple Ceniza</strong> y botín seguro. Además, un 50 % de las veces sueltan un <strong>amuleto</strong>, un 40 % un <strong>Hueso de velador</strong> y un 35 % un <strong>Ascua viva</strong>.</li></ul>
+<p>Vencer a cinco da el logro <em>Brillo apagado</em>.</p>
+<hr>
+<h2 id="jefes">Jefes</h2>
+<blockquote class="nota"><p><strong>Nota de la edición.</strong> Este códice describe a los jefes tal como están en la versión actual: cada uno tiene <strong>un repertorio propio y sin repetir</strong> (no hay dos jefes con la misma ronda de anillos o de charcos) y <strong>un último aliento que solo él conoce</strong>. Si algo de lo que ves en tu pantalla no está aquí, apúntalo en el margen.</p></blockquote>
+<h3 id="cómo-leer-a-un-jefe">Cómo leer a un jefe</h3>
+<table class="cols-3"><thead><tr><th>Señal</th><th>Qué viene</th><th>Qué hacer</th></tr></thead><tbody><tr><td><strong>Ojos rojos</strong> y cuña en el suelo</td><td>Golpe normal</td><td>Bloquear, desviar (parry) o rodar</td></tr><tr><td><strong>Destello violeta</strong></td><td>Golpe <strong>imparable</strong>: atraviesa el escudo y no admite parry</td><td>Solo rodar</td></tr><tr><td><strong>Destello violeta grande</strong> y un silencio sin nada en el aire</td><td>Golpe <strong>letal</strong> (el <em>Abrazo</em> de la Plañidera): lo que no se esquiva casi no se cuenta</td><td>Rodar a un lado, nunca hacia atrás</td></tr><tr><td><strong>Doble parpadeo ámbar</strong></td><td>El último golpe del combo <strong>llega tarde</strong> (<em>retenido</em>)</td><td>Esperar antes de rodar</td></tr><tr><td><strong>Anillo dorado</strong> que se expande, o un <strong>cono</strong> en el suelo</td><td>Onda alrededor del jefe o dirigida hacia ti</td><td>Salir del anillo o <strong>rodar a través</strong> del frente de la onda</td></tr><tr><td><strong>Marca en el suelo</strong> (sombra de campana, lanza, gota de cera, anillo)</td><td>Algo va a caer o brotar ahí</td><td>Salir de la marca antes de que estalle</td></tr><tr><td><strong>Estrella sobre la cabeza</strong></td><td>Lo has desviado</td><td>¡Ataca: <strong>contraataque crítico</strong>!</td></tr></tbody></table>
+<p><strong>Lo que vuela.</strong> Los proyectiles de <strong>acero y bronce</strong> (espadas espectrales, badajos, terrones, virotes) <strong>se bloquean y el parry los devuelve</strong>. El <strong>fuego, el agua, la cera y la magia</strong> (bolas de la retorta, plumas, lágrimas, notas, espirales) no los para el escudo: se esquivan.</p>
+<p><strong>Reglas que valen para todos:</strong></p>
+<ul><li><strong>Postura.</strong> Cada parry, golpe fuerte y contraataque le carga la postura. Si se <strong>rompe</strong>, queda aturdido y abierto a un <strong>crítico</strong>.</li><li><strong>Dos fases.</strong> Hacia la mitad de la vida (la Plañidera, al 44 %) cambian: más rápidos, ataques nuevos, a veces otra música (Ysolde).</li><li><strong>Último aliento.</strong> Al <strong>25 %</strong> de vida, una vez por combate, el jefe <strong>ruge y suelta un ataque que solo tiene él</strong> (se cuenta en cada ficha), y después pelea algo más rápido.</li><li><strong>Golpes retenidos.</strong> Muchos combos terminan con un golpe que espera: no ruedes al primer destello, aguanta el doble parpadeo.</li><li><strong>Los combos se suavizan.</strong> Los golpes encadenados suelen hacer menos daño que el primero.</li><li><strong>Casi nadie invoca.</strong> Solo el <strong>Capitán del Relevo</strong> (sus Guardias) e <strong>Ysolde</strong> (una Pesadilla) llaman a otros, y siempre en la segunda fase. Los demás pelean solos.</li><li><strong>Marcas en el suelo.</strong> Solo las usan el <strong>Rey del Túmulo</strong> (lanzas), el <strong>Campanero</strong> (campanas), el <strong>Cerero</strong> (gotas de cera) y el <strong>Alado</strong> (el Juicio).</li><li><strong>La arena se cierra.</strong> Al entrar bajan las <strong>rejas</strong> y no se abren hasta que caiga uno de los dos.</li><li><strong>Al vencer:</strong> su objeto único, <strong>2 Esquirlas de reja</strong>, una <strong>Esquirla de vasija</strong>, quedas <strong>Avivado</strong> y se abre el paso que guardaba.</li></ul>
+<p>La <strong>vida</strong> de las fichas es la del primer ciclo.</p>
+<hr>
+<article class="ficha ficha-jefe">
+<h3 id="el-precipitado-de-la-retorta">El Precipitado de la Retorta</h3>
+<p><em>El que se destiló a sí mismo</em></p>
+<figure class="retrato"><img src="img/sprites_diablo_rotations_south_hd.png" alt="El Precipitado de la Retorta" class="boss" data-src="../assets/sprites/diablo/rotations/south.png" loading="lazy"><figcaption>El Precipitado de la Retorta</figcaption></figure>
+<blockquote class="epigrafe"><p>«Otro cuerpo para la retorta… Arde bien, la ceniza. Arde mejor la ceniza que todavía se mueve.»</p></blockquote>
+<ul><li><strong>Arena:</strong> el <strong>Laboratorio del Alquimista</strong>, al fondo de la Hondonada del <strong>Camposanto</strong>. La puerta se abre con la <strong>Llave del Laboratorio</strong>, que guarda un muerto del adarve.</li><li><strong>Vida:</strong> unos 300. <strong>Daño base:</strong> 24. <strong>Deja:</strong> <em>Cuerno de la Retorta</em> (+15 de vida) y 1.500 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Zarpazo</strong> doble (el segundo, más flojo y con aire para rodar entre los dos; admite parry) · <strong>Embestida</strong> imparable, que lo deja aturdido si choca · <strong>Retorta</strong>: tres bolas de fuego lentas en abanico, con aviso largo (el escudo no las para)</td></tr><tr><td><strong>II</strong> (50 %)</td><td><strong>Zarpazo triple</strong> que prende, con el último retenido · <strong>Embestida</strong> · <strong>Retorta</strong> · <strong>Aliento</strong>: un cono de fuego que barre hacia el lado al que sueles rodar</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Destilado</strong>: dos <strong>muros de fuego</strong> que avanzan hacia ti, cada uno con su hueco</td></tr></tbody></table>
+<p><strong>Consejo:</strong> es el primer muro, pero es justo. Si algo grande carga hacia ti, no lo frenes: apártate. Las bolas son lentas: rueda cuando casi te toquen. Contra el destilado, busca el hueco y espera a que el muro llegue.</p>
+</article>
+<hr>
+<h3 id="ser-aldric-rey-del-túmulo">Ser Aldric, Rey del Túmulo</h3>
+<p><em>Guardián del último turno</em></p>
+<blockquote class="epigrafe"><p>«¿Vienes a relevarme? No… tú tampoco duermes. Al túmulo con los que se duermen en su puesto. Y con los que no.»</p></blockquote>
+<ul><li><strong>Arena:</strong> la cripta del Túmulo, en el <strong>Osario</strong>.</li><li><strong>Vida:</strong> 400. <strong>Daño base:</strong> 28. <strong>Deja:</strong> <em>Lágrima de la Guardia Perpetua</em> (+1 carga de Vasija) y 2.000 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Tajo</strong> doble, con el segundo retenido (admite parry) · <strong>Embestida</strong> imparable, que lo aturde si choca · <strong>Estocada</strong> larga y recta desde lejos (de lado se esquiva; admite parry) · <strong>Espadas</strong>: tres espadas espectrales en abanico (acero: se bloquean y el parry las devuelve)</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápido. <strong>Tajo</strong>, <strong>Embestida</strong> y <strong>Estocada</strong>, y además: <strong>Molinete</strong>, un giro completo con la espada (se bloquea pero no admite parry; mejor rodar hacia fuera) · <strong>Lanzas</strong>: siete lanzas brotan en línea desde él hasta ti, una tras otra (marcas en el suelo)</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Guardia muerta</strong>: las lanzas brotan en <strong>abanico</strong> desde él, en varias hileras a la vez</td></tr></tbody></table>
+<p><strong>Consejo:</strong> «Que su carga muera contra la piedra.» Ponte delante de un muro y rueda en el último momento: si se estrella, queda aturdido. Es el examen del parry. Las lanzas se esquivan <strong>de lado</strong>, no hacia atrás. Ya no llama a nadie: es un duelo.</p>
+<hr>
+<h3 id="el-campanero-ahorcado">El Campanero Ahorcado</h3>
+<p><em>El que tocaba a muerto</em></p>
+<blockquote class="epigrafe"><p>«Cada campanada era un nombre. Me até a la viga para no tener que tocar el tuyo.»</p></blockquote>
+<ul><li><strong>Arena:</strong> lo alto del <strong>Campanario Hendido</strong>. Cuelga de su soga, sin piernas.</li><li><strong>Vida:</strong> unos 540. <strong>Daño base:</strong> 26. <strong>Deja:</strong> <em>Soga del Campanero</em> (+15 de aguante) y 4.000 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Badajazo</strong> doble (admite parry) · <strong>Soga</strong>: tensa la cuerda y la barre media vuelta pegado a él, imparable y de corto alcance (se cruza rodando o se sale de su largo) · <strong>Columpio</strong>: se lanza colgado de la soga, imparable</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápido. Además: <strong>Repique</strong>: caen <strong>cuatro campanas</strong> del techo, con sus sombras creciendo en el suelo · <strong>Badajos</strong>: tres badajos de bronce que <strong>rebotan en los muros</strong> (se bloquean)</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Rebato</strong>: seis campanas caen <strong>una tras otra donde estés</strong></td></tr></tbody></table>
+<p><strong>Consejo:</strong> «Cuando la soga se tense, apártate: baja con todo el peso de la torre.» Durante el repique y el rebato no te pares: mira las sombras, y no las pises cuando crecen.</p>
+<hr>
+<h3 id="el-sabueso-de-las-piras">El Sabueso de las Piras</h3>
+<p><em>Perro de la pira</em></p>
+<blockquote class="epigrafe"><p>«(Olfatea. La campanilla sin badajo no suena.) Grrr… el que finge dormir… huele a ti, Velador.»</p></blockquote>
+<ul><li><strong>Arena:</strong> el <strong>Patio de la Perrera</strong>, en el <strong>Barrio de los Veladores</strong>.</li><li><strong>Vida:</strong> unos 335. <strong>Daño base:</strong> 22. <strong>Deja:</strong> <em>Collar del Sabueso</em> y 3.000 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Mordisco</strong> doble y muy rápido (admite parry) · <strong>Salto</strong> imparable desde lejos · <strong>Aliento</strong>: un cono de fuego que barre</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápido. <strong>Mordisco triple</strong> con el último retenido · <strong>Salto</strong> · <strong>Aliento</strong> · <strong>Brinco</strong>: salta a donde estabas y, al caer, una <strong>onda de fuego solo hacia delante</strong></td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Jauría</strong>: <strong>tres brincos seguidos</strong>, cada uno con su onda de fuego hacia delante</td></tr></tbody></table>
+<p><strong>Consejo:</strong> es el más veloz de los jefes. El mordisco casi no avisa: no intentes el parry hasta conocer su ritmo. Rueda <strong>a un lado</strong> del salto, no hacia atrás. Del brinco te libras quedándote <strong>a su espalda o a su flanco</strong>: la onda solo sale hacia delante. Ya no llama a otros perros.</p>
+<hr>
+<h3 id="odo-el-enterrado">Odo el Enterrado</h3>
+<p><em>El que cavó su propio lecho</em></p>
+<blockquote class="epigrafe"><p>«Abajo se está quieto. Abajo casi se duerme. No me saques de la tierra, Velador.»</p></blockquote>
+<ul><li><strong>Arena:</strong> su fosa, en el <strong>Barrio de los Veladores</strong>.</li><li><strong>Vida:</strong> unos 560. <strong>Daño base:</strong> 27. <strong>Deja:</strong> <em>Sudario de Odo</em> (+10 % de defensa) y 5.000 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Palada</strong> doble (admite parry) · <strong>Entierro</strong>: se hunde y <strong>emerge bajo tus pies</strong>, imparable; un <strong>montículo que te sigue</strong> es el aviso · <strong>Tierra</strong>: golpea el suelo y salen <strong>dos frentes de tierra en cono</strong> hacia ti</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápido. <strong>Palada</strong> con el segundo golpe retenido · <strong>Entierro</strong> · <strong>Tierra</strong> · <strong>Paletada</strong>: cinco terrones en abanico (se bloquean)</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Fosa</strong>: se hunde y emerge <strong>tres veces seguidas</strong> bajo tus pies; el sitio queda fijo un instante antes de cada salida</td></tr></tbody></table>
+<p><strong>Consejo:</strong> «Cuando la tierra tiemble y se levante bajo tus pies, apártate: sube con la pala por delante.» Mientras el montículo te siga, <strong>muévete en línea</strong> y rueda justo cuando se pare. En la fosa, el sitio se fija: sal de él y vuelve a salir.</p>
+<hr>
+<article class="ficha ficha-jefe">
+<h3 id="la-plañidera-mayor">La Plañidera Mayor</h3>
+<p><em>La que lloró por cada vela</em></p>
+<figure class="retrato"><img src="img/bosses_planidera_hd.png" alt="La Plañidera Mayor" class="boss" data-src="../assets/bosses/planidera.png" loading="lazy"><figcaption>La Plañidera Mayor</figcaption></figure>
+<blockquote class="epigrafe"><p>«Lloré por cada vela que encendiste, Velador. Por cada nombre. Aún me quedan lágrimas para ti.»</p></blockquote>
+<ul><li><strong>Arena:</strong> la <strong>Capilla Mayor</strong> del <strong>Osario</strong>. Tras las <strong>Siete Velas</strong>.</li><li><strong>Vida:</strong> unos 810. <strong>Daño base:</strong> 30 (y pega un 20 % más). <strong>Deja:</strong> <em>Vestigio de la Plañidera</em> (+1 nivel a tu arma) y 12.000 de Ceniza. Abre la subida al <strong>Dormitorio Mayor</strong>.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Doble</strong>: un barrido lento de largo alcance (admite parry) · <strong>Abrazo</strong>: <strong>letal</strong>, imparable, doble de daño, <strong>te vacía una carga de la Vasija</strong> y, si lo esquivas, se queda de rodillas · <strong>Lamento</strong>: cuatro lágrimas en abanico (solo si estás lejos; no se bloquean) · <strong>Giro</strong>: si te pegas a ella, un barrido corto del velo (se bloquea, no se desvía; es lo que más sale de cerca)</td></tr><tr><td><strong>II</strong> (44 %)</td><td>Más rápida. <strong>Triple</strong> barrido con el último retenido · <strong>Abrazo</strong> · <strong>Ojo</strong>: un <strong>rayo</strong> de brasa que barre la sala, imparable · <strong>Llanto</strong>: una espiral de lágrimas, cada vuelta con el hueco en otro sitio · <strong>Giro</strong></td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>El último abrazo</strong>: un golpe de luto y, retenido, el <strong>abrazo letal</strong>. Si lo esquivas, se queda <strong>tres segundos de rodillas</strong>: es el momento de acabarla</td></tr></tbody></table>
+<figure><img src="img/bosses_planidera_2_hd.png" alt="La Plañidera Mayor, segunda fase" class="boss" data-src="../assets/bosses/planidera_2.png" loading="lazy"><figcaption>La Plañidera Mayor, segunda fase</figcaption></figure>
+<p><strong>Consejo:</strong> el abrazo es lo peor que te puede pasar: cuando se incline hacia ti con el destello violeta grande, <strong>rueda a un lado</strong>, nunca hacia atrás. Contra el ojo, rueda <strong>a través</strong> del rayo en vez de huir de él. No la rodees de cerca sin necesidad: el giro del velo castiga al que se pega sin mirar.</p>
+</article>
+<hr>
+<h3 id="la-madre-de-las-charcas">La Madre de las Charcas</h3>
+<p><em>La que se hundió cantando</em> · <strong>opcional</strong></p>
+<blockquote class="epigrafe"><p>«Chist… los niños duermen bajo el agua. Es el único sitio donde aún se duerme. No hagas ruido, vela.»</p></blockquote>
+<ul><li><strong>Arena:</strong> la nave inundada de la <strong>Cisterna de los Ahogados</strong>, bajo el Osario.</li><li><strong>Vida:</strong> unos 760. <strong>Daño base:</strong> 27. <strong>Deja:</strong> <em>Perla negra</em> y uno de los <strong>cuatro sellos</strong> que reconoce el Lecho. 6.000 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Abrazo</strong> doble (admite parry) · <strong>Marea</strong>: una ola de agua negra que avanza con un hueco · <strong>Arrastre</strong>: embestida imparable</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápida. <strong>Abrazo triple</strong> con el último retenido · <strong>Marea</strong> · <strong>Arrastre</strong> · <strong>Lágrimas</strong>: tres lágrimas que te siguen despacio (agua: no se bloquean)</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Diluvio</strong>: <strong>tres olas seguidas</strong>, cada una con el hueco en otro sitio</td></tr></tbody></table>
+<p><strong>Consejo:</strong> el agua te frena a ti, no a ella. Pelea en las zonas secas y llévala hacia ti. Contra la marea, cruza por el hueco o rueda a través del frente. Ya no tiene hijos que la ayuden.</p>
+<hr>
+<article class="ficha ficha-jefe">
+<h3 id="el-cerero-mayor">El Cerero Mayor</h3>
+<p><em>Fundidor de velas</em></p>
+<figure class="retrato"><img src="img/bosses_cerero_hd.png" alt="El Cerero Mayor" class="boss" data-src="../assets/bosses/cerero.png" loading="lazy"><figcaption>El Cerero Mayor</figcaption></figure>
+<blockquote class="epigrafe"><p>«Otra vela. Buen sebo, buen pabilo. Arderás derecho, como los demás.»</p></blockquote>
+<ul><li><strong>Arena:</strong> el crisol del <strong>Horno de Velas</strong>, bajo la Perrera del Barrio.</li><li><strong>Vida:</strong> unos 1.060. <strong>Daño base:</strong> 27. <strong>Deja:</strong> <em>Mecha del Cerero</em> (+1 nivel al arma y +10 de vida), uno de los <strong>cuatro sellos</strong> y 10.000 de Ceniza. En el crisol espera la <strong>Vela de Edda</strong>.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Cazo</strong> doble con el segundo golpe retenido (admite parry) · <strong>Colada</strong>: tres charcos de cera ardiente · <strong>Goteo</strong>: sacude el cazo y caen <strong>cinco gotas</strong> marcadas que dejan un charquito · <strong>Embestida</strong> imparable</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápido. Además: <strong>Vertido</strong>, un chorro de cera que barre en línea (imparable) · <strong>Fundición</strong>: vuelca la colada y un <strong>muro de cera ardiente</strong> avanza con un hueco</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Crisol</strong>: vuelca el crisol y la colada da <strong>la vuelta entera</strong> a su alrededor, despacio; se cruza rodando</td></tr></tbody></table>
+<p><strong>Consejo:</strong> «El Cerero no ve: siente el calor. Cuando incline el cazo, apártate de su línea. Cuando vuelque el crisol, la colada da la vuelta entera a su alrededor: atraviésala rodando.» Ya no llama a las Velas Vivas: pelea solo, así que todo el cuidado va al suelo, y lo que arde no se pisa.</p>
+</article>
+<hr>
+<h3 id="el-capitán-del-relevo">El Capitán del Relevo</h3>
+<p><em>El que contaba a sus hombres</em> · <strong>opcional</strong></p>
+<blockquote class="epigrafe"><p>«…ciento doce, ciento trece… Falta uno. Ocupa tu nicho, soldado. Nadie abandona el turno.»</p></blockquote>
+<ul><li><strong>Arena:</strong> el fondo de las <strong>Criptas de la Guardia</strong>, bajo la Hondonada del Camposanto.</li><li><strong>Vida:</strong> unos 625. <strong>Daño base:</strong> 24 (y pega un 25 % más). <strong>Deja:</strong> <em>Insignia del Capitán</em>, uno de los <strong>cuatro sellos</strong> y 5.000 de Ceniza.</li><li><strong>Escudo en alto:</strong> de frente, tus golpes <strong>apenas entran</strong> y en cambio le <strong>cargan la postura</strong> (los fuertes, el doble). Se gira despacio para seguirte.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Tajo</strong> doble (admite parry) · <strong>Escudazo</strong>: corto, rápido, y te cansa mucho si lo bloqueas · <strong>Estocada</strong> larga · <strong>Carga</strong> imparable · <strong>Andanada</strong>: manda disparar a la guardia, tres virotes en fila y dos tandas (se bloquean; el parry los devuelve). <strong>No dispara si estás pegado a él</strong> (a menos de unos 60 px)</td></tr><tr><td><strong>II</strong> (50 %)</td><td>Más rápido. Además: <strong>Molinete</strong> completo · <strong>Llamada</strong>: dos <strong>Guardias del Relevo</strong> (una sola vez; <strong>es de los dos únicos jefes que invocan</strong>)</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Relevo</strong>: el relevo entero dispara, cinco virotes por tanda y <strong>tres andanadas</strong></td></tr></tbody></table>
+<p><strong>Consejo:</strong> «El Capitán no baja el escudo para mirarte, solo para golpear. Golpea cuando él golpee; si no, cánsale la guardia con golpes fuertes.» Pegarte a él durante la carga evita la andanada. Rodearlo también funciona, pero se gira.</p>
+<hr>
+<article class="ficha ficha-jefe">
+<h3 id="el-alado-de-hollín">El Alado de Hollín</h3>
+<p><em>Custodio del primer fuego</em> · <strong>opcional</strong></p>
+<figure class="retrato"><img src="img/bosses_angel_hd.png" alt="El Alado de Hollín" class="boss" data-src="../assets/bosses/angel.png" loading="lazy"><figcaption>El Alado de Hollín</figcaption></figure>
+<blockquote class="epigrafe"><p>«Yo llevé la antorcha hasta el Lecho la primera noche. Me pidieron que no la soltara. Arde, Velador… como ardieron todos.»</p></blockquote>
+<ul><li><strong>Arena:</strong> la capilla de las vigas del <strong>Desván Tejido</strong>, encima de la cúspide del Campanario.</li><li><strong>Vida:</strong> unos 990. <strong>Daño base:</strong> 28 (y pega un 15 % más). <strong>Deja:</strong> <em>Pluma consumida</em>, uno de los <strong>cuatro sellos</strong> y 7.000 de Ceniza.</li><li><em>Lo dibujó el hijo del autor.</em></li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I</strong></td><td><strong>Espada</strong>: triple con el último retrasado (admite parry; los dos últimos pegan menos y el Alado queda abierto después) · <strong>Antorcha</strong>: barrido de fuego imparable · <strong>Aletazo</strong>: cinco plumas encendidas en abanico · <strong>Picado</strong>: embestida imparable desde lejos</td></tr><tr><td><strong>II</strong> (50 %)</td><td><strong>El ojo del pecho se abre.</strong> <strong>Espada</strong>, <strong>Antorcha</strong> y <strong>Picado</strong>, y además: <strong>Estela</strong>: dos muros de fuego con su hueco · <strong>Juicio</strong>: cuatro anillos en cadena que marcan el suelo · <strong>Mirada</strong>: un rayo largo que barre la sala</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Primer fuego</strong>: una <strong>espiral</strong> de fuego de siete vueltas desde su pecho</td></tr></tbody></table>
+<p><strong>Consejo:</strong> el ataque más largo del juego es su triple de espada: <strong>no ruedes al segundo golpe</strong>, espera el doble parpadeo ámbar. Contra la antorcha, pégate a él por el lado contrario. En el juicio, no te quedes en el centro de ningún anillo.</p>
+</article>
+<hr>
+<article class="ficha ficha-jefe">
+<h3 id="ysolde-la-durmiente">Ysolde, la Durmiente</h3>
+<p><em>Ysolde del Párpado</em></p>
+<figure class="retrato"><img src="img/sprites_durmiente_rotations_south_hd.png" alt="Ysolde, la Durmiente" class="boss" data-src="../assets/sprites/durmiente/rotations/south.png" loading="lazy"><figcaption>Ysolde, la Durmiente</figcaption></figure>
+<blockquote class="epigrafe"><p>«Hueles a humo, Velador. Siempre oliste a humo. ¿Vienes a soñar en mi lugar… o a quemarme a mí también?»</p></blockquote>
+<ul><li><strong>Arena:</strong> el Lecho, al fondo del <strong>Dormitorio Mayor</strong>.</li><li><strong>Vida:</strong> unos 1.380. <strong>Daño base:</strong> 26 (y pega un 20 % más). 20.000 de Ceniza.</li></ul>
+<table class="cols-2"><thead><tr><th>Fase</th><th>Ataques</th></tr></thead><tbody><tr><td><strong>I · Dormida</strong></td><td><strong>Roce</strong>: golpe largo (admite parry) · <strong>Roce doble</strong>, con el segundo retenido, como quien se duerme a medio gesto · <strong>Nana</strong>: tres notas lentas que <strong>te buscan</strong> (magia: no se bloquean)</td></tr><tr><td><strong>II · Despierta</strong> (50 %, cambia la música)</td><td>Más rápida. <strong>Mirada</strong>: un rayo que <strong>barre la nave</strong> de lado a lado, imparable · <strong>Desvelo</strong>: una espiral de cera que gira y prende · <strong>Pesadilla</strong>: llama a <strong>una sola</strong> (nunca hay dos vivas; <strong>es de los dos únicos jefes que invocan</strong>) · Nana y Roces siguen</td></tr><tr><td><strong>Último aliento</strong> (25 %)</td><td><strong>Nana final</strong>: <strong>tres tandas</strong> de notas que te buscan, las únicas teledirigidas del juego</td></tr></tbody></table>
+<p><strong>Consejo:</strong> «Cuando despierte, no la mires de frente: su mirada barre la nave.» En la fase I solo hay que aprender sus roces y cansar las notas. En la II, <strong>colócate a su lado</strong>, nunca delante; mata a la Pesadilla deprisa y busca el hueco del desvelo mientras gira.</p>
+</article>
+</section>
+<div class="navpie"><a href="02_arsenal.html">← Libro II · Arsenal y objetos</a><span></span><a href="04_guia.html">Libro IV · Guía del Insomne →</a></div>
+</main>
+<script src="sitio.js"></script>
+</body>
+</html>

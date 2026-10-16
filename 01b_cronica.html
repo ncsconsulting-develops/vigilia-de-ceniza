@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Libro I·b · Crónica y atlas de Hondavela — Códice del Velador</title>
+<meta name="description" content="Códice del Velador: el lore, el arsenal, el bestiario y la guía de Vigilia de Ceniza, soulslike pixel art para iPhone, iPad y Android.">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="sitio.css">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="barra">
+<button class="menu-btn" id="menu-btn" aria-label="Menú">☰ Índice</button>
+<a class="titulo" href="index.html">Códice del Velador</a>
+<span class="sub">Vigilia de Ceniza · edición pública</span>
+<div class="buscar"><input id="buscar" type="search" placeholder="Buscar en el Códice…" autocomplete="off" aria-label="Buscar"><div class="resultados" id="resultados"></div></div>
+</header>
+<div class="velo" id="velo"></div>
+<nav class="lateral" aria-label="Capítulos">
+<h2>Libros</h2><ul>
+<li><a href="index.html" data-cap="00">Portada e índice</a></li>
+<li><a href="01_lore.html" data-cap="01">Libro I · Lore y mundo</a></li>
+<li><a href="01b_cronica.html" data-cap="01b" class="actual">Libro I·b · Crónica y atlas de Hondavela</a></li>
+<li><a href="02_arsenal.html" data-cap="02">Libro II · Arsenal y objetos</a></li>
+<li><a href="03_personajes_y_bestiario.html" data-cap="03">Libro III · Personajes, bestiario y jefes</a></li>
+<li><a href="04_guia.html" data-cap="04">Libro IV · Guía del Insomne</a></li>
+</ul>
+<h2>El juego</h2><ul><li><a href="privacy.html">Política de privacidad</a></li><li><a href="support.html">Soporte</a></li></ul><h2>En esta página</h2><ul class="secciones"><li><a class="n2" href="#1--atlas-las-nueve-zonas-y-sus-caminos">1 · Atlas: las nueve zonas y sus caminos</a></li><li><a class="n3" href="#cómo-se-relacionan">Cómo se relacionan</a></li><li><a class="n3" href="#los-pasos-y-lo-que-piden">Los pasos y lo que piden</a></li><li><a class="n2" href="#2--cronología-de-hondavela">2 · Cronología de Hondavela</a></li><li><a class="n3" href="#las-cinco-edades">Las cinco edades</a></li><li><a class="n2" href="#3--las-casas-y-las-facciones">3 · Las casas y las facciones</a></li><li><a class="n3" href="#la-casa-del-párpado">La Casa del Párpado</a></li><li><a class="n3" href="#los-veladores">Los Veladores</a></li><li><a class="n3" href="#la-guardia-del-relevo">La Guardia del Relevo</a></li><li><a class="n3" href="#los-cereros">Los Cereros</a></li><li><a class="n3" href="#las-plañideras">Las Plañideras</a></li><li><a class="n3" href="#los-campaneros">Los Campaneros</a></li><li><a class="n3" href="#los-enterradores-y-los-del-agua">Los Enterradores y los del agua</a></li><li><a class="n2" href="#4--dramatis-personae-quién-es-quién-y-qué-los-une">4 · Dramatis personae: quién es quién y qué los une</a></li><li><a class="n3" href="#quién-es-quién">Quién es quién</a></li><li><a class="n2" href="#5--los-objetos-que-cuentan-la-historia">5 · Los objetos que cuentan la historia</a></li><li><a class="n3" href="#lo-que-cuentan-de-las-piras">Lo que cuentan de las piras</a></li><li><a class="n3" href="#lo-que-cuentan-de-la-guardia">Lo que cuentan de la Guardia</a></li><li><a class="n3" href="#lo-que-cuentan-de-la-casa-de-la-torre-y-del-agua">Lo que cuentan de la Casa, de la torre y del agua</a></li><li><a class="n2" href="#6--los-tres-caminos-del-lecho">6 · Los tres caminos del Lecho</a></li></ul>
+<p class="pie-menu">Edición pública: sin desenlaces ni finales. <em>Vigilia de Ceniza</em> © 2026 NCS Gaming.</p>
+</nav>
+<main class="contenido">
+<section class="capitulo">
+<h1 id="libro-ib--crónica-y-atlas-de-hondavela">Libro I·b · Crónica y atlas de Hondavela</h1>
+<div class="espacio"></div>
+<blockquote class="epigrafe"><p><em>«Nadie en Hondavela escribe fechas. Se cuentan velas.»</em></p>
+<p>— Nota del archivero</p></blockquote>
+<div class="espacio"></div>
+<hr>
+<h2 id="1--atlas-las-nueve-zonas-y-sus-caminos">1 · Atlas: las nueve zonas y sus caminos</h2>
+<p>Hondavela es pequeña y está apilada. Lo que no se ve desde el Camposanto está debajo de él, encima de él o al final de un camino que se corta en una puerta sin hoja. Este es el plano de las zonas tal como las enlaza el juego, con la Pira del Velador del prólogo como entrada.</p>
+<figure class="diagrama">
+<svg id="diag-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" role="img" aria-label="Mapa esquemático de Hondavela: las nueve zonas y sus conexiones">
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0a04a"/>
+    </marker>
+    <style>#diag-1 .zona {fill: #241a12; stroke: #a47a2c; stroke-width: 2;}
+#diag-1 .zona.jefe {stroke: #c9a45a;}
+#diag-1 .nombre {font-family: "Jacquard 12", "EB Garamond", serif; font-size: 24px; fill: #f0d9a8; text-anchor: middle;}
+#diag-1 .sub {font-family: "EB Garamond", serif; font-size: 13px; fill: #c9b891; text-anchor: middle; font-style: italic;}
+#diag-1 .via {stroke: #c9a45a; stroke-width: 2.5; fill: none;}
+#diag-1 .via.unica {stroke: #e0a04a;}
+#diag-1 .via.ataud {stroke-dasharray: 7 6; stroke: #9a9087;}
+#diag-1 .pie {font-family: "EB Garamond", serif; font-size: 13px; fill: #e9dcc2; text-anchor: middle;}
+#diag-1 .pie.l {text-anchor: start;}
+#diag-1 .banda {fill: #1b1510; stroke: none;}
+#diag-1 .banda-t {font-family: "EB Garamond", serif; font-size: 12px; fill: #8a7558; letter-spacing: 2px; text-transform: uppercase;}
+#diag-1 .leyenda {font-family: "EB Garamond", serif; font-size: 13px; fill: #c9b891;}</style>
+  </defs>
+  <rect width="1000" height="660" fill="#15110e"/>
+  <rect class="banda" x="0" y="20" width="1000" height="100"/>
+  <rect class="banda" x="0" y="260" width="1000" height="100"/>
+  <rect class="banda" x="0" y="500" width="1000" height="100"/>
+  <text class="banda-t" x="14" y="38">Alturas</text>
+  <text class="banda-t" x="14" y="158">Superficie · la catedral</text>
+  <text class="banda-t" x="14" y="278">Bajo tierra</text>
+  <text class="banda-t" x="14" y="398">Lo más hondo</text>
+  <text class="banda-t" x="14" y="518">Leyenda</text>
+
+  <!-- Caminos -->
+  <path class="via" d="M430,100 L430,140"/>
+  <text class="pie l" x="438" y="124">cúspide</text>
+  <path class="via" d="M430,220 L430,260 L430,300" marker-end="none"/>
+  <text class="pie l" x="438" y="248">adarve</text>
+  <path class="via unica" d="M210,180 L340,180" marker-end="url(#flecha)"/>
+  <text class="pie" x="275" y="172">salida de la Pira</text>
+  <path class="via" d="M520,310 L670,310"/>
+  <text class="pie" x="595" y="302">camino del este</text>
+  <path class="via" d="M340,310 L210,310"/>
+  <text class="pie" x="275" y="302">bajo el laboratorio</text>
+  <path class="via" d="M430,340 L430,420"/>
+  <text class="pie l" x="438" y="372">escaleras</text>
+  <path class="via ataud" d="M400,340 L400,420"/>
+  <text class="pie" x="342" y="396">ascensor-ataúd</text>
+  <path class="via" d="M760,340 L760,420"/>
+  <text class="pie l" x="768" y="384">bajo la perrera</text>
+  <path class="via" d="M430,460 L430,540"/>
+  <text class="pie l" x="438" y="504">al agua</text>
+  <path class="via" d="M520,440 L620,440 L620,200" marker-end="url(#flecha)"/>
+  <path class="via" d="M620,200 L620,440 L520,440" marker-end="none"/>
+  <text class="pie l" x="628" y="346">escalera sellada</text>
+  <text class="pie l" x="628" y="364">con cera, tras la</text>
+  <text class="pie l" x="628" y="382">Capilla Mayor</text>
+
+  <!-- Zonas -->
+  <g>
+    <rect class="zona jefe" x="340" y="40" width="180" height="60" rx="6"/>
+    <text class="nombre" x="430" y="68">Desván Tejido</text>
+    <text class="sub" x="430" y="88">arañas · el Alado de Hollín</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="340" y="140" width="180" height="60" rx="6"/>
+    <text class="nombre" x="430" y="168">Campanario Hendido</text>
+    <text class="sub" x="430" y="188">Tres Campanas · el Campanero</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="610" y="140" width="180" height="60" rx="6"/>
+    <text class="nombre" x="700" y="168">Dormitorio Mayor</text>
+    <text class="sub" x="700" y="188">la nave · el Lecho</text>
+  </g>
+  <g>
+    <rect class="zona" x="30" y="150" width="180" height="60" rx="6"/>
+    <text class="nombre" x="120" y="178">La Pira del Velador</text>
+    <text class="sub" x="120" y="198">prólogo · el Atizador</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="340" y="280" width="180" height="60" rx="6"/>
+    <text class="nombre" x="430" y="308">Camposanto del Relevo</text>
+    <text class="sub" x="430" y="328">plaza · adarve · laboratorio</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="670" y="280" width="180" height="60" rx="6"/>
+    <text class="nombre" x="760" y="308">Barrio de los Veladores</text>
+    <text class="sub" x="760" y="328">piras · perrera · la fosa</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="30" y="280" width="180" height="60" rx="6"/>
+    <text class="nombre" x="120" y="308">Criptas de la Guardia</text>
+    <text class="sub" x="120" y="328">nichos · el Capitán</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="340" y="400" width="180" height="60" rx="6"/>
+    <text class="nombre" x="430" y="428">Osario</text>
+    <text class="sub" x="430" y="448">Siete Velas · el Rey · la Plañidera</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="670" y="400" width="180" height="60" rx="6"/>
+    <text class="nombre" x="760" y="428">Horno de Velas</text>
+    <text class="sub" x="760" y="448">moldes · el crisol · el Cerero</text>
+  </g>
+  <g>
+    <rect class="zona jefe" x="340" y="540" width="180" height="60" rx="6"/>
+    <text class="nombre" x="430" y="568">Cisterna de los Ahogados</text>
+    <text class="sub" x="430" y="588">la nave inundada · la Madre</text>
+  </g>
+
+  <!-- Leyenda -->
+  <path class="via" d="M700,540 L760,540"/>
+  <text class="leyenda" x="770" y="545">ida y vuelta</text>
+  <path class="via unica" d="M700,566 L760,566" marker-end="url(#flecha)"/>
+  <text class="leyenda" x="770" y="571">solo en un sentido</text>
+  <path class="via ataud" d="M700,592 L760,592"/>
+  <text class="leyenda" x="770" y="597">ascensor-ataúd (contrapeso + traba del Osario)</text>
+  <text class="leyenda" x="30" y="548">Las zonas con borde claro tienen jefe. Los caminos</text>
+  <text class="leyenda" x="30" y="568">son los del juego; los atajos de cada zona (escalas,</text>
+  <text class="leyenda" x="30" y="588">portones, verjas) se cuentan en el Libro IV.</text>
+</svg>
+<figcaption>Plano esquemático de Hondavela: tres alturas, un pozo de agua, y todo cuelga del Camposanto.</figcaption>
+</figure>
+<h3 id="cómo-se-relacionan">Cómo se relacionan</h3>
+<ul><li><strong>El Camposanto del Relevo</strong> es el cruce de caminos: a sus pies vivía y se enterraba la guardia de noche. Todo lo demás se alcanza desde él.</li><li><strong>Hacia arriba</strong> está la torre: el <strong>Campanario Hendido</strong> se sube desde el adarve, y de su cúspide cuelga el <strong>Desván Tejido</strong>, el ático de la torre.</li><li><strong>Hacia abajo</strong> está el <strong>Osario</strong>, la red de galerías donde la Casa del Párpado guardaba a sus muertos y sus juramentos. Debajo del Osario, el agua: la <strong>Cisterna de los Ahogados</strong>. Encima del Osario, la catedral: el <strong>Dormitorio Mayor</strong>, que solo se alcanza por la escalera sellada del fondo de la Capilla Mayor, aunque desde la cúspide del Campanario se vea su tejado.</li><li><strong>Bajo el laboratorio</strong> del Camposanto, al fondo de la Hondonada, están los nichos de la <strong>Guardia del Relevo</strong>: las <strong>Criptas</strong>.</li><li><strong>Hacia el este</strong> está el barrio de oficio de los que atizaban, el <strong>Barrio de los Veladores</strong>, y bajo su perrera, la fundición: el <strong>Horno de Velas</strong>. <em>«Del agujero bajo la perrera subía el humo de todas las piras del Barrio.»</em></li><li><strong>La Pira del Velador</strong>, donde empieza todo, era donde los novicios practicaban antes de que les dieran una pira que atizar. De ella solo se sale; no se vuelve.</li></ul>
+<h3 id="los-pasos-y-lo-que-piden">Los pasos y lo que piden</h3>
+<table class="cols-4"><thead><tr><th>De</th><th>A</th><th>Por</th><th>Pide</th></tr></thead><tbody><tr><td>La Pira del Velador</td><td>Camposanto</td><td>La salida al este del Atrio del Atizador</td><td>Nada (no hay vuelta)</td></tr><tr><td>Camposanto</td><td>Osario</td><td>Las escaleras bajo la fosa común</td><td>Nada</td></tr><tr><td>Camposanto</td><td>Osario</td><td>El ascensor-ataúd del Pozo de Cera</td><td>El contrapeso resuelto y la traba del Osario suelta (tras el Rey del Túmulo)</td></tr><tr><td>Camposanto</td><td>Campanario Hendido</td><td>La subida del adarve</td><td>Nada (la subida está en el adarve, sobre el muro norte)</td></tr><tr><td>Camposanto</td><td>Barrio de los Veladores</td><td>El confín este, «donde el camino se corta en una puerta sin hoja»</td><td>Nada</td></tr><tr><td>Camposanto</td><td>Criptas de la Guardia</td><td>La bajada al fondo de la Hondonada, bajo el laboratorio</td><td>Nada (la inscripción aconseja volver «cuando hayas velado más noches»)</td></tr><tr><td>Camposanto</td><td>Laboratorio del Alquimista</td><td>La puerta de la retorta</td><td>La <strong>Llave del Laboratorio</strong>, al oeste del adarve</td></tr><tr><td>Osario</td><td>Cisterna de los Ahogados</td><td>La bajada al agua</td><td>Nada</td></tr><tr><td>Osario</td><td>Dormitorio Mayor</td><td>La escalera sellada del fondo de la Capilla Mayor</td><td>Que la Plañidera Mayor deje de llorar</td></tr><tr><td>Osario</td><td>Cripta del Túmulo</td><td>La puerta de los siete ojos</td><td>El puzle de las <strong>Siete Velas</strong></td></tr><tr><td>Campanario</td><td>Desván Tejido</td><td>La escalera de la cúspide</td><td>Nada (tras el Campanero)</td></tr><tr><td>Barrio</td><td>Horno de Velas</td><td>El agujero bajo la Perrera</td><td>Nada</td></tr></tbody></table>
+<hr>
+<h2 id="2--cronología-de-hondavela">2 · Cronología de Hondavela</h2>
+<p>Hondavela no cuenta años; cuenta velas, turnos y campanadas. Para poder ordenar los sucesos, este Códice usa una medida que el juego solo sugiere: <strong>el Ocaso</strong>. La noche del humo es el <strong>año 0</strong>; lo anterior se mide hacia atrás en vigilias, y lo posterior, hacia delante. La única cifra firme que da el juego es la cuenta de Ser Aldric, que esperó su relevo <strong>cuarenta años</strong>, de modo que el <em>ahora</em> del Insomne cae, si esa cuenta vale, alrededor del año 40 del Ocaso. Todo lo demás es orden, no fecha.</p>
+<figure class="diagrama">
+<svg id="diag-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-label="Línea de tiempo de Hondavela">
+  <defs>
+    <style>#diag-2 .era {fill: #241a12; stroke: #a47a2c; stroke-width: 1.5;}
+#diag-2 .era.humo {fill: #3a1511; stroke: #c9a45a;}
+#diag-2 .era-t {font-family: "Jacquard 12", "EB Garamond", serif; font-size: 22px; fill: #f0d9a8; text-anchor: middle;}
+#diag-2 .era-s {font-family: "EB Garamond", serif; font-size: 12px; fill: #c9b891; text-anchor: middle; font-style: italic;}
+#diag-2 .linea {stroke: #c9a45a; stroke-width: 3;}
+#diag-2 .tic {stroke: #e0a04a; stroke-width: 2;}
+#diag-2 .ev {font-family: "EB Garamond", serif; font-size: 13px; fill: #e9dcc2;}
+#diag-2 .ev.c {text-anchor: middle;}
+#diag-2 .ev.dim {fill: #9a9087;}
+#diag-2 .ano {font-family: "EB Garamond", serif; font-size: 12px; fill: #8a7558; text-anchor: middle; letter-spacing: 1px;}</style>
+  </defs>
+  <rect width="1000" height="560" fill="#15110e"/>
+
+  <!-- Eras -->
+  <rect class="era" x="20" y="250" width="150" height="60" rx="5"/>
+  <text class="era-t" x="95" y="276">La primera noche</text>
+  <text class="era-s" x="95" y="296">el pacto del Lecho</text>
+  <rect class="era" x="180" y="250" width="260" height="60" rx="5"/>
+  <text class="era-t" x="310" y="276">Edad del Sueño</text>
+  <text class="era-s" x="310" y="296">una Durmiente releva a otra</text>
+  <rect class="era" x="450" y="250" width="200" height="60" rx="5"/>
+  <text class="era-t" x="550" y="276">Los años de las piras</text>
+  <text class="era-s" x="550" y="296">«ningún sueño es gratis»</text>
+  <rect class="era humo" x="660" y="240" width="60" height="80" rx="5"/>
+  <text class="era-t" x="690" y="272">0</text>
+  <text class="era-s" x="690" y="292">el humo</text>
+  <rect class="era" x="730" y="250" width="200" height="60" rx="5"/>
+  <text class="era-t" x="830" y="276">El largo Ocaso</text>
+  <text class="era-s" x="830" y="296">«desde entonces nadie duerme»</text>
+  <rect class="era humo" x="934" y="250" width="62" height="60" rx="5"/>
+  <text class="era-t" x="965" y="276" font-size="19">Ahora</text>
+  <text class="era-s" x="965" y="296">≈ año 40</text>
+
+  <!-- Línea -->
+  <line class="linea" x1="20" y1="330" x2="990" y2="330"/>
+  <text class="ano" x="95" y="350">hace siglos</text>
+  <text class="ano" x="310" y="350">generaciones</text>
+  <text class="ano" x="550" y="350">los últimos años del sueño</text>
+  <text class="ano" x="690" y="350">año 0</text>
+  <text class="ano" x="830" y="350">años 1 a 40</text>
+
+  <!-- Sucesos de arriba (la Casa, el reino) -->
+  <line class="tic" x1="95" y1="250" x2="95" y2="200"/>
+  <text class="ev c" x="95" y="130">El Alado lleva la antorcha</text>
+  <text class="ev c" x="95" y="148">hasta el Lecho: «no la sueltes»</text>
+  <text class="ev c dim" x="95" y="170">La primera pira y</text>
+  <text class="ev c dim" x="95" y="188">la primera hoguera</text>
+
+  <line class="tic" x1="250" y1="250" x2="250" y2="200"/>
+  <text class="ev c" x="250" y="152">Se talan los árboles</text>
+  <text class="ev c" x="250" y="170">de lámpara; las campanas</text>
+  <text class="ev c" x="250" y="188">tocan a dormir y a velar</text>
+
+  <line class="tic" x1="380" y1="250" x2="380" y2="200"/>
+  <text class="ev c" x="380" y="134">La Guardia del Relevo</text>
+  <text class="ev c" x="380" y="152">monta el turno de noche;</text>
+  <text class="ev c" x="380" y="170">Anselmo funde las rejas</text>
+  <text class="ev c" x="380" y="188">de los dormitorios</text>
+
+  <line class="tic" x1="550" y1="250" x2="550" y2="200"/>
+  <text class="ev c" x="550" y="98">Las piras se alimentan de velas.</text>
+  <text class="ev c" x="550" y="116">Las plañideras lloran en público;</text>
+  <text class="ev c" x="550" y="134">Odo entierra; el Horno funde;</text>
+  <text class="ev c" x="550" y="152">los perros rastrean el Barrio.</text>
+  <text class="ev c dim" x="550" y="174">En las Actas, cuarenta veces:</text>
+  <text class="ev c dim" x="550" y="192">«No mejoró»</text>
+
+  <line class="tic" x1="690" y1="240" x2="690" y2="60"/>
+  <text class="ev c" x="690" y="40">La Durmiente huele el humo</text>
+  <text class="ev c" x="690" y="58" font-style="italic">y cierra los ojos. El cielo se detiene.</text>
+
+  <line class="tic" x1="830" y1="250" x2="830" y2="200"/>
+  <text class="ev c" x="830" y="80">Las campanas suenan solas;</text>
+  <text class="ev c" x="830" y="98">el campanero sube a callarlas.</text>
+  <text class="ev c" x="830" y="116">El Alquimista se encierra.</text>
+  <text class="ev c" x="830" y="134">La Guardia baja a sus nichos.</text>
+  <text class="ev c" x="830" y="152">El agua de la Cisterna sube.</text>
+  <text class="ev c" x="830" y="170">Ser Aldric espera cuarenta años.</text>
+  <text class="ev c" x="830" y="188">Las arañas bajan del Desván.</text>
+
+  <!-- Sucesos de abajo (el Insomne) -->
+  <line class="tic" x1="520" y1="330" x2="520" y2="380"/>
+  <text class="ev c" x="520" y="400">El Insomne entra de Velador</text>
+  <text class="ev c" x="520" y="418">y oculta que tampoco duerme</text>
+  <text class="ev c dim" x="520" y="440">(la primavera de la</text>
+  <text class="ev c dim" x="520" y="458">última vela que atizó)</text>
+
+  <line class="tic" x1="690" y1="330" x2="690" y2="380"/>
+  <text class="ev c" x="690" y="400">Deja de fingir</text>
+  <text class="ev c" x="690" y="418">que dormía</text>
+
+  <line class="tic" x1="965" y1="330" x2="965" y2="380"/>
+  <text class="ev c" x="940" y="400">La pira se apaga</text>
+  <text class="ev c" x="940" y="418">con él dentro.</text>
+  <text class="ev c" x="940" y="436">Sale de las brasas</text>
+
+  <line class="tic" x1="830" y1="330" x2="830" y2="380"/>
+  <text class="ev c dim" x="830" y="400">Los vecinos se vacían:</text>
+  <text class="ev c dim" x="830" y="418">los Desvelados</text>
+
+  <text class="ev dim" x="20" y="520">Arriba, el reino y la Casa del Párpado; abajo, el Velador que será el Insomne. Las cifras son relativas al Ocaso (año 0 = la noche del humo).</text>
+  <text class="ev dim" x="20" y="540">Después de «ahora» solo queda el ciclo: «Alguien se despierta en el Camposanto. Otra vez.»</text>
+</svg>
+<figcaption>Línea de tiempo de Hondavela, medida en años del Ocaso. Solo la cuenta de Aldric (cuarenta) la fija.</figcaption>
+</figure>
+<h3 id="las-cinco-edades">Las cinco edades</h3>
+<p><strong>La primera noche.</strong> Un custodio lleva una antorcha encendida hasta el Lecho y le piden que no la suelte nunca. Es <em>«el primer fuego»</em>. De la primera pira se toman las brasas que los Veladores llevarán después en relicarios de hierro, y la primera hoguera se enciende con algo que la Casa del Párpado no quiso registrar. Hay hogueras que, de cerca, todavía susurran nanas.</p>
+<p><strong>La Edad del Sueño.</strong> El trato funciona: una sola mujer sueña por todos y el reino cierra los ojos con ella. Cuando el Lecho se cansa, la Durmiente siguiente releva a la anterior: eso es el <strong>Relevo</strong>, el turno más alto del reino. Los bosques de lámpara se talan para alumbrar alcobas, las campanas tocan a dormir, a velar y a enterrar, la Guardia del Relevo monta turnos en la muralla y Anselmo funde las rejas que cierran los dormitorios. Nadie sabe cuántas Durmientes hubo.</p>
+<p><strong>Los años de las piras.</strong> En algún momento la Casa descubre que el sueño de la Durmiente necesita fuego, y que el fuego necesita <strong>velas</strong>: los que nacen sin poder dormir. Aparecen los Veladores, las piras del Barrio, las plañideras que lloran en público por cada vela, el Horno donde a las velas no se las quema sino que se las funde, los perros que rastrean a quien finge dormir y Odo, que entierra lo que queda. En las Actas de la Pira alguien apunta cuarenta veces la misma frase: <em>«No mejoró»</em>. En estos años el protagonista entra de Velador y calla que él tampoco duerme.</p>
+<p><strong>La noche del humo (año 0).</strong> La Durmiente huele el humo, comprende de qué está hecho su descanso y cierra los ojos para no verlo más. El cielo se detiene a medio crepúsculo. Esa misma noche al Insomne le tocaba un turno de guardia y no fue: dejó de fingir que dormía.</p>
+<p><strong>El largo Ocaso (años 1 a 40).</strong> Las campanas empiezan a sonar solas y el campanero mayor sube a callarlas. El Alquimista del Relevo se encierra en su laboratorio y entrega la llave a la guardia del adarve. La Guardia baja a sus nichos con el escudo puesto <em>«por si hacía falta»</em>. El agua de la Cisterna deja de sacarse y sube. Ser Aldric se sienta en el túmulo a esperar un relevo. Los vecinos se vacían poco a poco hasta quedar Desvelados. Las arañas envuelven a los Veladores del Desván <em>«para que no se enfríen»</em>, e Ilse toca hasta tener las manos en carne viva.</p>
+<p><strong>Ahora.</strong> La pira se apaga con el Insomne dentro. Sale de las brasas.</p>
+<blockquote class="nota"><p><strong>Conjetura de los veladores.</strong> Los cuarenta se repiten demasiado: cuarenta años esperó Aldric, cuarenta velas contó Lumbre, cuarenta veces se escribió «No mejoró» y, según los papeles de la Casa, cuarenta años lloró la Plañidera. Puede que el Ocaso dure exactamente lo que duró la pira, y que la cuenta de velas y la cuenta de años sean la misma cuenta.</p></blockquote>
+<hr>
+<h2 id="3--las-casas-y-las-facciones">3 · Las casas y las facciones</h2>
+<p>Hondavela no tiene ejércitos ni gremios enfrentados: tiene oficios que se heredaban y un único trato que los ordenaba a todos. Estas son las casas que el juego nombra, lo que creían y lo que queda de ellas.</p>
+<table class="cols-4"><thead><tr><th>Casa u oficio</th><th>Qué guardaba</th><th>Señas</th><th>Lo que queda</th></tr></thead><tbody><tr><td><strong>La Casa del Párpado</strong></td><td>El sueño del reino: la Durmiente y el Lecho</td><td>Un ojo cerrado sobre campo de ceniza; espadas con el ojo grabado</td><td>La Durmiente, las Pesadillas, la Sangre del Párpado, las rejas que fundió Anselmo</td></tr><tr><td><strong>Los Veladores</strong></td><td>Las piras, para que la Durmiente no despertara</td><td>Vasija de barro al cuello, cuchillo de hueso al cinto, perros</td><td>Lumbre, el Atizador, el Sabueso, las Velas Encendidas, el propio Insomne</td></tr><tr><td><strong>La Guardia del Relevo</strong></td><td>La muralla y el turno de noche, «hasta que nos releven»</td><td>Escudo, pavés con la cruz de turno, el Sello del Relevo</td><td>Los Centinelas, los Ballesteros, los Guardias, los Aparecidos, Ser Aldric y el Capitán</td></tr><tr><td><strong>Los Cereros</strong></td><td>El Horno de Velas: fundir en vez de quemar</td><td>Cazo, moldes, mechas colgando del techo</td><td>El Cerero Mayor, las Velas Vivas, la estirpe cereña</td></tr><tr><td><strong>Las Plañideras</strong></td><td>El duelo público por cada vela</td><td>Velo, hoz, campana</td><td>La Plañidera Mayor, las Rezadoras</td></tr><tr><td><strong>Los Campaneros</strong></td><td>Las campanas que llamaban a dormir, a velar y a enterrar</td><td>Soga, badajo</td><td>El Campanero Ahorcado, Ilse</td></tr><tr><td><strong>Los Enterradores</strong></td><td>Lo que quedaba de las piras</td><td>Pala, lápidas sin nombre</td><td>Odo, los Roedores de Fosas, la estirpe de los Enterrados</td></tr><tr><td><strong>Los del agua</strong></td><td>La Cisterna, el agua para las piras</td><td>Garfio, remo</td><td>Los Ahogados, la Madre de las Charcas, los Charqueños</td></tr></tbody></table>
+<h3 id="la-casa-del-párpado">La Casa del Párpado</h3>
+<p>Orden y dinastía a la vez. Guardaba el sueño de todos y a cambio lo administraba: decidía quién era vela y quién no. Sus caballeros juraban velar el sueño de la Durmiente; el Caballero del Párpado <em>«juró velar el sueño de la Durmiente y ahora vela su ausencia»</em>. Sus herreros grababan un ojo cerrado en cada empuñadura porque creían que bastaba con cerrar los ojos. Sus plañideras lloraban por las velas para que el pueblo viera un duelo y no un sacrificio. Y en algún sitio de sus archivos está lo que no quiso registrar: con qué se encendió la primera hoguera.</p>
+<p>De la Casa salen la <strong>Durmiente</strong> (reina y sacerdotisa), la <strong>Sangre del Párpado</strong> (primos lejanos <em>«que duermen con un ojo y pelean con el otro»</em>) y el <strong>Caballero del Párpado</strong> entre los orígenes del Insomne. Las <strong>Pesadillas</strong> que rondan Hondavela son suyas también: <em>«lo que la Durmiente soñó por todos y no pudo retener»</em>.</p>
+<h3 id="los-veladores">Los Veladores</h3>
+<p>El oficio del protagonista. Atizaban las piras del Barrio donde ardían los que nacían sin sueño. Llevaban al cuello una vasija de barro con ceniza tibia, <em>«para el frío»</em>, y un cuchillo de hueso para cortar mechas. Tenían prohibido dormir junto a las piras; muchos no lo necesitaron nunca. Criaban <strong>perros de hueso</strong> para olfatear a quien fingía dormir, y de noche los soltaban por el Barrio. Enterraban a sus muertos con la vasija rota, para que no bebieran más.</p>
+<p>La <strong>Hermana Lumbre</strong> sigue atizando la hoguera del Barrio. El <strong>Atizador</strong> de la Pira del Velador no dejó apagarse nunca su pira y, cuando ya no quedó a quién quemar, siguió atizándose a sí mismo. El <strong>Sabueso de las Piras</strong> nunca dejó de buscar.</p>
+<h3 id="la-guardia-del-relevo">La Guardia del Relevo</h3>
+<p>Los soldados de la muralla y del turno de noche. Juraban con lacre <em>«velaré hasta que me releven»</em>; nadie juró qué pasaría si nadie venía. El Camposanto lleva su nombre porque allí vivía y se enterraba la guardia de noche, y las Criptas son sus nichos: los enterraban de pie, con el escudo puesto, por si hacía falta. Tiene dos capitanes, y a ninguno lo relevaron: <strong>Ser Aldric de la Guardia Perpetua</strong>, que se sentó en el túmulo a esperar; y el <strong>Capitán del Relevo</strong>, que bajó a las criptas a contar a sus hombres una última vez. El <strong>Alquimista del Relevo</strong> trabajaba para ellos: quería un fuego que no se apagara, <em>«para que ningún Velador tuviera que volver a velar»</em>.</p>
+<p>El Lancero de los orígenes <em>«guardó las murallas en el turno de noche, el que nunca terminó»</em>. Los <strong>Ballesteros</strong> siguen tensando la ballesta en el adarve <em>«por si alguien intenta salir del Camposanto. O entrar»</em>. Los <strong>Aparecidos</strong> son soldados que volvieron años tarde y encontraron la guardia vacía: ahora la montan ellos, contra cualquiera.</p>
+<h3 id="los-cereros">Los Cereros</h3>
+<p>En el Horno de Velas, bajo el Barrio, <em>«no se quemaba a nadie: allí se los fundía»</em>. Lo que entraba Insomne salía vela, y lo que salía vela alumbraba y no preguntaba. El <strong>Cerero Mayor</strong> fundió a tantos que la cera le creció por dentro. Los <strong>Cereños</strong>, fundidores del Horno, quedaron medio cera de tanto mirar el crisol: apenas arden. Las <strong>Velas Vivas</strong> son Insomnes a medio fundir con la mecha aún encendida en la cabeza.</p>
+<h3 id="las-plañideras">Las Plañideras</h3>
+<p>Lloraban en público por cada vela de la catedral, por orden de la Casa. La <strong>Plañidera Mayor</strong> es la que lloró por todas: <em>«Nadie lloró por ella»</em>. Su hoz es una <em>«siega de mango negro con que las plañideras cortaban mechones a los muertos para trenzar sus lutos»</em>. Las <strong>Rezadoras</strong> del Campanario, el Osario, el Desván y el Dormitorio rezan todavía, con brasas que arden despacio y buscan a quien las oye.</p>
+<h3 id="los-campaneros">Los Campaneros</h3>
+<p>Las torres de Hondavela no daban la hora: daban el sueño. Primero se doblaba por los muertos, luego se llamaba a los que velaban y al final se cantaba la nana. Cuando las campanas empezaron a sonar solas, el <strong>campanero mayor</strong> subió a callarlas y se quedó colgado de su soga, tocando con los pies. <strong>Ilse</strong> toca ahora la campana grande a todas horas, convencida de que mientras suene, <em>«no viene»</em>.</p>
+<h3 id="los-enterradores-y-los-del-agua">Los Enterradores y los del agua</h3>
+<p><strong>Odo</strong> enterraba lo que quedaba de las piras, convencido de que bajo tierra, a oscuras, por fin dormirían. A algunos los metía vivos; la estirpe de los <strong>Enterrados</strong> <em>«salió arañando, con hambre»</em>. En la Cisterna, los que se tumbaron en el agua para no oír las campanas no las oyen, ni nada más: son los <strong>Ahogados</strong>, y los <strong>Charqueños</strong> son los barqueros que aprendieron a no hundirse con ellos.</p>
+<hr>
+<h2 id="4--dramatis-personae-quién-es-quién-y-qué-los-une">4 · Dramatis personae: quién es quién y qué los une</h2>
+<p>Casi todos los que quedan en Hondavela conocieron al Insomne antes de que fuera Insomne, o conocieron su oficio. Este árbol recoge los lazos que el juego dice en voz alta; los que se descubren al final están en el recuadro de más abajo.</p>
+<figure class="diagrama">
+<svg id="diag-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" role="img" aria-label="Árbol de relaciones de los personajes de Hondavela">
+  <defs>
+    <style>#diag-3 .p {fill: #241a12; stroke: #a47a2c; stroke-width: 1.8;}
+#diag-3 .p.jefe {stroke: #c9a45a; stroke-width: 2.2;}
+#diag-3 .p.yo {fill: #3a1511; stroke: #e0a04a; stroke-width: 3;}
+#diag-3 .n {font-family: "Jacquard 12", "EB Garamond", serif; font-size: 21px; fill: #f0d9a8; text-anchor: middle;}
+#diag-3 .n.yo {font-size: 28px; fill: #e0a04a;}
+#diag-3 .r {font-family: "EB Garamond", serif; font-size: 12px; fill: #c9b891; text-anchor: middle; font-style: italic;}
+#diag-3 .lazo {stroke: #8a7558; stroke-width: 1.6; fill: none;}
+#diag-3 .lazo.fuerte {stroke: #c9a45a; stroke-width: 2.2;}
+#diag-3 .lz {font-family: "EB Garamond", serif; font-size: 12.5px; fill: #e9dcc2; text-anchor: middle;}
+#diag-3 .lz.dim {fill: #9a9087;}
+#diag-3 .grupo {font-family: "EB Garamond", serif; font-size: 12px; fill: #8a7558; letter-spacing: 2px; text-transform: uppercase;}
+#diag-3 .marco {fill: none; stroke: #2e2419; stroke-width: 1.5; stroke-dasharray: 4 4;}</style>
+  </defs>
+  <rect width="1000" height="720" fill="#15110e"/>
+  <rect class="marco" x="20" y="30" width="300" height="300" rx="10"/>
+  <text class="grupo" x="32" y="52">La pira y el Barrio</text>
+  <rect class="marco" x="680" y="30" width="300" height="300" rx="10"/>
+  <text class="grupo" x="692" y="52">La Guardia del Relevo</text>
+  <rect class="marco" x="20" y="400" width="300" height="300" rx="10"/>
+  <text class="grupo" x="32" y="422">La torre y el agua</text>
+  <rect class="marco" x="680" y="400" width="300" height="300" rx="10"/>
+  <text class="grupo" x="692" y="422">La Casa del Párpado</text>
+
+  <!-- Lazos hacia el Insomne -->
+  <path class="lazo fuerte" d="M500,330 L170,120"/>
+  <text class="lz" x="330" y="212">atizaron la misma pira</text>
+  <path class="lazo" d="M500,330 L170,300"/>
+  <text class="lz" x="330" y="328">lo olfateó junto a la pira</text>
+  <path class="lazo" d="M500,330 L250,230"/>
+  <text class="lz dim" x="405" y="268">le pide lápidas sin nombre</text>
+  <path class="lazo" d="M500,330 L830,120"/>
+  <text class="lz" x="690" y="212">espera un relevo</text>
+  <path class="lazo" d="M500,330 L830,300"/>
+  <text class="lz" x="690" y="330">«falta uno»</text>
+  <path class="lazo" d="M500,330 L750,230"/>
+  <text class="lz dim" x="600" y="268">cerró el laboratorio y dio la llave</text>
+  <path class="lazo fuerte" d="M500,330 L830,600"/>
+  <text class="lz" x="690" y="478">«hueles a humo, Velador»</text>
+  <path class="lazo" d="M500,330 L830,470"/>
+  <text class="lz" x="650" y="420">lloró por cada vela</text>
+  <path class="lazo" d="M500,330 L170,470"/>
+  <text class="lz" x="330" y="420">le pide el badajo</text>
+  <path class="lazo" d="M500,330 L170,600"/>
+  <text class="lz" x="330" y="478">«no hagas ruido, vela»</text>
+  <path class="lazo" d="M500,330 L500,170"/>
+  <text class="lz dim" x="500" y="246">custodia el primer fuego</text>
+  <path class="lazo" d="M500,330 L500,470"/>
+  <text class="lz dim" x="500" y="414">«otro como tú, de otro ciclo»</text>
+  <path class="lazo" d="M500,330 L380,580"/>
+  <text class="lz dim" x="410" y="470">vende lo de los muertos</text>
+  <path class="lazo" d="M500,330 L620,580"/>
+  <text class="lz dim" x="590" y="470">refunde con hierro de reja</text>
+
+  <!-- Lazos entre ellos -->
+  <path class="lazo" d="M170,150 L170,200"/>
+  <text class="lz dim" x="118" y="180">«ahora es él quien no sale»</text>
+  <path class="lazo" d="M170,500 L170,570"/>
+  <text class="lz dim" x="120" y="540">la torre y el agua</text>
+  <path class="lazo" d="M250,470 L250,120"/>
+  <path class="lazo" d="M830,150 L830,200"/>
+  <text class="lz dim" x="770" y="180">la misma guardia</text>
+  <path class="lazo" d="M830,500 L830,570"/>
+  <text class="lz dim" x="770" y="540">lloraba por su Casa</text>
+  <path class="lazo" d="M250,300 L250,230"/>
+  <path class="lazo" d="M620,610 L830,600"/>
+  <text class="lz dim" x="725" y="630">fundió las rejas de sus dormitorios</text>
+
+  <!-- El Insomne -->
+  <circle class="p yo" cx="500" cy="330" r="62"/>
+  <text class="n yo" x="500" y="326">El Insomne</text>
+  <text class="r" x="500" y="348">Velador · no duerme</text>
+
+  <!-- La pira y el Barrio -->
+  <rect class="p" x="100" y="90" width="140" height="60" rx="6"/>
+  <text class="n" x="170" y="116">Hermana Lumbre</text>
+  <text class="r" x="170" y="136">Veladora · aviva la hoguera</text>
+  <rect class="p" x="180" y="200" width="140" height="60" rx="6"/>
+  <text class="n" x="250" y="226">Odo</text>
+  <text class="r" x="250" y="246">el Sepulturero</text>
+  <rect class="p jefe" x="100" y="270" width="140" height="60" rx="6"/>
+  <text class="n" x="170" y="296">El Sabueso</text>
+  <text class="r" x="170" y="316">perro de la pira</text>
+  <rect class="p jefe" x="20" y="200" width="140" height="60" rx="6"/>
+  <text class="n" x="90" y="226">El Cerero</text>
+  <text class="r" x="90" y="246">fundía las velas</text>
+
+  <!-- La Guardia -->
+  <rect class="p jefe" x="760" y="90" width="150" height="60" rx="6"/>
+  <text class="n" x="835" y="116">Ser Aldric</text>
+  <text class="r" x="835" y="136">Rey del Túmulo</text>
+  <rect class="p jefe" x="760" y="270" width="150" height="60" rx="6"/>
+  <text class="n" x="835" y="296">El Capitán</text>
+  <text class="r" x="835" y="316">contaba a sus hombres</text>
+  <rect class="p jefe" x="680" y="200" width="150" height="60" rx="6"/>
+  <text class="n" x="755" y="226">El Alquimista</text>
+  <text class="r" x="755" y="246">del Relevo · laboratorio</text>
+
+  <!-- La Casa -->
+  <rect class="p jefe" x="760" y="440" width="150" height="60" rx="6"/>
+  <text class="n" x="835" y="466">La Plañidera</text>
+  <text class="r" x="835" y="486">lloró por cada vela</text>
+  <rect class="p jefe" x="760" y="570" width="150" height="60" rx="6"/>
+  <text class="n" x="835" y="596">Ysolde</text>
+  <text class="r" x="835" y="616">la Durmiente</text>
+
+  <!-- La torre y el agua -->
+  <rect class="p" x="100" y="440" width="140" height="60" rx="6"/>
+  <text class="n" x="170" y="466">Ilse</text>
+  <text class="r" x="170" y="486">la Campanera</text>
+  <rect class="p jefe" x="100" y="570" width="140" height="60" rx="6"/>
+  <text class="n" x="170" y="596">La Madre</text>
+  <text class="r" x="170" y="616">de las Charcas</text>
+  <rect class="p jefe" x="20" y="500" width="140" height="60" rx="6"/>
+  <text class="n" x="90" y="526">El Campanero</text>
+  <text class="r" x="90" y="546">Ahorcado · su soga</text>
+  <path class="lazo" d="M160,530 L170,500"/>
+
+  <!-- Centro arriba y abajo -->
+  <rect class="p jefe" x="420" y="110" width="160" height="60" rx="6"/>
+  <text class="n" x="500" y="136">El Alado de Hollín</text>
+  <text class="r" x="500" y="156">custodio del primer fuego</text>
+  <rect class="p" x="420" y="470" width="160" height="60" rx="6"/>
+  <text class="n" x="500" y="496">La Sombra</text>
+  <text class="r" x="500" y="516">del Insomne · otro ciclo</text>
+  <rect class="p" x="310" y="580" width="140" height="60" rx="6"/>
+  <text class="n" x="380" y="606">La Buhonera</text>
+  <text class="r" x="380" y="626">mercader</text>
+  <rect class="p" x="550" y="580" width="140" height="60" rx="6"/>
+  <text class="n" x="620" y="606">Anselmo</text>
+  <text class="r" x="620" y="626">el Fundidor</text>
+
+  <text class="grupo" x="500" y="700" text-anchor="middle">borde claro: jefe · trazo grueso: lazo que el juego subraya</text>
+</svg>
+<figcaption>Lazos que el juego dice en voz alta. Los que calla hasta el final van en el recuadro siguiente.</figcaption>
+</figure>
+<h3 id="quién-es-quién">Quién es quién</h3>
+<table class="cols-4"><thead><tr><th>Personaje</th><th>Casa</th><th>Dónde</th><th>Lo que lo une al Insomne</th></tr></thead><tbody><tr><td><strong>Hermana Lumbre</strong></td><td>Veladores</td><td>Barrio, junto a su hoguera</td><td>Atizaron la misma pira. Ella contaba las velas; él no.</td></tr><tr><td><strong>Odo el Sepulturero</strong></td><td>Enterradores</td><td>Camposanto, la fosa común</td><td>Le pide lápidas sin nombre. Enterraba lo que quedaba de las piras del Insomne.</td></tr><tr><td><strong>Ilse, la Campanera</strong></td><td>Campaneros</td><td>Cúspide del Campanario</td><td>Le pide el Badajo Perdido para que la campana grande vuelva a sonar.</td></tr><tr><td><strong>La Buhonera</strong></td><td>—</td><td>Camposanto</td><td>Vende lo que encuentra en los muertos. <em>«Tú haces lo mismo.»</em></td></tr><tr><td><strong>Anselmo el Fundidor</strong></td><td>Casa del Párpado (fundía sus rejas)</td><td>Osario, su fragua</td><td>Refunde armas con esquirlas de las rejas que guardaron el sueño.</td></tr><tr><td><strong>El Centinela del Turno</strong></td><td>Guardia del Relevo</td><td>Patio del Turno, en la Pira</td><td>Corrigió la guardia del novicio. <em>«Ser Aldric no perdona un turno abierto.»</em></td></tr><tr><td><strong>El Atizador</strong></td><td>Veladores</td><td>Atrio de la Pira</td><td>Atizó la pira en la que el Insomne se apagó.</td></tr><tr><td><strong>El Precipitado de la Retorta</strong></td><td>—</td><td>Laboratorio del Alquimista, Camposanto</td><td>Lo que sale del laboratorio arrastrándose <em>«ya no es él»</em>.</td></tr><tr><td><strong>Ser Aldric</strong></td><td>Guardia del Relevo</td><td>Cripta del Túmulo, Osario</td><td>Espera un relevo que nunca llegó. <em>«¿Vienes a relevarme?»</em></td></tr><tr><td><strong>El Campanero Ahorcado</strong></td><td>Campaneros</td><td>Campanario</td><td><em>«Me até a la viga para no tener que tocar el tuyo.»</em></td></tr><tr><td><strong>El Sabueso de las Piras</strong></td><td>Veladores</td><td>Patio de la Perrera, Barrio</td><td>Olfateaba a los que fingían dormir junto a la pira. <em>«...el que finge dormir... huele a ti, Velador.»</em></td></tr><tr><td><strong>Odo el Enterrado</strong></td><td>Enterradores</td><td>Fosa de Odo, Barrio</td><td><em>«El que cavó su propio lecho.»</em></td></tr><tr><td><strong>La Plañidera Mayor</strong></td><td>Plañideras</td><td>Capilla Mayor, Osario</td><td><em>«Lloré por cada vela que encendiste, Velador.»</em></td></tr><tr><td><strong>La Madre de las Charcas</strong></td><td>Los del agua</td><td>Cisterna</td><td><em>«No hagas ruido, vela.»</em> Sus hijos duermen bajo el agua.</td></tr><tr><td><strong>El Cerero Mayor</strong></td><td>Cereros</td><td>Crisol del Horno</td><td><em>«Otra vela. Buen sebo, buen pabilo.»</em> Una vez le dio una vela pequeña, <em>«para tu casa»</em>.</td></tr><tr><td><strong>El Capitán del Relevo</strong></td><td>Guardia del Relevo</td><td>Sala de Armas, Criptas</td><td>Cuenta a sus hombres y le falta uno. <em>«Ocupa tu nicho, soldado.»</em></td></tr><tr><td><strong>El Alado de Hollín</strong></td><td>La primera noche</td><td>Capilla del Alado, Desván</td><td>Llevó la antorcha al Lecho antes de que hubiera Veladores. <em>«Arde, Velador... como ardieron todos.»</em></td></tr><tr><td><strong>Ysolde, la Durmiente</strong></td><td>Casa del Párpado</td><td>El Lecho, Dormitorio Mayor</td><td><em>«Hueles a humo, Velador. Siempre oliste a humo.»</em></td></tr><tr><td><strong>La Sombra del Insomne</strong></td><td>—</td><td>Invade dos veces</td><td>Otro como él, de otro ciclo, que viene a por su Ceniza.</td></tr></tbody></table>
+<hr>
+<h2 id="5--los-objetos-que-cuentan-la-historia">5 · Los objetos que cuentan la historia</h2>
+<p>En Hondavela la historia no la cuentan los libros, la cuentan las cosas. Cada objeto lleva encima lo que fue de quien lo tuvo. Estos son los que más dicen, agrupados por lo que cuentan; las fichas completas, con sus números, están en el <a href="02_arsenal.html">Libro II</a>.</p>
+<h3 id="lo-que-cuentan-de-las-piras">Lo que cuentan de las piras</h3>
+<table class="cols-3"><thead><tr><th>Objeto</th><th>Dónde</th><th>Lo que cuenta</th></tr></thead><tbody><tr><td><strong>Vasija de Ceniza</strong></td><td>Desde el principio</td><td>La vasija de barro que los Veladores llevaban al cuello «para el frío». Sabe a nana olvidada.</td></tr><tr><td><strong>Cuchillo de hueso</strong></td><td>Buhonera, cadáveres</td><td>Los veladores los llevaban al cinto para cortar mechas, no gargantas; la necesidad enseña otros usos.</td></tr><tr><td><strong>Cera de Vigilia</strong></td><td>Barrio, Osario, Campanario</td><td>Gotas endurecidas al pie de las piras, tibias aún. Si se aprietan contra el oído, alguien reza para no despertar.</td></tr><tr><td><strong>Actas de la Pira</strong></td><td>Un cadáver del Osario</td><td>La cuenta de cada Insomne quemado en el Barrio: nombre, edad, hora. Al margen, cuarenta veces: «No mejoró».</td></tr><tr><td><strong>Collar del Sabueso</strong></td><td>El Sabueso</td><td>Cuero tostado con una campanilla sin badajo: el perro iba atado a la pira para olfatear a quien fingía dormir.</td></tr><tr><td><strong>Fuelle de Lumbre</strong> y <strong>Fuego azul</strong></td><td>La Hermana Lumbre, según lo que se haga</td><td>Un fuelle de cuero demasiado fino, con costuras como de párpado, que avivó cuarenta piras y una hoguera.</td></tr><tr><td><strong>Esquirla de vasija</strong> y <strong>Hueso de velador</strong></td><td>Jefes, élites, la Buhonera</td><td>Los Veladores enterraban a los suyos con la vasija rota, para que no bebieran más. Un hueso tan seco que arde sin llama.</td></tr><tr><td><strong>Brasa de Velador</strong></td><td>Un cadáver del Camposanto</td><td>Ascua de la primera pira en un relicario de hierro. Lleva un nombre grabado.</td></tr></tbody></table>
+<h3 id="lo-que-cuentan-de-la-guardia">Lo que cuentan de la Guardia</h3>
+<table class="cols-3"><thead><tr><th>Objeto</th><th>Dónde</th><th>Lo que cuenta</th></tr></thead><tbody><tr><td><strong>Sello del Relevo</strong></td><td>Altar de la Capilla del Juramento, Criptas</td><td>Lacre con el que se firmaba «velaré hasta que me releven». Nadie juró qué pasaría si nadie venía.</td></tr><tr><td><strong>Lágrima de la Guardia Perpetua</strong></td><td>Ser Aldric</td><td>Una gota de cera que Aldric recogió de la mejilla del último centinela que se durmió en su turno, antes de colgarlo.</td></tr><tr><td><strong>Insignia del Capitán</strong></td><td>El Capitán</td><td>El Capitán bajó a las criptas a contar a sus hombres una última vez y se quedó contándolos.</td></tr><tr><td><strong>Llave del Laboratorio</strong></td><td>El oeste del adarve</td><td>Hierro negro con la cabeza en forma de retorta. El Alquimista la confió a la guardia: que nadie bajara mientras destilaba.</td></tr><tr><td><strong>Cuerno de la Retorta</strong></td><td>El Precipitado</td><td>Echó en la retorta la ceniza de los muertos, y luego la suya.</td></tr><tr><td><strong>Esquirla de reja</strong></td><td>Jefes, cadáveres de cada zona, la Buhonera (tras la Plañidera)</td><td>Hierro de las rejas que cerraban los dormitorios. Lo que guardó tanto tiempo un sueño todavía sabe cortar.</td></tr></tbody></table>
+<h3 id="lo-que-cuentan-de-la-casa-de-la-torre-y-del-agua">Lo que cuentan de la Casa, de la torre y del agua</h3>
+<table class="cols-3"><thead><tr><th>Objeto</th><th>Dónde</th><th>Lo que cuenta</th></tr></thead><tbody><tr><td><strong>Badajo Perdido</strong></td><td>Un cadáver del Osario</td><td>El corazón de hierro de la campana grande. Alguien lo bajó a los muertos para que la torre callara.</td></tr><tr><td><strong>Eco de campana</strong></td><td>Tras el muro que vibra, Campanario</td><td>Una campanilla del tamaño de una uña que suena después, cuando ya nadie la mueve. Quien la escondió quería oír algo que no fuera su respiración.</td></tr><tr><td><strong>Campanilla de Ilse</strong> y <strong>Lazo de Ilse</strong></td><td>Ilse</td><td>Lo que una niña lleva para no dormirse, y lo que ata a la cuerda para encontrarla a oscuras.</td></tr><tr><td><strong>Soga del Campanero</strong></td><td>El Campanero</td><td>Trenzada con cabello. La ató a la viga y a su cuello la misma noche.</td></tr><tr><td><strong>Vestigio de la Plañidera</strong></td><td>La Plañidera</td><td>Un párpado de cera del tamaño de una puerta, con las puntadas de hilo de campana arrancadas.</td></tr><tr><td><strong>Perla negra</strong></td><td>La Madre de las Charcas</td><td>Se formó en su garganta con todo lo que no llegó a decir antes de hundirse.</td></tr><tr><td><strong>Pluma consumida</strong></td><td>El Alado</td><td>Pluma de hollín del custodio del primer fuego. Deja los dedos negros y tibios.</td></tr><tr><td><strong>Nana embotellada</strong></td><td>La Buhonera (tras el Campanero) y un cadáver del Horno</td><td>Una canción de cuna con lacre del Párpado. Los Desvelados que la oyen se detienen, como si recordaran algo.</td></tr><tr><td><strong>Mecha del Cerero</strong> y <strong>Vela de Edda</strong></td><td>El Cerero y su crisol</td><td>El pabilo que fue lo único que le quedó de cabeza, y una vela pequeña, con una cara apenas marcada, guardada aparte en un trapo limpio.</td></tr><tr><td><strong>Lápida sin Nombre</strong></td><td>Camposanto, Barrio, Osario</td><td>No se graba el nombre de una vela. Odo las colecciona; dice que algún día recordará qué escribir.</td></tr><tr><td><strong>Ceniza propia</strong></td><td>La Sombra del Dormitorio</td><td>Al caer se deshizo en una ceniza que reconoces: es tuya.</td></tr></tbody></table>
+<hr>
+<h2 id="6--los-tres-caminos-del-lecho">6 · Los tres caminos del Lecho</h2>
+<p>Tras la Durmiente solo queda el Lecho, tibio, y una decisión. Siempre hay dos caminos, y a veces un tercero. Lo que significa cada uno se cuenta en el <a href="01_lore.html#vi-el-lecho-los-tres-finales">Libro I</a>; aquí solo se dibuja la encrucijada.</p>
+<figure class="diagrama">
+<svg id="diag-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" role="img" aria-label="Los tres caminos del Lecho">
+  <defs>
+    <marker id="flecha2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c9a45a"/>
+    </marker>
+    <style>#diag-4 .c {fill: #241a12; stroke: #a47a2c; stroke-width: 2;}
+#diag-4 .c.lecho {fill: #3a1511; stroke: #e0a04a; stroke-width: 3;}
+#diag-4 .c.oculto {stroke-dasharray: 6 5; stroke: #9a9087;}
+#diag-4 .ct {font-family: "Jacquard 12", "EB Garamond", serif; font-size: 26px; fill: #f0d9a8; text-anchor: middle;}
+#diag-4 .cs {font-family: "EB Garamond", serif; font-size: 13px; fill: #c9b891; text-anchor: middle; font-style: italic;}
+#diag-4 .cf {stroke: #c9a45a; stroke-width: 2.5; fill: none;}
+#diag-4 .cf.oculto {stroke-dasharray: 6 5; stroke: #9a9087;}
+#diag-4 .ce {font-family: "EB Garamond", serif; font-size: 13px; fill: #e9dcc2; text-anchor: middle;}</style>
+  </defs>
+  <rect width="1000" height="330" fill="#15110e"/>
+  <rect class="c lecho" x="380" y="30" width="240" height="70" rx="8"/>
+  <text class="ct" x="500" y="62">El Lecho</text>
+  <text class="cs" x="500" y="84">«Alguien tiene que hacerlo, o nadie»</text>
+  <path class="cf" d="M440,100 L190,200" marker-end="url(#flecha2)"/>
+  <text class="ce" x="280" y="138">tenderte</text>
+  <path class="cf" d="M560,100 L810,200" marker-end="url(#flecha2)"/>
+  <text class="ce" x="720" y="138">romperlo</text>
+  <path class="cf oculto" d="M500,100 L500,200" marker-end="url(#flecha2)"/>
+  <text class="ce" x="500" y="150">(para quien recuerda</text>
+  <text class="ce" x="500" y="168">y lleva lo que hay que llevar)</text>
+  <rect class="c" x="60" y="200" width="260" height="90" rx="8"/>
+  <text class="ct" x="190" y="234">Relevo</text>
+  <text class="cs" x="190" y="256">Sueñas el sueño de todo un reino.</text>
+  <text class="cs" x="190" y="274">El cielo vuelve a moverse.</text>
+  <rect class="c oculto" x="370" y="200" width="260" height="90" rx="8"/>
+  <text class="ct" x="500" y="234">Vela</text>
+  <text class="cs" x="500" y="256">Un sueño corto, del tamaño</text>
+  <text class="cs" x="500" y="274">de una llama. Alguien tendrá que velar.</text>
+  <rect class="c" x="680" y="200" width="260" height="90" rx="8"/>
+  <text class="ct" x="810" y="234">Desvelo</text>
+  <text class="cs" x="810" y="256">Nadie volverá a dormir. Nadie</text>
+  <text class="cs" x="810" y="274">volverá a arder por otros.</text>
+  <text class="ce" x="500" y="316" fill="#9a9087">Termine como termine, después alguien se despierta en el Camposanto. Otra vez.</text>
+</svg>
+<figcaption>La encrucijada del Lecho. El camino del medio no siempre está.</figcaption>
+</figure>
+<hr>
+<div class="espacio"></div>
+<blockquote class="epigrafe"><p><em>«Velaré hasta que me releven.»</em></p>
+<p>— Juramento de la Guardia del Relevo</p></blockquote>
+</section>
+<div class="navpie"><a href="01_lore.html">← Libro I · Lore y mundo</a><span></span><a href="02_arsenal.html">Libro II · Arsenal y objetos →</a></div>
+</main>
+<script src="sitio.js"></script>
+</body>
+</html>

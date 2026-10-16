@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Libro IV · Guía del Insomne — Códice del Velador</title>
+<meta name="description" content="Códice del Velador: el lore, el arsenal, el bestiario y la guía de Vigilia de Ceniza, soulslike pixel art para iPhone, iPad y Android.">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="sitio.css">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="barra">
+<button class="menu-btn" id="menu-btn" aria-label="Menú">☰ Índice</button>
+<a class="titulo" href="index.html">Códice del Velador</a>
+<span class="sub">Vigilia de Ceniza · edición pública</span>
+<div class="buscar"><input id="buscar" type="search" placeholder="Buscar en el Códice…" autocomplete="off" aria-label="Buscar"><div class="resultados" id="resultados"></div></div>
+</header>
+<div class="velo" id="velo"></div>
+<nav class="lateral" aria-label="Capítulos">
+<h2>Libros</h2><ul>
+<li><a href="index.html" data-cap="00">Portada e índice</a></li>
+<li><a href="01_lore.html" data-cap="01">Libro I · Lore y mundo</a></li>
+<li><a href="01b_cronica.html" data-cap="01b">Libro I·b · Crónica y atlas de Hondavela</a></li>
+<li><a href="02_arsenal.html" data-cap="02">Libro II · Arsenal y objetos</a></li>
+<li><a href="03_personajes_y_bestiario.html" data-cap="03">Libro III · Personajes, bestiario y jefes</a></li>
+<li><a href="04_guia.html" data-cap="04" class="actual">Libro IV · Guía del Insomne</a></li>
+</ul>
+<h2>El juego</h2><ul><li><a href="privacy.html">Política de privacidad</a></li><li><a href="support.html">Soporte</a></li></ul><h2>En esta página</h2><ul class="secciones"><li><a class="n2" href="#1-los-controles">1. Los controles</a></li><li><a class="n3" href="#en-la-pantalla-teléfono-y-tablet">En la pantalla (teléfono y tablet)</a></li><li><a class="n3" href="#con-mando">Con mando</a></li><li><a class="n3" href="#con-teclado-y-ratón">Con teclado y ratón</a></li><li><a class="n2" href="#2-el-combate">2. El combate</a></li><li><a class="n3" href="#el-aguante-lo-es-todo">El aguante lo es todo</a></li><li><a class="n3" href="#rodar">Rodar</a></li><li><a class="n3" href="#bloquear">Bloquear</a></li><li><a class="n3" href="#parry-y-contraataque">Parry y contraataque</a></li><li><a class="n3" href="#la-puñalada-por-la-espalda">La puñalada por la espalda</a></li><li><a class="n3" href="#hiperarmadura">Hiperarmadura</a></li><li><a class="n3" href="#leer-al-enemigo">Leer al enemigo</a></li><li><a class="n2" href="#3-las-hogueras">3. Las hogueras</a></li><li><a class="n2" href="#4-morir">4. Morir</a></li><li><a class="n2" href="#5-subir-de-nivel">5. Subir de nivel</a></li><li><a class="n2" href="#6-la-vasija-de-ceniza">6. La Vasija de Ceniza</a></li><li><a class="n3" href="#avivado-y-avivar">Avivado y avivar</a></li><li><a class="n2" href="#7-atajos-y-caminos">7. Atajos y caminos</a></li><li><a class="n3" href="#trampas">Trampas</a></li><li><a class="n2" href="#8-puzles">8. Puzles</a></li><li><a class="n3" href="#las-siete-velas-osario">Las Siete Velas (Osario)</a></li><li><a class="n3" href="#las-tres-campanas-campanario">Las Tres Campanas (Campanario)</a></li><li><a class="n3" href="#el-contrapeso-de-los-ataúdes-camposanto-terraza-de-los-ataúdes">El Contrapeso de los Ataúdes (Camposanto, Terraza de los Ataúdes)</a></li><li><a class="n3" href="#el-muro-que-vibra-campanario">El muro que vibra (Campanario)</a></li><li><a class="n3" href="#la-puerta-de-la-retorta-camposanto">La puerta de la retorta (Camposanto)</a></li><li><a class="n2" href="#9-el-diario-de-velador">9. El Diario de Velador</a></li><li><a class="n2" href="#10-nueva-partida-ciclos">10. Nueva Partida+ (ciclos)</a></li><li><a class="n2" href="#11-asistencia-y-accesibilidad">11. Asistencia y accesibilidad</a></li><li><a class="n3" href="#asistencia">Asistencia</a></li><li><a class="n3" href="#accesibilidad">Accesibilidad</a></li><li><a class="n2" href="#12-logros">12. Logros</a></li><li><a class="n2" href="#13-diez-consejos-para-la-primera-noche">13. Diez consejos para la primera noche</a></li><li><a class="n2" href="#14-atlas-los-mapas-de-cada-zona">14. Atlas: los mapas de cada zona</a></li><li><a class="n3" href="#la-pira-del-velador-tutorial">La Pira del Velador (tutorial)</a></li><li><a class="n3" href="#camposanto-del-relevo">Camposanto del Relevo</a></li><li><a class="n3" href="#osario">Osario</a></li><li><a class="n3" href="#cisterna-de-los-ahogados">Cisterna de los Ahogados</a></li><li><a class="n3" href="#criptas-de-la-guardia">Criptas de la Guardia</a></li><li><a class="n3" href="#campanario-hendido">Campanario Hendido</a></li><li><a class="n3" href="#desván-tejido">Desván Tejido</a></li><li><a class="n3" href="#barrio-de-los-veladores">Barrio de los Veladores</a></li><li><a class="n3" href="#horno-de-velas">Horno de Velas</a></li><li><a class="n3" href="#dormitorio-mayor">Dormitorio Mayor</a></li></ul>
+<p class="pie-menu">Edición pública: sin desenlaces ni finales. <em>Vigilia de Ceniza</em> © 2026 NCS Gaming.</p>
+</nav>
+<main class="contenido">
+<section class="capitulo">
+<h1 id="libro-iv--guía-del-insomne">Libro IV · Guía del Insomne</h1>
+<blockquote class="epigrafe"><p>«La Ceniza ajena te recompone. Lo tuyo quedó donde caíste.» — La Pira del Velador</p></blockquote>
+<p>Este capítulo está escrito para dos lectores. Si es tu primera noche en Hondavela, léelo de principio a fin. Si ya has cerrado el Lecho alguna vez, busca los recuadros <strong>Para veteranos</strong>.</p>
+<hr>
+<h2 id="1-los-controles">1. Los controles</h2>
+<h3 id="en-la-pantalla-teléfono-y-tablet">En la pantalla (teléfono y tablet)</h3>
+<table class="cols-2"><thead><tr><th>Botón</th><th>Qué hace</th></tr></thead><tbody><tr><td><strong>Joystick</strong> (izquierda)</td><td>Moverse. También apunta: tu golpe busca al enemigo más cercano hacia donde inclinas.</td></tr><tr><td><strong>ATQ</strong></td><td>Golpe ligero. Púlsalo seguido para encadenar el combo.</td></tr><tr><td><strong>FUERTE</strong></td><td>Golpe fuerte: más lento y más caro, rompe escudos y postura.</td></tr><tr><td><strong>RODAR</strong></td><td>Tócalo para <strong>rodar</strong>; <strong>mantenlo</strong> para <strong>correr</strong>.</td></tr><tr><td><strong>ESCUDO</strong></td><td>Mantén para cubrirte. Sin escudo pone <strong>GUARDIA</strong>: te cubres con el arma a dos manos.</td></tr><tr><td><strong>PARRY</strong></td><td>Desvío: el instante justo antes del golpe enemigo.</td></tr><tr><td><strong>VASIJA</strong></td><td>Beber de la Vasija de Ceniza (curarse).</td></tr><tr><td><strong>USAR</strong></td><td>Puertas, palancas, cadáveres, hogueras y puzles. Junto a un NPC pone <strong>HABLAR</strong>; agarrando un ataúd, <strong>SOLTAR</strong>.</td></tr><tr><td><strong>OBJETO</strong></td><td>Usa el consumible elegido en el menú (cuchillo, bomba, incienso…). Una <strong>retícula ámbar</strong> marca a quién iría.</td></tr><tr><td><strong>MENÚ</strong></td><td>Pausa, personaje, equipo, mapa, diario y ajustes.</td></tr></tbody></table>
+<p>Puedes <strong>deslizar el pulgar</strong> de un botón a otro sin levantarlo. Los nombres de los botones aparecen al empezar y al pulsarlos, y luego se desvanecen: los iconos bastan. En <strong>Ajustes</strong> puedes agrandarlos y hacerlos más transparentes.</p>
+<h3 id="con-mando">Con mando</h3>
+<table class="cols-2"><thead><tr><th>Mando</th><th>Acción</th></tr></thead><tbody><tr><td>Stick izquierdo</td><td>Moverse</td></tr><tr><td><strong>R1</strong> / <strong>R2</strong></td><td>Ligero / Fuerte</td></tr><tr><td><strong>L1</strong> / <strong>L2</strong></td><td>Escudo / Parry</td></tr><tr><td><strong>B</strong> (círculo)</td><td>Rodar (mantener: correr)</td></tr><tr><td><strong>X</strong> (cuadrado)</td><td>Vasija</td></tr><tr><td><strong>A</strong> (cruz)</td><td>Usar / Hablar</td></tr><tr><td><strong>Y</strong> (triángulo)</td><td>Objeto</td></tr><tr><td><strong>Start</strong> / <strong>Back</strong></td><td>Menú / Hablar</td></tr></tbody></table>
+<h3 id="con-teclado-y-ratón">Con teclado y ratón</h3>
+<table class="cols-2"><thead><tr><th>Tecla</th><th>Acción</th></tr></thead><tbody><tr><td><strong>W A S D</strong> o flechas</td><td>Moverse</td></tr><tr><td><strong>J</strong> / <strong>U</strong></td><td>Ligero / Fuerte</td></tr><tr><td><strong>Espacio</strong> o <strong>K</strong></td><td>Rodar (mantener: correr)</td></tr><tr><td><strong>I</strong> / <strong>O</strong></td><td>Escudo / Parry</td></tr><tr><td><strong>R</strong></td><td>Vasija</td></tr><tr><td><strong>E</strong> o <strong>Intro</strong></td><td>Usar</td></tr><tr><td><strong>Q</strong> o <strong>F</strong></td><td>Objeto</td></tr><tr><td><strong>T</strong></td><td>Hablar</td></tr><tr><td><strong>Esc</strong> o <strong>Tab</strong></td><td>Menú</td></tr><tr><td><strong>Clic izquierdo</strong> (con Mayús: fuerte)</td><td>Atacar hacia el puntero</td></tr><tr><td><strong>Clic derecho</strong> (con Mayús: parry)</td><td>Cubrirse</td></tr></tbody></table>
+<p>Todas las teclas se cambian en <strong>Ajustes → Teclas</strong>.</p>
+<hr>
+<h2 id="2-el-combate">2. El combate</h2>
+<h3 id="el-aguante-lo-es-todo">El aguante lo es todo</h3>
+<p>La barra verde es el <strong>aguante</strong>. Cada golpe, cada rodada, cada bloqueo y cada paso corriendo lo gastan. Se recupera solo, pero <strong>tarda un poco en empezar</strong> después de cada acción.</p>
+<ul><li>Con poco aguante todavía puedes empezar <strong>una acción más</strong>, y quedas <strong>en negativo</strong>. Mientras estés en deuda no puedes rodar, atacar ni desviar: toca esperar a que la barra vuelva.</li><li>Sin aguante, un golpe bloqueado te <strong>rompe la guardia</strong> y te deja abierto.</li><li><strong>La regla de oro:</strong> no gastes la última rodada en atacar.</li></ul>
+<h3 id="rodar">Rodar</h3>
+<p>Rodar te hace <strong>intocable</strong> durante casi toda la voltereta. No se trata de huir sino de <strong>atravesar</strong> el golpe: rueda <strong>hacia</strong> el enemigo o hacia un lado, casi nunca hacia atrás.</p>
+<p>El peso de tu equipo decide cómo ruedas:</p>
+<table class="cols-2"><thead><tr><th>Carga</th><th>Rodada</th></tr></thead><tbody><tr><td>Hasta el 25 %</td><td><strong>Ligera</strong>: más rápida, más intocable y más barata</td></tr><tr><td>Hasta el 50 %</td><td><strong>Media</strong></td></tr><tr><td>Hasta el 100 %</td><td><strong>Pesada</strong>: lenta, corta y cara</td></tr><tr><td>Por encima</td><td><strong>Sobrecarga</strong>: no puedes rodar</td></tr></tbody></table>
+<p>La <strong>Resistencia</strong> aumenta la carga que soportas.</p>
+<p>Pulsar el golpe <strong>justo después de rodar</strong> suelta un ataque especial de tu arma. Lo mismo pasa <strong>corriendo</strong>.</p>
+<h3 id="bloquear">Bloquear</h3>
+<p>Con el escudo en alto, los golpes normales te quitan sobre todo aguante en lugar de vida. Cuánto paras depende del escudo. Moverte cubierto es lento. Los golpes <strong>imparables</strong> (destello <strong>violeta</strong>) atraviesan cualquier escudo.</p>
+<p>Sin escudo te cubres con el arma a dos manos (<strong>GUARDIA</strong>): paras menos y te cansas más. Las dagas, además, desvían.</p>
+<h3 id="parry-y-contraataque">Parry y contraataque</h3>
+<p>El <strong>parry</strong> desvía el golpe si llega en el instante justo, un poco antes del impacto. Si aciertas, el enemigo se tambalea con una <strong>estrella sobre la cabeza</strong>: pulsa <strong>ATQ</strong> para el <strong>contraataque</strong>, un golpe crítico que hace muchísimo daño.</p>
+<ul><li>Solo se pueden desviar los golpes que avisan en <strong>rojo</strong>.</li><li>Los <strong>virotes</strong> de los Ballesteros y las <strong>brasas</strong> de las Rezadoras también se desvían. La brasa, desviada, vuelve a quien la lanzó.</li><li>Fallar un parry te deja con la guardia baja. Practícalo con el Centinela del Turno, en el Tutorial.</li></ul>
+<h3 id="la-puñalada-por-la-espalda">La puñalada por la espalda</h3>
+<p>Un enemigo <strong>desprevenido y de espaldas</strong> (que no te ha visto, o que duerme de cara al muro) se puede <strong>apuñalar</strong>: acércate por detrás y ataca. Es un crítico igual que el contraataque. Logro <em>Por la espalda</em> a los 15.</p>
+<h3 id="hiperarmadura">Hiperarmadura</h3>
+<p>Los <strong>golpes fuertes</strong> de las armas pesadas (mandobles, hachas y garrotes) no se interrumpen aunque te golpeen a mitad del gesto. Puedes cambiar un golpe recibido por uno dado. Úsalo con cabeza.</p>
+<h3 id="leer-al-enemigo">Leer al enemigo</h3>
+<table class="cols-2"><thead><tr><th>Aviso</th><th>Significa</th></tr></thead><tbody><tr><td>Ojos que se encienden + cuña en el suelo</td><td>Golpe en camino, hacia donde apunta la cuña</td></tr><tr><td>Doble parpadeo <strong>ámbar</strong></td><td>Golpe <strong>retrasado</strong>: espera antes de rodar</td></tr><tr><td>Destello <strong>violeta</strong></td><td>Imparable: solo rodar</td></tr><tr><td>Anillo <strong>dorado</strong></td><td>Onda: sal o rueda a través del frente</td></tr><tr><td>Sombra en el suelo</td><td>Algo va a caer ahí (un salto, una campana)</td></tr><tr><td>Círculo de aviso</td><td>Un giro: el alcance es el círculo</td></tr><tr><td>Rugido</td><td>Ha entrado en <strong>furia</strong>: más rápido a partir de ahora</td></tr></tbody></table>
+<blockquote class="nota"><p><strong>Para veteranos.</strong> Los enemigos <strong>recuerdan</strong> tus costumbres y se las enseñan unos a otros. Si siempre ruedas al mismo tiempo, retrasarán el golpe; si siempre te cubres, encadenarán; si bebes cerca de ellos, castigarán el trago; si te quedas plantado después de atacar, te castigarán la recuperación. Descansar les hace <strong>olvidar</strong> una parte. Lo que no olvidan es tu partida: la memoria es de cada ranura.</p></blockquote>
+<hr>
+<h2 id="3-las-hogueras">3. Las hogueras</h2>
+<p><strong>Encender no es descansar.</strong> La primera vez que pulsas <strong>USAR</strong> en una hoguera, la <strong>enciendes</strong>: desde ese momento es tu <strong>punto de regreso</strong> al morir y un destino para <strong>Viajar</strong>. Encenderla no te cura ni levanta a los muertos.</p>
+<p>Después, cada USAR es <strong>descansar</strong>:</p>
+<ul><li>Recuperas toda la vida y todas las cargas de la <strong>Vasija</strong>.</li><li><strong>Todos los enemigos comunes se levantan</strong> otra vez. Los jefes y los únicos, no.</li><li>Se abre el <strong>menú de la hoguera</strong>: subir de nivel, reforzar la Vasija, avivar, viajar y recuperar recuerdos del Diario.</li></ul>
+<p>Una hoguera sin encender se ve como un <strong>rescoldo</strong>: un puñado de brasas sin llama.</p>
+<hr>
+<h2 id="4-morir">4. Morir</h2>
+<p>Al morir despiertas en la última hoguera encendida y <strong>toda tu Ceniza se queda en el suelo</strong>, donde caíste, como una <strong>mancha</strong> que brilla.</p>
+<ul><li>Vuelve a por ella y tócala para recuperarla entera.</li><li><strong>Si mueres antes de llegar, se pierde para siempre.</strong> La nueva mancha sustituye a la vieja.</li><li>Una <strong>carta de muerte</strong> te dice quién te mató y te da un consejo.</li><li>Cada <strong>tres muertes seguidas sin descansar</strong>, uno de tus recuerdos del <strong>Diario de Velador</strong> se <strong>emborrona</strong>. En la hoguera puedes recuperarlo con Ceniza (sección 9).</li></ul>
+<blockquote class="nota"><p><strong>Consejo.</strong> Antes de cruzar una niebla de jefe con mucha Ceniza encima, vuelve a la hoguera y gástala. La Ceniza que se pierde es la que no se ha gastado.</p></blockquote>
+<hr>
+<h2 id="5-subir-de-nivel">5. Subir de nivel</h2>
+<p>La <strong>Ceniza</strong> es moneda y experiencia a la vez. En cualquier hoguera, desde la primera, puedes subir de nivel. El HUD te avisa con <strong>▲ Nivel</strong> cuando te alcanza para uno.</p>
+<table class="cols-2"><thead><tr><th>Atributo</th><th>Qué mejora</th></tr></thead><tbody><tr><td><strong>Vigor</strong></td><td>Vida</td></tr><tr><td><strong>Resistencia</strong></td><td>Aguante y carga de equipo</td></tr><tr><td><strong>Fuerza</strong></td><td>Daño de hachas, mandobles y garrotes</td></tr><tr><td><strong>Destreza</strong></td><td>Daño de dagas, lanzas y espadas (y del Báculo de Vela)</td></tr></tbody></table>
+<p>En el menú, reserva los puntos con <strong>+</strong> y <strong>−</strong> y pulsa <strong>Confirmar</strong>. Nada se gasta hasta entonces. Cada nivel cuesta algo más que el anterior.</p>
+<ul><li>Cada arma pide un mínimo de <strong>Fuerza</strong> o <strong>Destreza</strong>. Sin él, <strong>pega la mitad</strong>.</li><li>Pasados los niveles <strong>20</strong> y <strong>30</strong> de un atributo, cada punto rinde menos. Repartir compensa.</li></ul>
+<blockquote class="nota"><p><strong>Para veteranos.</strong> El Camposanto da menos Ceniza a propósito (un 60 %), para que no salgas de él demasiado fuerte. Si te atascas en un jefe, ve primero a otra zona.</p></blockquote>
+<hr>
+<h2 id="6-la-vasija-de-ceniza">6. La Vasija de Ceniza</h2>
+<p>Tu curación. Empiezas con <strong>3 cargas</strong>, que se llenan al descansar. Beber tarda un segundo largo y te deja quieto: <strong>nunca bebas al alcance de un golpe</strong>. Los jefes lo saben: si empiezas un trago cerca de ellos, no esperan y te lanzan en el acto su golpe más rápido; aléjate antes de beber.</p>
+<p>Se mejora en la hoguera de dos maneras:</p>
+<ul><li><strong>Más cargas</strong> (hasta 10) con <strong>Esquirlas de vasija</strong>: cada jefe deja una y la Buhonera vende dos. Usa <strong>Reforzar Vasija</strong>.</li><li><strong>Más curación</strong> por trago (hasta +5, un 5 % más cada nivel) con <strong>Huesos de velador</strong>: los sueltan los élites y la Buhonera vende tres. Usa <strong>Quemar hueso</strong>.</li></ul>
+<p>Además, la <em>Lágrima de la Guardia Perpetua</em> del Rey del Túmulo da una carga más.</p>
+<h3 id="avivado-y-avivar">Avivado y avivar</h3>
+<p>Son dos cosas distintas que se parecen.</p>
+<ul><li><strong>Estar Avivado:</strong> tras vencer a un jefe, o al quemar un <strong>Ascua viva</strong> en el pecho, tienes <strong>un 30 % más de vida máxima</strong> hasta que mueras. Se ve por las brasas que te rodean.</li><li><strong>Avivar una hoguera:</strong> en el menú de una hoguera, quemar un <strong>Ascua viva</strong> en ella te da <strong>una carga más</strong> cada vez que descanses <strong>allí</strong>. Se puede hacer dos veces en cada hoguera.</li></ul>
+<p>«El pecho da fuerza hasta la próxima muerte. La hoguera, una Vasija más honda para siempre.»</p>
+<hr>
+<h2 id="7-atajos-y-caminos">7. Atajos y caminos</h2>
+<p>Hondavela está hecha de vueltas. Casi todas las zonas tienen un <strong>atajo de un solo sentido</strong> que te devuelve a la hoguera:</p>
+<ul><li><strong>Escalas</strong> que se dejan caer de una patada desde arriba.</li><li><strong>Portones atrancados</strong> que solo se abren desde el otro lado.</li><li><strong>Verjas</strong> (en el Barrio, en el Horno) que se abren desde el lado del jefe.</li><li>El <strong>ascensor-ataúd</strong> entre el Camposanto y el Osario.</li></ul>
+<p>Si ves una puerta cerrada que no se abre, <strong>recuérdala</strong>: casi siempre la abrirás desde el otro lado. El <strong>mapa de la zona</strong> (en el menú) solo dibuja lo que ya has visto.</p>
+<p>Las <strong>inscripciones</strong> de las paredes dan pistas: sobre trampas, sobre jefes, y sobre las zonas ocultas (Cisterna, Criptas, Desván y Horno), que señalan con su <strong>sello</strong>.</p>
+<h3 id="trampas">Trampas</h3>
+<table class="cols-3"><thead><tr><th>Trampa</th><th>Cómo se ve</th><th>Qué hacer</th></tr></thead><tbody><tr><td><strong>Losa de Duelo</strong></td><td>Losa limpia en un suelo sucio</td><td>Al pisarla, una sombra crece y <strong>cae una campana</strong>. Rueda fuera de la sombra. El ruido atrae a los muertos.</td></tr><tr><td><strong>Fosa oculta</strong></td><td>Tierra donde no crece el musgo</td><td>Caes a un piso inferior. «Odo nunca pisaba allí.»</td></tr><tr><td><strong>Saetera</strong></td><td>Ranura en el muro</td><td>Dispara virotes. Se bloquean y se desvían.</td></tr><tr><td><strong>Ataúd de pie</strong></td><td>Ataúd vertical cerrado</td><td>Algunos esconden un Centinela. Otros están vacíos.</td></tr><tr><td><strong>Suelo en llamas</strong></td><td>Brilla</td><td>Quema. Rodar no lo apaga: rodéalo.</td></tr><tr><td><strong>Telaraña</strong></td><td>Tela en el suelo</td><td>Te frena y no te deja rodar.</td></tr><tr><td><strong>Agua y pasto alto</strong></td><td>—</td><td>Te frenan. A algunos enemigos, no.</td></tr></tbody></table>
+<hr>
+<h2 id="8-puzles">8. Puzles</h2>
+<p>Todos los puzles de Hondavela siguen dos reglas: <strong>la regla está a la vista</strong> y <strong>fallar no borra lo que ya hiciste</strong>. Las pistas de abajo van de menos a más. Lee solo la que necesites.</p>
+<h3 id="las-siete-velas-osario">Las Siete Velas (Osario)</h3>
+<p>Una puerta con <strong>siete ojos cerrados</strong> y una sala con <strong>siete braseros</strong>, cada uno con un rostro.</p>
+<blockquote class="pistas"><p><strong>Pista 1.</strong> Cada brasero tiene un rostro distinto. Míralos de cerca: no todos duermen igual.</p>
+<p><strong>Pista 2.</strong> «Siete rostros, siete vigilias. Despierta primero al que más duerme; el último no tiene párpados.» Lleva fuego desde la llama de la sala.</p>
+<p><strong>Pista 3.</strong> Enciéndelos <strong>de más dormido a más despierto</strong>, de los ojos completamente cerrados a los que no pueden cerrarse. Cada acierto abre un ojo de la puerta. Si te equivocas, el brasero se niega y lo hecho no se pierde.</p></blockquote>
+<h3 id="las-tres-campanas-campanario">Las Tres Campanas (Campanario)</h3>
+<p>Una puerta con <strong>tres campanas grabadas</strong>: una <strong>calavera</strong>, un <strong>ojo</strong> y una <strong>cuna</strong>. En la sala hay tres campanas.</p>
+<blockquote class="pistas"><p><strong>Pista 1.</strong> Mira el símbolo de cada campana de la sala. La puerta se ilumina con cada campana tañida en orden.</p>
+<p><strong>Pista 2.</strong> «Primero se dobla por los muertos, luego se llama a los que velan, y al final se canta la nana.»</p>
+<p><strong>Pista 3.</strong> Calavera, ojo, cuna. Si tañes una fuera de orden cae una campana, pero las bien tañidas siguen encendidas.</p></blockquote>
+<h3 id="el-contrapeso-de-los-ataúdes-camposanto-terraza-de-los-ataúdes">El Contrapeso de los Ataúdes (Camposanto, Terraza de los Ataúdes)</h3>
+<p>Un ascensor-ataúd que no baja, un <strong>plato de hierro con cuatro muescas</strong> y varios ataúdes con <strong>bandas de hierro</strong>.</p>
+<blockquote class="pistas"><p><strong>Pista 1.</strong> Agarra un ataúd con <strong>USAR</strong> y empújalo o tira de él con el joystick. Caminar contra él también lo empuja. Basta con que toque el plato: se encaja solo.</p>
+<p><strong>Pista 2.</strong> «Cuatro muescas en el plato. Ni una menos: el ataúd no baja. Ni una más: la cadena saltó con cinco.» Las bandas de hierro marcan cuánto pesa cada ataúd, y las muescas se encienden con el peso que hay encima.</p>
+<p><strong>Pista 3.</strong> El plato tiene <strong>dos huecos</strong>: elige los dos ataúdes que suman <strong>exactamente cuatro</strong>. Si te equivocas, <strong>USAR</strong> en el plato los devuelve a su sitio, y descansar también.</p>
+<p><strong>Pista 4.</strong> Aunque el peso sea el justo, el ascensor necesita además que sueltes una <strong>traba de hierro</strong> abajo, en el Osario, tras el <strong>Rey del Túmulo</strong>. Su cerradura brilla a medias para avisarte.</p></blockquote>
+<h3 id="el-muro-que-vibra-campanario">El muro que vibra (Campanario)</h3>
+<blockquote class="pistas"><p><strong>Pista.</strong> «La pared zumbaba con cada campanada. Ahora calla: a la campana grande le falta el badajo.» Habla con Ilse.</p></blockquote>
+<h3 id="la-puerta-de-la-retorta-camposanto">La puerta de la retorta (Camposanto)</h3>
+<blockquote class="pistas"><p><strong>Pista.</strong> «El Alquimista cerró su laboratorio y dio la llave a la guardia del adarve.» Busca entre los muertos del adarve.</p></blockquote>
+<hr>
+<h2 id="9-el-diario-de-velador">9. El Diario de Velador</h2>
+<p>Doce <strong>recuerdos</strong> del Insomne que se desbloquean con el progreso. Cada <strong>tres muertes sin descansar</strong>, el último recuerdo intacto <strong>se emborrona</strong>: se ve que hubo algo escrito, pero no qué. En la hoguera puedes recuperarlo pagando Ceniza.</p>
+<p>Conservarlos importa. El final del juego dice cuántos te quedan… y con los doce intactos se abre una puerta que de otra forma no existe.</p>
+<hr>
+<h2 id="10-nueva-partida-ciclos">10. Nueva Partida+ (ciclos)</h2>
+<p>Tras el final empieza un <strong>nuevo ciclo</strong>. Conservas el <strong>personaje</strong>, el <strong>equipo</strong> y los <strong>objetos</strong>. Hondavela vuelve a empezar, pero no igual:</p>
+<table class="cols-2"><thead><tr><th>Por cada ciclo</th><th>Cambio</th></tr></thead><tbody><tr><td>Vida de los enemigos</td><td><strong>+60 %</strong></td></tr><tr><td>Daño de los enemigos</td><td><strong>+35 %</strong></td></tr><tr><td>Ceniza que dan</td><td><strong>+50 %</strong></td></tr><tr><td>Élites</td><td><strong>+5 %</strong> de probabilidad</td></tr></tbody></table>
+<p>Empezar uno da el logro <em>Otra vez</em>. Los finales que no viste te siguen esperando.</p>
+<hr>
+<h2 id="11-asistencia-y-accesibilidad">11. Asistencia y accesibilidad</h2>
+<p>Hondavela es difícil a propósito, pero <strong>no tiene por qué serlo para todos igual</strong>. En <strong>Ajustes</strong> hay dos secciones pensadas para eso. Todas las ayudas empiezan apagadas, se activan <strong>por separado</strong> y <strong>no tocan los logros</strong>.</p>
+<h3 id="asistencia">Asistencia</h3>
+<table class="cols-2"><thead><tr><th>Ayuda</th><th>Efecto</th></tr></thead><tbody><tr><td><strong>Daño recibido</strong></td><td>100 %, 75 % o 50 %</td></tr><tr><td><strong>Ventanas más anchas</strong></td><td>Rodar y parry perdonan un 30 % más</td></tr><tr><td><strong>Velocidad del juego</strong></td><td>100 %, 90 % u 80 %</td></tr><tr><td><strong>Reserva para rodar</strong></td><td>Rodar nunca se niega por falta de aguante (sigues quedando en deuda)</td></tr><tr><td><strong>Conservar Ceniza</strong></td><td>Al morir conservas la mitad; la otra mitad queda en la mancha</td></tr></tbody></table>
+<h3 id="accesibilidad">Accesibilidad</h3>
+<ul><li><strong>Temblor de pantalla:</strong> normal, la mitad o nada.</li><li><strong>Destellos:</strong> suavizados.</li><li><strong>Pausa al golpear</strong> (el congelado del impacto): se puede quitar.</li><li><strong>Texto grande.</strong></li><li><strong>Opacidad de los controles</strong> y <strong>botones grandes</strong>.</li><li><strong>Subtítulos lentos</strong> y <strong>con fondo</strong>.</li><li><strong>Vibración</strong>, <strong>música</strong> y <strong>efectos</strong> por separado.</li><li><strong>Calidad gráfica</strong> (resplandor, sombras, partículas) y <strong>30 o 60 FPS</strong>. En teléfonos con poca memoria el juego elige solo.</li><li><strong>Idioma</strong> del texto (siete) y <strong>voz del narrador</strong>, por separado.</li></ul>
+<hr>
+<h2 id="12-logros">12. Logros</h2>
+<p>Cada partida tiene sus propios logros (botón <strong>Logros</strong> en el menú de partidas), que se borran con ella. Ahí se ven también los <strong>tiempos</strong> de cada zona y de cada jefe.</p>
+<table class="cols-2"><thead><tr><th>Logro</th><th>Cómo</th></tr></thead><tbody><tr><td>Primera vigilia</td><td>Descansa en una hoguera</td></tr><tr><td>Retorta rota</td><td>Vence al Precipitado de la Retorta</td></tr><tr><td>El rey sin corona</td><td>Vence a Ser Aldric</td></tr><tr><td>La soga cortada</td><td>Vence al Campanero Ahorcado</td></tr><tr><td>Rastro perdido</td><td>Vence al Sabueso de las Piras</td></tr><tr><td>Tierra encima</td><td>Vence a Odo el Enterrado</td></tr><tr><td>Aguas quietas</td><td>Vence a la Madre de las Charcas</td></tr><tr><td>Molde roto</td><td>Vence al Cerero Mayor</td></tr><tr><td>Relevado</td><td>Vence al Capitán del Relevo</td></tr><tr><td>Antorcha soltada</td><td>Vence al Alado de Hollín</td></tr><tr><td>Sin lágrimas</td><td>Vence a la Plañidera Mayor</td></tr><tr><td>Ojos abiertos</td><td>Vence a Ysolde</td></tr><tr><td>Ninguna sombra</td><td>Vence a las dos Sombras del Insomne</td></tr><tr><td>Badajo devuelto</td><td>Lleva el badajo a Ilse</td></tr><tr><td>Que arda</td><td>Dale a la Hermana Lumbre su fuego</td></tr><tr><td>Una fosa propia</td><td>Ayuda a Odo a encontrar su fosa</td></tr><tr><td>Mano firme</td><td>50 parrys</td></tr><tr><td>Por la espalda</td><td>15 puñaladas por la espalda</td></tr><tr><td>Brillo apagado</td><td>5 élites</td></tr><tr><td>Obra de Anselmo</td><td>Un arma a +5</td></tr><tr><td>Otra vez</td><td>Empieza un nuevo ciclo</td></tr><tr><td>El relevo · El desvelo · La vela de Edda</td><td>Los tres finales</td></tr></tbody></table>
+<hr>
+<h2 id="13-diez-consejos-para-la-primera-noche">13. Diez consejos para la primera noche</h2>
+<ol><li><strong>Haz el Tutorial.</strong> Hasta descansar en la Capilla de la Ceniza no puedes morir.</li><li><strong>Enciende cada hoguera que veas</strong>, aunque no vayas a descansar.</li><li><strong>Camina</strong> por sitios nuevos. Correr gasta aguante y no deja ver las trampas.</li><li><strong>Un enemigo cada vez.</strong> Retrocede hasta un pasillo.</li><li><strong>Dos golpes y atrás.</strong> El tercero casi siempre es el que te mata.</li><li><strong>Lee las paredes.</strong> Las inscripciones no mienten.</li><li><strong>Gasta la Ceniza</strong> antes de un jefe.</li><li><strong>Ve a otra zona</strong> si un jefe te supera.</li><li><strong>Habla dos veces</strong> con todo el mundo.</li><li><strong>Mira hacia arriba</strong> en el Desván.</li></ol>
+<hr>
+<h2 id="14-atlas-los-mapas-de-cada-zona">14. Atlas: los mapas de cada zona</h2>
+<p>Cada mapa es la zona entera, capturada sin la oscuridad de la vigilia y a la escala del juego (una baldosa son 32 píxeles). Desde dentro verás mucho menos: solo lo que alumbran las hogueras, las antorchas y tu propio paso. Los nombres de los lugares son los del Libro I; las <strong>regiones con nombre</strong> son las que el juego distingue por su luz y su ambiente.</p>
+<h3 id="la-pira-del-velador-tutorial">La Pira del Velador (tutorial)</h3>
+<figure><img src="img/mapas_tutorial.png" alt="La Pira del Velador: la Pira, la Galería de las Saeteras, el Patio del Turno, la Capilla de la Ceniza y el Atrio del Atizador, de oeste a este." class="mapa" data-src="img/mapas/tutorial.png" loading="lazy"><figcaption>La Pira del Velador: la Pira, la Galería de las Saeteras, el Patio del Turno, la Capilla de la Ceniza y el Atrio del Atizador, de oeste a este.</figcaption></figure>
+<p>Cinco estancias en fila. La hoguera de la Capilla de la Ceniza no admite viajes; la salida al Camposanto está al este del Atrio del Atizador.</p>
+<h3 id="camposanto-del-relevo">Camposanto del Relevo</h3>
+<figure><img src="img/mapas_camposanto.png" alt="Camposanto del Relevo: la plaza de la Hoguera del Relevo en el centro, el adarve a lo largo del muro norte, las terrazas de tumbas, la Terraza de los Ataúdes y el Pozo de Cera al suroeste, el Bosque de las Lámparas Taladas, y al sureste la Hondonada con el Laboratorio del Alquimista." class="mapa" data-src="img/mapas/camposanto.png" loading="lazy"><figcaption>Camposanto del Relevo: la plaza de la Hoguera del Relevo en el centro, el adarve a lo largo del muro norte, las terrazas de tumbas, la Terraza de los Ataúdes y el Pozo de Cera al suroeste, el Bosque de las Lámparas Taladas, y al sureste la Hondonada con el Laboratorio del Alquimista.</figcaption></figure>
+<p>Regiones con nombre: <strong>el Laboratorio</strong> (la antesala con la puerta de la retorta y la sala del Precipitado, al sureste) y <strong>el Pozo</strong> (la sala de las fosas bajo el portón, al suroeste, adonde cae quien pisa tierra sin musgo). Salidas: al Osario por las escaleras de la fosa común, al Campanario desde el adarve, al Barrio por el confín este, a las Criptas al fondo de la Hondonada.</p>
+<h3 id="osario">Osario</h3>
+<figure><img src="img/mapas_osario.png" alt="Osario: el Umbral de los Huesos y la fragua de Anselmo a la entrada, la Galería de Cráneos, la Sala de las Siete Velas, la Cripta del Túmulo, el Pozo de Cera y, al fondo, la Capilla Mayor con la escalera sellada al Dormitorio." class="mapa" data-src="img/mapas/osario.png" loading="lazy"><figcaption>Osario: el Umbral de los Huesos y la fragua de Anselmo a la entrada, la Galería de Cráneos, la Sala de las Siete Velas, la Cripta del Túmulo, el Pozo de Cera y, al fondo, la Capilla Mayor con la escalera sellada al Dormitorio.</figcaption></figure>
+<p>La bajada a la Cisterna está en el lado este de la galería. La puerta de los siete ojos solo se abre con las Siete Velas; tras el Rey se enciende la hoguera del Túmulo.</p>
+<h3 id="cisterna-de-los-ahogados">Cisterna de los Ahogados</h3>
+<figure><img src="img/mapas_cisterna.png" alt="Cisterna de los Ahogados: el atrio de la Escalinata Ahogada, la nave inundada con sus islas y la pasarela en zigzag de velas votivas, la capilla lateral y, tras la niebla, la Pila de la Madre." class="mapa" data-src="img/mapas/cisterna.png" loading="lazy"><figcaption>Cisterna de los Ahogados: el atrio de la Escalinata Ahogada, la nave inundada con sus islas y la pasarela en zigzag de velas votivas, la capilla lateral y, tras la niebla, la Pila de la Madre.</figcaption></figure>
+<p>El agua frena a los vivos y no a los Ahogados: el camino seco se lee de lejos por las velas. La segunda hoguera está en la Isla del Garfio.</p>
+<h3 id="criptas-de-la-guardia">Criptas de la Guardia</h3>
+<figure><img src="img/mapas_criptas.png" alt="Criptas de la Guardia: la Antecámara, la Galería de los Nichos con sus ataúdes de pie, el Osario de los Escudos con el portón-atajo, la Capilla del Juramento y, al fondo, la Sala de Armas del Capitán." class="mapa" data-src="img/mapas/criptas.png" loading="lazy"><figcaption>Criptas de la Guardia: la Antecámara, la Galería de los Nichos con sus ataúdes de pie, el Osario de los Escudos con el portón-atajo, la Capilla del Juramento y, al fondo, la Sala de Armas del Capitán.</figcaption></figure>
+<p>Los Guardias del Relevo paran de frente: hay que buscarles la espalda. El Sello del Relevo espera en el altar de la Capilla del Juramento.</p>
+<h3 id="campanario-hendido">Campanario Hendido</h3>
+<figure><img src="img/mapas_campanario.png" alt="Campanario Hendido: el Pie de la Torre con el muro que vibra, el piso de las Tres Campanas, la sala del Campanero bajo el tejado roto y la cúspide con Ilse y la escalera al Desván." class="mapa" data-src="img/mapas/campanario.png" loading="lazy"><figcaption>Campanario Hendido: el Pie de la Torre con el muro que vibra, el piso de las Tres Campanas, la sala del Campanero bajo el tejado roto y la cúspide con Ilse y la escalera al Desván.</figcaption></figure>
+<p>Regiones con nombre: <strong>las Campanas</strong> (la arena del Campanero, bajo el tejado roto) y <strong>la Cúspide</strong> (a cielo abierto, con la hoguera de las Tres Campanas, Ilse y la subida al Desván). La torre sube y no lleva a otro sitio: al Lecho se va por el Osario.</p>
+<h3 id="desván-tejido">Desván Tejido</h3>
+<figure><img src="img/mapas_desvan.png" alt="Desván Tejido: el Rellano de las Vigas, la Galería de los Capullos, el Nido, las Vigas con la escala-atajo y, arriba, la Antecapilla y la Capilla del Alado." class="mapa" data-src="img/mapas/desvan.png" loading="lazy"><figcaption>Desván Tejido: el Rellano de las Vigas, la Galería de los Capullos, el Nido, las Vigas con la escala-atajo y, arriba, la Antecapilla y la Capilla del Alado.</figcaption></figure>
+<p>Mira hacia arriba antes de pasar: las Tejedoras cuelgan del techo. La telaraña del suelo frena y no deja rodar.</p>
+<h3 id="barrio-de-los-veladores">Barrio de los Veladores</h3>
+<figure><img src="img/mapas_barrio.png" alt="Barrio de los Veladores: la Plaza con la Pira de Lumbre, la Calle Mayor en llamas, el Mercado, el Callejón norte con su verja, el Patio de la Perrera al este y la Fosa de Odo al sur." class="mapa" data-src="img/mapas/barrio.png" loading="lazy"><figcaption>Barrio de los Veladores: la Plaza con la Pira de Lumbre, la Calle Mayor en llamas, el Mercado, el Callejón norte con su verja, el Patio de la Perrera al este y la Fosa de Odo al sur.</figcaption></figure>
+<p>Regiones con nombre: <strong>la Perrera</strong> (el patio-jardín abandonado del Sabueso, al este) y <strong>la Fosa</strong> (hundida entre muros, al sur, donde cava Odo). Bajo la Perrera está la boca del Horno; la verja del callejón solo se abre desde el lado de la fosa.</p>
+<h3 id="horno-de-velas">Horno de Velas</h3>
+<figure><img src="img/mapas_horno.png" alt="Horno de Velas: la Antecámara, la Sala de los Moldes con los canales de cera, la Galería de las Mechas, la verja del pasadizo y, al fondo, el Crisol del Cerero." class="mapa" data-src="img/mapas/horno.png" loading="lazy"><figcaption>Horno de Velas: la Antecámara, la Sala de los Moldes con los canales de cera, la Galería de las Mechas, la verja del pasadizo y, al fondo, el Crisol del Cerero.</figcaption></figure>
+<p>Los canales se cruzan por donde asoma la piedra, nunca rodando por encima. La Vela de Edda espera en el crisol.</p>
+<h3 id="dormitorio-mayor">Dormitorio Mayor</h3>
+<figure><img src="img/mapas_dormitorio.png" alt="Dormitorio Mayor: la nave de la catedral con la hoguera de la Nave a la entrada, el pie del ábside con su segunda hoguera y, tras la niebla, el Lecho." class="mapa" data-src="img/mapas/dormitorio.png" loading="lazy"><figcaption>Dormitorio Mayor: la nave de la catedral con la hoguera de la Nave a la entrada, el pie del ábside con su segunda hoguera y, tras la niebla, el Lecho.</figcaption></figure>
+<p>Es la catedral del prólogo. Una nave larga, pilares, bancos y la luz fría de los vitrales. Se sube desde la Capilla Mayor del Osario.</p>
+</section>
+<div class="navpie"><a href="03_personajes_y_bestiario.html">← Libro III · Personajes, bestiario y jefes</a><span></span><i></i></div>
+</main>
+<script src="sitio.js"></script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Libro II · Arsenal y objetos — Códice del Velador</title>
+<meta name="description" content="Códice del Velador: el lore, el arsenal, el bestiario y la guía de Vigilia de Ceniza, soulslike pixel art para iPhone, iPad y Android.">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="sitio.css">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="barra">
+<button class="menu-btn" id="menu-btn" aria-label="Menú">☰ Índice</button>
+<a class="titulo" href="index.html">Códice del Velador</a>
+<span class="sub">Vigilia de Ceniza · edición pública</span>
+<div class="buscar"><input id="buscar" type="search" placeholder="Buscar en el Códice…" autocomplete="off" aria-label="Buscar"><div class="resultados" id="resultados"></div></div>
+</header>
+<div class="velo" id="velo"></div>
+<nav class="lateral" aria-label="Capítulos">
+<h2>Libros</h2><ul>
+<li><a href="index.html" data-cap="00">Portada e índice</a></li>
+<li><a href="01_lore.html" data-cap="01">Libro I · Lore y mundo</a></li>
+<li><a href="01b_cronica.html" data-cap="01b">Libro I·b · Crónica y atlas de Hondavela</a></li>
+<li><a href="02_arsenal.html" data-cap="02" class="actual">Libro II · Arsenal y objetos</a></li>
+<li><a href="03_personajes_y_bestiario.html" data-cap="03">Libro III · Personajes, bestiario y jefes</a></li>
+<li><a href="04_guia.html" data-cap="04">Libro IV · Guía del Insomne</a></li>
+</ul>
+<h2>El juego</h2><ul><li><a href="privacy.html">Política de privacidad</a></li><li><a href="support.html">Soporte</a></li></ul><h2>En esta página</h2><ul class="secciones"><li><a class="n3" href="#vigilia-de-ceniza--wiki-del-coleccionista">Vigilia de Ceniza — Wiki del coleccionista</a></li><li><a class="n2" href="#1--cómo-leer-una-ficha">1 · Cómo leer una ficha</a></li><li><a class="n3" href="#daño">Daño</a></li><li><a class="n3" href="#escalado-ae">Escalado A–E</a></li><li><a class="n3" href="#requisitos">Requisitos</a></li><li><a class="n3" href="#aguante-por-golpe-alcance-y-crítico">Aguante por golpe, alcance y crítico</a></li><li><a class="n3" href="#peso-y-carga">Peso y carga</a></li><li><a class="n3" href="#bloqueo-estabilidad-y-parry">Bloqueo, estabilidad y parry</a></li><li><a class="n3" href="#leyenda-de-los-movimientos">Leyenda de los movimientos</a></li><li><a class="n2" href="#2--armas-de-los-orígenes">2 · Armas de los orígenes</a></li><li><a class="n3" href="#espada-larga">Espada larga</a></li><li><a class="n3" href="#hacha-de-leñador">Hacha de leñador</a></li><li><a class="n3" href="#daga">Daga</a></li><li><a class="n3" href="#asta-de-centinela-la-del-lancero">Asta de centinela (la del Lancero)</a></li><li><a class="n3" href="#mandoble">Mandoble</a></li><li><a class="n3" href="#garrote">Garrote</a></li><li><a class="n2" href="#3--armas-halladas-en-hondavela">3 · Armas halladas en Hondavela</a></li><li><a class="n3" href="#estoque-de-velador">Estoque de Velador</a></li><li><a class="n3" href="#hoz-de-la-plañidera">Hoz de la Plañidera</a></li><li><a class="n3" href="#campana-rota">Campana rota</a></li><li><a class="n3" href="#espada-del-velador">Espada del Velador</a></li><li><a class="n3" href="#báculo-de-vela">Báculo de Vela</a></li><li><a class="n3" href="#garfio-del-ahogado">Garfio del ahogado</a></li><li><a class="n3" href="#lanza-de-muralla">Lanza de muralla</a></li><li><a class="n2" href="#4--armas-de-jefe">4 · Armas de jefe</a></li><li><a class="n3" href="#lanza-de-aldric">Lanza de Aldric</a></li><li><a class="n3" href="#badajo-del-campanero">Badajo del Campanero</a></li><li><a class="n3" href="#colmillo-del-sabueso">Colmillo del Sabueso</a></li><li><a class="n3" href="#espada-del-capitán">Espada del Capitán</a></li><li><a class="n3" href="#remo-de-la-madre">Remo de la Madre</a></li><li><a class="n3" href="#espada-del-alado">Espada del Alado</a></li><li><a class="n3" href="#cazo-del-cerero">Cazo del Cerero</a></li><li><a class="n3" href="#pala-de-odo">Pala de Odo</a></li><li><a class="n2" href="#5--escudos">5 · Escudos</a></li><li><a class="n3" href="#guardia-con-el-arma-sin-escudo">Guardia con el arma (sin escudo)</a></li><li><a class="n3" href="#escudo-heráldico">Escudo heráldico</a></li><li><a class="n3" href="#escudo-redondo">Escudo redondo</a></li><li><a class="n3" href="#broquel">Broquel</a></li><li><a class="n3" href="#escudo-alto">Escudo alto</a></li><li><a class="n3" href="#tabla-podrida">Tabla podrida</a></li><li><a class="n3" href="#escudo-lápida">Escudo-lápida</a></li><li><a class="n3" href="#rodela-de-ascua">Rodela de ascua</a></li><li><a class="n3" href="#pavés-de-la-guardia">Pavés de la guardia</a></li><li><a class="n2" href="#6--consumibles-materiales-y-milagros">6 · Consumibles, materiales y milagros</a></li><li><a class="n3" href="#materiales">Materiales</a></li><li><a class="n3" href="#la-refundición-de-anselmo">La refundición de Anselmo</a></li><li><a class="n3" href="#milagros">Milagros</a></li><li><a class="n2" href="#7--la-vasija-de-ceniza">7 · La Vasija de Ceniza</a></li><li><a class="n2" href="#8--amuletos">8 · Amuletos</a></li><li><a class="n2" href="#9--reliquias-y-objetos-de-misión">9 · Reliquias y objetos de misión</a></li><li><a class="n3" href="#reliquias-de-jefe">Reliquias de jefe</a></li><li><a class="n3" href="#reliquias-de-los-rincones">Reliquias de los rincones</a></li><li><a class="n3" href="#reliquias-de-las-sombras">Reliquias de las Sombras</a></li><li><a class="n3" href="#reliquias-de-los-que-esperan">Reliquias de los que esperan</a></li><li><a class="n3" href="#objetos-de-misión-y-objetos-clave">Objetos de misión y objetos clave</a></li><li><a class="n2" href="#10--orígenes">10 · Orígenes</a></li><li><a class="n2" href="#11--estirpes">11 · Estirpes</a></li><li><a class="n2" href="#12--lista-de-verificación-del-coleccionista">12 · Lista de verificación del coleccionista</a></li><li><a class="n3" href="#armas-21">Armas (21)</a></li><li><a class="n3" href="#escudos-8">Escudos (8)</a></li><li><a class="n3" href="#amuletos-9">Amuletos (9)</a></li><li><a class="n3" href="#milagros-2">Milagros (2)</a></li><li><a class="n3" href="#reliquias-20">Reliquias (20)</a></li><li><a class="n3" href="#objetos-clave-3">Objetos clave (3)</a></li></ul>
+<p class="pie-menu">Edición pública: sin desenlaces ni finales. <em>Vigilia de Ceniza</em> © 2026 NCS Gaming.</p>
+</nav>
+<main class="contenido">
+<section class="capitulo">
+<h1 id="libro-ii--arsenal-y-objetos">Libro II · Arsenal y objetos</h1>
+<h3 id="vigilia-de-ceniza--wiki-del-coleccionista"><em>Vigilia de Ceniza</em> — Wiki del coleccionista</h3>
+<hr>
+<blockquote><p><em>Todo lo que empuñas lo empuñó antes alguien que no durmió.</em> <em>Hondavela no fabrica armas: las hereda.</em></p></blockquote>
+<hr>
+<p>Este cuaderno reúne cada hoja, cada escudo y cada objeto que un Insomne puede llevar encima: sus números tal como los guarda el juego, cómo se mueven en la mano, dónde esperan y lo que cuentan de quienes los llevaron antes.</p>
+<p>El lore del mundo está en <a href="01_lore.html">01 · Lore</a>. Los personajes, el bestiario, los jefes y la guía de zonas están en el cuaderno 03 de esta wiki; aquí solo se nombran cuando hace falta decir de dónde sale algo.</p>
+<h2 id="1--cómo-leer-una-ficha">1 · Cómo leer una ficha</h2>
+<h3 id="daño">Daño</h3>
+<p>Cada arma tiene un <strong>daño base</strong>. Los atributos del Insomne lo aumentan según el escalado del arma:</p>
+<blockquote><p><strong>Daño = base × (1 + (Fuerza × esc. Fue + Destreza × esc. Des + Resistencia × esc. Res) × 0,03)</strong></p></blockquote>
+<p>Ejemplo: el Caballero del Párpado empieza con Fuerza 11 y Destreza 10 y una Espada larga (base 24, escalado 0,5 / 0,5): 24 × (1 + (5,5 + 5) × 0,03) ≈ <strong>32</strong> por golpe.</p>
+<p>Los atributos rinden menos al subir (topes blandos): cada punto vale entero hasta 20, medio punto de 21 a 30 y un cuarto a partir de 31. Repartir entre Fuerza y Destreza acaba rindiendo más que volcarlo todo en una.</p>
+<p>Sobre ese daño se aplican, multiplicando: la refundición de Anselmo (+8 % por nivel, hasta +5), las reliquias que refunden todas las armas (+10 % cada una), los amuletos de daño y la afinidad de la estirpe (+10 %).</p>
+<h3 id="escalado-ae">Escalado A–E</h3>
+<p>La letra que muestra el menú de Equipo es el coeficiente de cada atributo, redondeado a una nota:</p>
+<table class="cols-3"><thead><tr><th style="text-align:center">Letra</th><th style="text-align:center">Coeficiente</th><th>Lectura</th></tr></thead><tbody><tr><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">1,0 o más</td><td>El atributo manda: cada punto se nota.</td></tr><tr><td style="text-align:center"><strong>B</strong></td><td style="text-align:center">0,8 – 0,99</td><td>Escala muy bien.</td></tr><tr><td style="text-align:center"><strong>C</strong></td><td style="text-align:center">0,5 – 0,79</td><td>Escala bien.</td></tr><tr><td style="text-align:center"><strong>D</strong></td><td style="text-align:center">0,3 – 0,49</td><td>Algo aporta.</td></tr><tr><td style="text-align:center"><strong>E</strong></td><td style="text-align:center">más de 0 y menos de 0,3</td><td>Casi nada.</td></tr><tr><td style="text-align:center"><strong>–</strong></td><td style="text-align:center">0</td><td>No escala.</td></tr></tbody></table>
+<p>En cada ficha se da la letra y, entre paréntesis, el número exacto.</p>
+<h3 id="requisitos">Requisitos</h3>
+<p>Algunas armas piden un mínimo de <strong>Fuerza</strong> o <strong>Destreza</strong>. Se pueden empuñar sin cumplirlo, pero <strong>pegan la mitad (daño ×0,5)</strong> y el menú lo avisa en rojo: «Te faltan… daño ×0,5». Las seis armas de origen no piden nada.</p>
+<h3 id="aguante-por-golpe-alcance-y-crítico">Aguante por golpe, alcance y crítico</h3>
+<ul><li><strong>Aguante por golpe:</strong> lo que cuesta un ligero. Los demás golpes lo multiplican (el fuerte suele costar ×1,5–1,7).</li><li><strong>Alcance:</strong> distancia del golpe, en píxeles del mundo. Una lanza llega casi al doble que una daga.</li><li><strong>Crítico:</strong> multiplicador del contraataque tras un parry y de la puñalada por la espalda. Por defecto ×3; las dagas llegan a ×4,5.</li><li><strong>Arranque:</strong> segundos desde que pulsas hasta que el golpe conecta. Es lo que decide si llegas antes que el enemigo.</li></ul>
+<h3 id="peso-y-carga">Peso y carga</h3>
+<p>Arma + escudo + 0,5 por amuleto es la <strong>carga</strong>. La <strong>carga máxima</strong> es 22 + Resistencia × 1,2. Según el porcentaje, se rueda así:</p>
+<table class="cols-5"><thead><tr><th>Carga</th><th>Rodada</th><th style="text-align:center">Invulnerabilidad</th><th style="text-align:center">Velocidad</th><th style="text-align:center">Aguante al rodar</th></tr></thead><tbody><tr><td>hasta 25 %</td><td><strong>ligera</strong></td><td style="text-align:center">×1,2</td><td style="text-align:center">×1,1</td><td style="text-align:center">×0,9</td></tr><tr><td>hasta 50 %</td><td><strong>media</strong></td><td style="text-align:center">×1,0</td><td style="text-align:center">×1,0</td><td style="text-align:center">×1,0</td></tr><tr><td>hasta 100 %</td><td><strong>pesada</strong></td><td style="text-align:center">×0,7</td><td style="text-align:center">×0,85</td><td style="text-align:center">×1,25</td></tr><tr><td>más de 100 %</td><td><strong>sobrecargado</strong></td><td style="text-align:center">no se puede rodar</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr></tbody></table>
+<p>Peso por familia de arma:</p>
+<table class="cols-7"><thead><tr><th style="text-align:center">Báculo</th><th style="text-align:center">Daga</th><th style="text-align:center">Espada</th><th style="text-align:center">Lanza</th><th style="text-align:center">Hacha</th><th style="text-align:center">Maza</th><th style="text-align:center">Mandoble</th></tr></thead><tbody><tr><td style="text-align:center">3</td><td style="text-align:center">2</td><td style="text-align:center">4</td><td style="text-align:center">5</td><td style="text-align:center">6</td><td style="text-align:center">7</td><td style="text-align:center">9</td></tr></tbody></table>
+<p>Las <strong>hachas, mazas y mandobles</strong> tienen <strong>hiperarmadura</strong> en el golpe fuerte: no se interrumpen si te golpean a mitad.</p>
+<h3 id="bloqueo-estabilidad-y-parry">Bloqueo, estabilidad y parry</h3>
+<ul><li><strong>Bloqueo:</strong> qué parte del daño frena el escudo (100 % = no entra nada).</li><li><strong>Estabilidad (0–100):</strong> cuanto más alta, menos aguante gasta parar. El juego guarda el coste por punto de daño parado; el menú lo traduce a esta escala.</li><li><strong>Parry:</strong> ventana en segundos para desviar el golpe y abrir al enemigo a un contraataque. Cuesta 12 de aguante. Sin ventana, ese escudo no desvía.</li></ul>
+<h3 id="leyenda-de-los-movimientos">Leyenda de los movimientos</h3>
+<table class="cols-2"><thead><tr><th>Gesto</th><th>Qué hace</th></tr></thead><tbody><tr><td><strong>tajo / revés</strong></td><td>corte lateral, de ida o de vuelta</td></tr><tr><td><strong>estocada</strong></td><td>punta hacia delante, estrecha y larga</td></tr><tr><td><strong>vertical</strong></td><td>golpe de arriba abajo, frontal</td></tr><tr><td><strong>giro</strong></td><td>barrido de 360° alrededor del Insomne</td></tr></tbody></table>
+<p>Barrido: <em>en línea</em> (estrecho), <em>frontal</em>, <em>ancho</em>, <em>muy ancho</em>, <em>360°</em>. «Embiste» indica que el golpe arrastra al Insomne varios pasos hacia delante.</p>
+<ul><li><strong>Ligero:</strong> el combo al pulsar seguido.</li><li><strong>Fuerte:</strong> el golpe cargado.</li><li><strong>Carrera:</strong> atacar mientras se corre.</li><li><strong>Tras rodar:</strong> atacar justo al salir de una rodada.</li></ul>
+<hr>
+<h2 id="2--armas-de-los-orígenes">2 · Armas de los orígenes</h2>
+<p><em>Las seis armas con las que empiezan los orígenes. Quien elija otro origen las encontrará en cofres por Hondavela.</em></p>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="espada-larga">Espada larga</h3>
+<figure class="retrato"><img src="img/icons_espada_larga_hd.png" alt="" class="icono" data-src="../assets/icons/espada_larga.png" loading="lazy"></figure>
+<blockquote><p><em>Hoja recta de la Casa del Párpado.</em> <em>En la empuñadura, un ojo cerrado grabado a buril.</em> <em>Los que la forjaron creían que bastaba con cerrar los ojos.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Espada</td><td style="text-align:center">24</td><td>Fue <strong>C</strong> (0,5) · Des <strong>C</strong> (0,5)</td><td>ninguno</td><td style="text-align:center">18</td><td style="text-align:center">28</td><td style="text-align:center">×3,0</td><td style="text-align:center">4</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>tajo · revés · estocada</td><td>×1,0 · ×1,0 · ×1,2</td><td>0,12 · 0,11 · 0,16 s</td><td>ancho · ancho · en línea</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,7</td><td>0,36 s</td><td>frontal</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,3</td><td>0,12 s</td><td>en línea, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,10 s</td><td>ancho</td></tr></tbody></table>
+<p>La medida de todas las demás: dos cortes rápidos y una estocada que remata.</p>
+<p><strong>Dónde:</strong> arma inicial del Caballero del Párpado · cofre en el <strong>Osario</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="hacha-de-leñador">Hacha de leñador</h3>
+<figure class="retrato"><img src="img/icons_hacha_hd.png" alt="" class="icono" data-src="../assets/icons/hacha.png" loading="lazy"></figure>
+<blockquote><p><em>Hierro mellado de talar lámparas.</em> <em>En Hondavela los árboles daban luz, y se cortaban para alumbrar las alcobas.</em> <em>Ya no queda alcoba que alumbrar.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Hacha</td><td style="text-align:center">32</td><td>Fue <strong>B</strong> (0,9) · Des <strong>E</strong> (0,2)</td><td>ninguno</td><td style="text-align:center">22</td><td style="text-align:center">26</td><td style="text-align:center">×3,0</td><td style="text-align:center">6</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>vertical · tajo</td><td>×1,0 · ×1,0</td><td>0,20 · 0,17 s</td><td>frontal · ancho</td></tr><tr><td>Fuerte</td><td>giro</td><td>×1,6</td><td>0,40 s</td><td>360°, hiperarmadura</td></tr><tr><td>Carrera</td><td>vertical</td><td>×1,4</td><td>0,18 s</td><td>frontal, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,14 s</td><td>ancho</td></tr></tbody></table>
+<p>El fuerte limpia todo lo que rodea al Insomne y no se deja interrumpir.</p>
+<p><strong>Dónde:</strong> arma inicial del Guerrero · cofre en el <strong>Barrio de los Veladores</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="daga">Daga</h3>
+<figure class="retrato"><img src="img/icons_daga_hd.png" alt="" class="icono" data-src="../assets/icons/daga.png" loading="lazy"></figure>
+<blockquote><p><em>Hoja corta para trabajo de noche.</em> <em>Su antiguo dueño la llamaba "la de buenas noches".</em> <em>Hace mucho que nadie las da.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Daga</td><td style="text-align:center">14</td><td>Fue <strong>E</strong> (0,2) · Des <strong>B</strong> (0,9)</td><td>ninguno</td><td style="text-align:center">11</td><td style="text-align:center">21</td><td style="text-align:center">×4,5</td><td style="text-align:center">2</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (4)</td><td>tajo · revés · tajo · estocada</td><td>×1,0 · ×1,0 · ×1,0 · ×1,3</td><td>0,07 · 0,07 · 0,07 · 0,10 s</td><td>ancho ×3 · en línea</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,8</td><td>0,25 s</td><td>en línea, embiste, largo</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,3</td><td>0,08 s</td><td>en línea, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,2</td><td>0,06 s</td><td>ancho</td></tr></tbody></table>
+<p>La más rápida del juego y el mejor crítico. Sin escudo, es la única arma que desvía (parry de 0,16 s).</p>
+<p><strong>Dónde:</strong> arma inicial del Ladrón · cofre en el <strong>Camposanto del Relevo</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="asta-de-centinela-la-del-lancero">Asta de centinela <em>(la del Lancero)</em></h3>
+<figure class="retrato"><img src="img/icons_lanza_hd.png" alt="" class="icono" data-src="../assets/icons/lanza.png" loading="lazy"></figure>
+<blockquote><p><em>Asta larga del turno de noche.</em> <em>Los centinelas la apoyaban en el hombro para no caer dormidos.</em> <em>Ahora no hace falta: no caen.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Lanza</td><td style="text-align:center">26</td><td>Fue <strong>D</strong> (0,4) · Des <strong>C</strong> (0,7)</td><td>ninguno</td><td style="text-align:center">16</td><td style="text-align:center">42</td><td style="text-align:center">×3,0</td><td style="text-align:center">5</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>estocada · estocada · tajo</td><td>×1,0 · ×1,0 · ×1,1</td><td>0,13 · 0,13 · 0,18 s</td><td>en línea · en línea · ancho (corto)</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,7</td><td>0,34 s</td><td>en línea, embiste</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,5</td><td>0,10 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>estocada</td><td>×1,1</td><td>0,10 s</td><td>en línea</td></tr></tbody></table>
+<p>Mata a un brazo y medio de distancia. El tercer golpe del combo es un barrido para cuando se te echan encima.</p>
+<p><strong>Dónde:</strong> arma inicial del Lancero · cofre en la <strong>Cisterna de los Ahogados</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="mandoble">Mandoble</h3>
+<figure class="retrato"><img src="img/icons_mandoble_hd.png" alt="" class="icono" data-src="../assets/icons/mandoble.png" loading="lazy"></figure>
+<blockquote><p><em>Acero de montaña para las dos manos.</em> <em>Pesa como un párpado al amanecer.</em> <em>O eso dicen quienes aún recuerdan el amanecer.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Mandoble</td><td style="text-align:center">40</td><td>Fue <strong>B</strong> (0,8) · Des <strong>D</strong> (0,4)</td><td>ninguno</td><td style="text-align:center">28</td><td style="text-align:center">34</td><td style="text-align:center">×3,0</td><td style="text-align:center">9</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>tajo · revés</td><td>×1,0 · ×1,05</td><td>0,26 · 0,24 s</td><td>ancho</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,8</td><td>0,50 s</td><td>frontal, hiperarmadura</td></tr><tr><td>Carrera</td><td>giro</td><td>×1,3</td><td>0,24 s</td><td>360°</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,20 s</td><td>ancho</td></tr></tbody></table>
+<p>Lento, ancho y definitivo. La carrera termina en un giro completo.</p>
+<p><strong>Dónde:</strong> arma inicial del Bárbaro · cofre en el <strong>Campanario Hendido</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="garrote">Garrote</h3>
+<figure class="retrato"><img src="img/icons_garrote_hd.png" alt="" class="icono" data-src="../assets/icons/garrote.png" loading="lazy"></figure>
+<blockquote><p><em>Rama nudosa, oscurecida por manos sucias.</em> <em>En la corteza alguien grabó una cuenta de días.</em> <em>La cuenta se detiene en la misma noche que el cielo.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Maza</td><td style="text-align:center">18</td><td>Fue <strong>C</strong> (0,7) · Des <strong>E</strong> (0,1)</td><td>ninguno</td><td style="text-align:center">17</td><td style="text-align:center">24</td><td style="text-align:center">×3,0</td><td style="text-align:center">7</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>tajo · vertical</td><td>×1,0 · ×1,1</td><td>0,15 · 0,18 s</td><td>ancho · frontal</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,8</td><td>0,38 s</td><td>frontal, hiperarmadura</td></tr><tr><td>Carrera</td><td>vertical</td><td>×1,3</td><td>0,15 s</td><td>frontal, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,12 s</td><td>ancho</td></tr></tbody></table>
+<p>Poco daño y mucho peso. Es lo que hay cuando no se tiene nada.</p>
+<p><strong>Dónde:</strong> arma inicial del Paria · cofre en el <strong>Camposanto del Relevo</strong>.</p>
+</article>
+<hr>
+<h2 id="3--armas-halladas-en-hondavela">3 · Armas halladas en Hondavela</h2>
+<p><em>Esperan junto a cadáveres o en la tienda. Todas piden atributos.</em></p>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="estoque-de-velador">Estoque de Velador</h3>
+<figure class="retrato"><img src="img/icons_estoque_velador_hd.png" alt="" class="icono" data-src="../assets/icons/estoque_velador.png" loading="lazy"></figure>
+<blockquote><p><em>Hoja fina con una brasa encajada en la punta. Los Veladores despertaban con ella a quien cabeceaba en la guardia: un pinchazo, una quemadura, y de vuelta a mirar la noche.</em> <em>No corta. Recuerda.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Espada</td><td style="text-align:center">19</td><td>Fue <strong>E</strong> (0,2) · Des <strong>A</strong> (1,0)</td><td>Des 13</td><td style="text-align:center">13</td><td style="text-align:center">32</td><td style="text-align:center">×4,0</td><td style="text-align:center">4</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>estocada · estocada · tajo</td><td>×1,0 · ×1,0 · ×1,1</td><td>0,10 · 0,10 · 0,12 s</td><td>en línea · en línea · ancho</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,9</td><td>0,30 s</td><td>en línea, embiste, largo</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,4</td><td>0,08 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>estocada</td><td>×1,3</td><td>0,07 s</td><td>en línea, avanza</td></tr></tbody></table>
+<p>La espada del que vive de la Destreza: estocadas rapidísimas y crítico de daga.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Osario</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="hoz-de-la-plañidera">Hoz de la Plañidera</h3>
+<figure class="retrato"><img src="img/icons_hoz_planidera_hd.png" alt="" class="icono" data-src="../assets/icons/hoz_planidera.png" loading="lazy"></figure>
+<blockquote><p><em>Siega de mango negro con que las plañideras cortaban mechones a los muertos para trenzar sus lutos.</em> <em>Barre en ancho, como quien despeja un lecho de flores secas.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Hacha</td><td style="text-align:center">27</td><td>Fue <strong>C</strong> (0,5) · Des <strong>C</strong> (0,6)</td><td>Fue 10 · Des 12</td><td style="text-align:center">20</td><td style="text-align:center">34</td><td style="text-align:center">×3,0</td><td style="text-align:center">6</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>tajo · revés</td><td>×1,0 · ×1,0</td><td>0,18 · 0,16 s</td><td>muy ancho</td></tr><tr><td>Fuerte</td><td>giro</td><td>×1,5</td><td>0,38 s</td><td>360°, hiperarmadura</td></tr><tr><td>Carrera</td><td>giro</td><td>×1,3</td><td>0,20 s</td><td>360°</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,13 s</td><td>muy ancho</td></tr></tbody></table>
+<p>El barrido más ancho del juego. Hecha para grupos.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Dormitorio Mayor</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="campana-rota">Campana rota</h3>
+<figure class="retrato"><img src="img/icons_campana_rota_hd.png" alt="" class="icono" data-src="../assets/icons/campana_rota.png" loading="lazy"></figure>
+<blockquote><p><em>Media campana de bronce clavada a un mástil. El Campanero la arrancó de la torre cuando dejó de sonar a tiempo.</em> <em>Pesa como una culpa. Golpea como una.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Maza</td><td style="text-align:center">42</td><td>Fue <strong>A</strong> (1,0) · Des –</td><td>Fue 16</td><td style="text-align:center">27</td><td style="text-align:center">30</td><td style="text-align:center">×2,5</td><td style="text-align:center">7</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>vertical · tajo</td><td>×1,0 · ×1,0</td><td>0,30 · 0,28 s</td><td>frontal · ancho</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×2,0</td><td>0,58 s</td><td>frontal, largo, hiperarmadura</td></tr><tr><td>Carrera</td><td>giro</td><td>×1,3</td><td>0,26 s</td><td>360°</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,22 s</td><td>ancho</td></tr></tbody></table>
+<p>Fuerza pura. El fuerte dobla el daño a cambio de más de medio segundo de espera.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Campanario Hendido</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="espada-del-velador">Espada del Velador</h3>
+<figure class="retrato"><img src="img/icons_espada_velador_hd.png" alt="" class="icono" data-src="../assets/icons/espada_velador.png" loading="lazy"></figure>
+<blockquote><p><em>Hoja recta con la cruz soldada en forma de atizador. Servía para remover las brasas y para lo que hiciera falta si la vela se resistía. Los Veladores no tenían permiso para dormir junto a las piras. Muchos no lo necesitaron nunca.</em> <em>Prende fuego a lo que corta.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Espada</td><td style="text-align:center">25</td><td>Fue <strong>C</strong> (0,55) · Des <strong>C</strong> (0,55)</td><td>Fue 11 · Des 11</td><td style="text-align:center">18</td><td style="text-align:center">29</td><td style="text-align:center">×3,0</td><td style="text-align:center">4</td></tr></tbody></table>
+<p><strong>Fuego:</strong> 6 de daño por segundo durante 3 s.</p>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>tajo · revés · estocada</td><td>×1,0 · ×1,0 · ×1,25</td><td>0,12 · 0,12 · 0,16 s</td><td>ancho · ancho · en línea</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,75</td><td>0,38 s</td><td>frontal</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,3</td><td>0,12 s</td><td>en línea, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,10 s</td><td>ancho</td></tr></tbody></table>
+<p>Una espada larga que arde.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Horno de Velas</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="báculo-de-vela">Báculo de Vela</h3>
+<figure class="retrato"><img src="img/icons_baculo_vela_hd.png" alt="" class="icono" data-src="../assets/icons/baculo_vela.png" loading="lazy"></figure>
+<blockquote><p><em>Vara de fresno con una vela que no se consume, atada con alambre de relicario. Las hermanas de la Vigilia la llevaban por los pasillos para que nadie durmiera a oscuras. Si la agitas con pulso firme, la llama salta.</em> <em>Ligero: una chispa. Fuerte: tres en abanico.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Báculo</td><td style="text-align:center">17</td><td>Fue <strong>E</strong> (0,1) · Des <strong>C</strong> (0,55) · Res <strong>D</strong> (0,45)</td><td>Des 9</td><td style="text-align:center">16</td><td style="text-align:center">24 (chispas: 170)</td><td style="text-align:center">×2,0</td><td style="text-align:center">3</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero</td><td>una chispa de fuego</td><td>×1,0</td><td>0,22 s</td><td>a distancia</td></tr><tr><td>Fuerte</td><td>tres chispas en abanico</td><td>×1,5 cada una</td><td>0,45 s</td><td>a distancia (aguante ×2)</td></tr><tr><td>Carrera</td><td>bastonazo (tajo)</td><td>×0,8</td><td>0,16 s</td><td>ancho</td></tr><tr><td>Tras rodar</td><td>bastonazo (tajo)</td><td>×0,8</td><td>0,14 s</td><td>ancho</td></tr></tbody></table>
+<p>La única arma a distancia y la única que escala con Resistencia, «el pulso que sostiene la llama». De cerca solo da bastonazos.</p>
+<p><strong>Dónde:</strong> la <strong>Buhonera</strong> lo vende por <strong>600 de Ceniza</strong>, desde el principio. Solo hay uno.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="garfio-del-ahogado">Garfio del ahogado</h3>
+<figure class="retrato"><img src="img/icons_garfio_ahogado_hd.png" alt="" class="icono" data-src="../assets/icons/garfio_ahogado.png" loading="lazy"></figure>
+<blockquote><p><em>Gancho de cisterna con que se sacaban los cubos, y luego otra cosa. Los Ahogados lo temen: es lo único que alguna vez los sacó del agua.</em> <em>Tira hacia ti. Siempre hacia ti.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Hacha</td><td style="text-align:center">22</td><td>Fue <strong>D</strong> (0,3) · Des <strong>B</strong> (0,8)</td><td>Des 12</td><td style="text-align:center">15</td><td style="text-align:center">30</td><td style="text-align:center">×3,5</td><td style="text-align:center">6</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>tajo · revés · estocada</td><td>×1,0 · ×1,0 · ×1,2</td><td>0,12 · 0,12 · 0,15 s</td><td>ancho · ancho · en línea</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,7</td><td>0,32 s</td><td>frontal, hiperarmadura</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,4</td><td>0,10 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,2</td><td>0,09 s</td><td>ancho, avanza</td></tr></tbody></table>
+<p>Un hacha que se maneja como una espada de Destreza, con la hiperarmadura de las hachas.</p>
+<p><strong>Dónde:</strong> cadáver en la <strong>Cisterna de los Ahogados</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="lanza-de-muralla">Lanza de muralla</h3>
+<figure class="retrato"><img src="img/icons_lanza_muralla_hd.png" alt="" class="icono" data-src="../assets/icons/lanza_muralla.png" loading="lazy"></figure>
+<blockquote><p><em>Lanza larga de la guardia del adarve, hecha para alcanzar por encima de las almenas.</em> <em>Su dueño esperó el relevo con ella al hombro. El relevo nunca subió la escala.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Lanza</td><td style="text-align:center">27</td><td>Fue <strong>C</strong> (0,6) · Des <strong>C</strong> (0,5)</td><td>Fue 13 · Des 10</td><td style="text-align:center">18</td><td style="text-align:center">46</td><td style="text-align:center">×3,0</td><td style="text-align:center">5</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>estocada ×3</td><td>×1,0 · ×1,0 · ×1,25</td><td>0,15 · 0,15 · 0,20 s</td><td>en línea</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,8</td><td>0,36 s</td><td>en línea, embiste, largo</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,6</td><td>0,10 s</td><td>en línea, embiste larguísimo</td></tr><tr><td>Tras rodar</td><td>estocada</td><td>×1,1</td><td>0,10 s</td><td>en línea</td></tr></tbody></table>
+<p>El arma de más alcance de Hondavela y la carrera más larga. No barre nunca: todo es punta.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Camposanto del Relevo</strong>.</p>
+</article>
+<hr>
+<h2 id="4--armas-de-jefe">4 · Armas de jefe</h2>
+<p><em>Anselmo el Fundidor las forja cuando el jefe ha caído. Cada una cuesta Ceniza y Esquirlas de reja (todo jefe deja 2 esquirlas al caer). La Pala de Odo es la excepción: es un regalo.</em></p>
+<table class="cols-4"><thead><tr><th>Arma</th><th>Jefe que debe haber caído</th><th style="text-align:center">Ceniza</th><th style="text-align:center">Esquirlas</th></tr></thead><tbody><tr><td>Lanza de Aldric</td><td>Ser Aldric, Rey del Túmulo</td><td style="text-align:center">1500</td><td style="text-align:center">2</td></tr><tr><td>Badajo del Campanero</td><td>El Campanero Ahorcado</td><td style="text-align:center">2500</td><td style="text-align:center">2</td></tr><tr><td>Colmillo del Sabueso</td><td>El Sabueso de las Piras</td><td style="text-align:center">3000</td><td style="text-align:center">3</td></tr><tr><td>Espada del Capitán</td><td>El Capitán del Relevo</td><td style="text-align:center">3000</td><td style="text-align:center">3</td></tr><tr><td>Remo de la Madre</td><td>La Madre de las Charcas</td><td style="text-align:center">4000</td><td style="text-align:center">3</td></tr><tr><td>Espada del Alado</td><td>El Alado de Hollín</td><td style="text-align:center">4000</td><td style="text-align:center">3</td></tr><tr><td>Cazo del Cerero</td><td>El Cerero Mayor</td><td style="text-align:center">5000</td><td style="text-align:center">4</td></tr></tbody></table>
+<p><strong>Firmas.</strong> Tres armas de jefe llevan un efecto propio en el <strong>golpe fuerte</strong> (se lee en pantalla y se oye distinto, y su ficha lo dice en «Efecto»): el <em>Badajo del Campanero</em> (<strong>Eco de campana</strong>), la <em>Espada del Alado</em> (<strong>Ala de fuego</strong>) y el <em>Cazo del Cerero</em> (<strong>Cera vertida</strong>). Las demás armas de jefe se distinguen por sus movimientos y su daño. Con <em>Sin destellos</em> (Ajustes → Accesibilidad) el brillo de las firmas se atenúa, pero hacen lo mismo.</p>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="lanza-de-aldric">Lanza de Aldric</h3>
+<figure class="retrato"><img src="img/icons_lanza_aldric_hd.png" alt="" class="icono" data-src="../assets/icons/lanza_aldric.png" loading="lazy"></figure>
+<blockquote><p><em>La lanza con la que Ser Aldric esperó a su relevo cuarenta años. Anselmo la enderezó sin quitarle el óxido: dice que el óxido también es guardia.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Lanza</td><td style="text-align:center">28</td><td>Fue <strong>C</strong> (0,55) · Des <strong>C</strong> (0,65)</td><td>Fue 12 · Des 12</td><td style="text-align:center">17</td><td style="text-align:center">44</td><td style="text-align:center">×3,0</td><td style="text-align:center">5</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>estocada · estocada · tajo</td><td>×1,0 · ×1,0 · ×1,1</td><td>0,13 · 0,13 · 0,18 s</td><td>en línea (fino) · en línea · ancho (corto)</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,7</td><td>0,34 s</td><td>en línea, embiste</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,5</td><td>0,10 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>estocada</td><td>×1,1</td><td>0,10 s</td><td>en línea</td></tr></tbody></table>
+<p>Un Asta de centinela más larga y más precisa: las estocadas son más finas, así que hay que apuntar.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer a <strong>Ser Aldric, Rey del Túmulo</strong> · 1500 de Ceniza y 2 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="badajo-del-campanero">Badajo del Campanero</h3>
+<figure class="retrato"><img src="img/icons_badajo_campanero_hd.png" alt="" class="icono" data-src="../assets/icons/badajo_campanero.png" loading="lazy"></figure>
+<blockquote><p><em>El badajo de la campana que el Campanero no pudo callar. Pesa como un remordimiento y suena igual cuando golpea.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Maza</td><td style="text-align:center">30</td><td>Fue <strong>B</strong> (0,85) · Des <strong>E</strong> (0,2)</td><td>Fue 15</td><td style="text-align:center">20</td><td style="text-align:center">27</td><td style="text-align:center">×3,0</td><td style="text-align:center">7</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>tajo · vertical</td><td>×1,0 · ×1,1</td><td>0,15 · 0,18 s</td><td>ancho · frontal</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,8</td><td>0,38 s</td><td>frontal, hiperarmadura</td></tr><tr><td>Carrera</td><td>vertical</td><td>×1,3</td><td>0,15 s</td><td>frontal, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,12 s</td><td>ancho</td></tr></tbody></table>
+<p>El ritmo del garrote con el peso de una campana.</p>
+<p><strong>Firma · Eco de campana.</strong> Si el golpe fuerte <strong>acierta</strong>, una fracción de segundo después (0,3 s) <strong>vuelve a sonar</strong> una campanada: un tañido en aros de bronce alrededor del punto del golpe. Hace una cuarta parte del daño del golpe, <strong>aturde un instante a los Desvelados cercanos</strong> (no al mismo más de una vez cada pocos segundos) y <strong>le carga la postura a los jefes</strong>. Si el fuerte falla, no hay eco.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer al <strong>Campanero Ahorcado</strong> · 2500 de Ceniza y 2 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="colmillo-del-sabueso">Colmillo del Sabueso</h3>
+<figure class="retrato"><img src="img/icons_colmillo_sabueso_hd.png" alt="" class="icono" data-src="../assets/icons/colmillo_sabueso.png" loading="lazy"></figure>
+<blockquote><p><em>Un colmillo del Sabueso de las Piras, afilado hasta parecer cuchillo. Aún huele a quien no dormía. Prende al morder.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Daga</td><td style="text-align:center">19</td><td>Fue <strong>E</strong> (0,1) · Des <strong>A</strong> (1,15)</td><td>Des 15</td><td style="text-align:center">11</td><td style="text-align:center">22</td><td style="text-align:center">×4,5</td><td style="text-align:center">2</td></tr></tbody></table>
+<p><strong>Fuego:</strong> 4 de daño por segundo durante 2 s.</p>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (4)</td><td>tajo · revés · tajo · estocada</td><td>×1,0 · ×1,0 · ×1,0 · ×1,3</td><td>0,07 · 0,07 · 0,07 · 0,10 s</td><td>ancho ×3 · en línea</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,8</td><td>0,25 s</td><td>en línea, embiste, largo</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,3</td><td>0,08 s</td><td>en línea, embiste</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,2</td><td>0,06 s</td><td>ancho</td></tr></tbody></table>
+<p>El mejor escalado de Destreza del juego. Cada mordisco deja una brasa.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer al <strong>Sabueso de las Piras</strong> · 3000 de Ceniza y 3 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="espada-del-capitán">Espada del Capitán</h3>
+<figure class="retrato"><img src="img/icons_espada_capitan_hd.png" alt="" class="icono" data-src="../assets/icons/espada_capitan.png" loading="lazy"></figure>
+<blockquote><p><em>Refundida de la insignia del que mandaba el relevo. Anselmo dice que la hoja no deja de contar: uno, dos, tres... y luego empieza otra vez.</em> <em>Tajos anchos y una estocada que llega lejos, como llegaba la suya.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Espada</td><td style="text-align:center">30</td><td>Fue <strong>C</strong> (0,6) · Des <strong>C</strong> (0,6)</td><td>Fue 13 · Des 12</td><td style="text-align:center">19</td><td style="text-align:center">30</td><td style="text-align:center">×3,2</td><td style="text-align:center">4</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>tajo · revés · estocada</td><td>×1,0 · ×1,0 · ×1,3</td><td>0,13 · 0,12 · 0,18 s</td><td>ancho · ancho · en línea, avanza, largo</td></tr><tr><td>Fuerte</td><td>estocada</td><td>×1,8</td><td>0,34 s</td><td>en línea, embiste, muy largo</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,4</td><td>0,12 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,10 s</td><td>ancho</td></tr></tbody></table>
+<p>Cuenta hasta tres y el tercero cruza media sala.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer al <strong>Capitán del Relevo</strong> · 3000 de Ceniza y 3 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="remo-de-la-madre">Remo de la Madre</h3>
+<figure class="retrato"><img src="img/icons_remo_madre_hd.png" alt="" class="icono" data-src="../assets/icons/remo_madre.png" loading="lazy"></figure>
+<blockquote><p><em>La pala con la que la Madre de las Charcas empujaba a sus hijos hacia el fondo, para que durmieran. Gotea siempre, aunque esté seco.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Mandoble</td><td style="text-align:center">42</td><td>Fue <strong>B</strong> (0,85) · Des <strong>D</strong> (0,35)</td><td>Fue 16</td><td style="text-align:center">28</td><td style="text-align:center">36</td><td style="text-align:center">×3,0</td><td style="text-align:center">9</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>tajo · revés</td><td>×1,0 · ×1,05</td><td>0,26 · 0,24 s</td><td>ancho</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,8</td><td>0,50 s</td><td>frontal, hiperarmadura</td></tr><tr><td>Carrera</td><td>giro</td><td>×1,3</td><td>0,24 s</td><td>360°</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,20 s</td><td>ancho</td></tr></tbody></table>
+<p>El mandoble, más pesado y con algo más de alcance.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer a la <strong>Madre de las Charcas</strong> · 4000 de Ceniza y 3 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="espada-del-alado">Espada del Alado</h3>
+<figure class="retrato"><img src="img/icons_espada_angel_hd.png" alt="" class="icono" data-src="../assets/icons/espada_angel.png" loading="lazy"></figure>
+<blockquote><p><em>Refundida con la pluma del custodio. Anselmo se quemó las manos al templarla y no quiso decir con qué la apagó.</em> <em>La hoja prende lo que corta, como la antorcha que la acompañaba.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Espada</td><td style="text-align:center">31</td><td>Fue <strong>C</strong> (0,5) · Des <strong>C</strong> (0,55)</td><td>Fue 12 · Des 14</td><td style="text-align:center">20</td><td style="text-align:center">31</td><td style="text-align:center">×3,0</td><td style="text-align:center">4</td></tr></tbody></table>
+<p><strong>Fuego:</strong> 6 de daño por segundo durante 3 s.</p>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (3)</td><td>tajo · revés · vertical</td><td>×1,0 · ×1,0 · ×1,25</td><td>0,14 · 0,13 · 0,20 s</td><td>ancho · ancho · frontal</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,9</td><td>0,40 s</td><td>frontal, largo</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,35</td><td>0,12 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,10 s</td><td>ancho</td></tr></tbody></table>
+<p>La espada que más pega de su familia, y arde.</p>
+<p><strong>Firma · Ala de fuego.</strong> El golpe fuerte <strong>cargado al máximo</strong> (mantén FUERTE hasta el nivel 2) suelta además una <strong>media luna de fuego</strong> que vuela unas cuatro baldosas hacia delante, <strong>atraviesa</strong> a lo que encuentra y lo <strong>prende</strong>. Hace algo más de la mitad del daño del golpe. Sin cargar, el fuerte es solo la espada.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer al <strong>Alado de Hollín</strong> · 4000 de Ceniza y 3 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="cazo-del-cerero">Cazo del Cerero</h3>
+<figure class="retrato"><img src="img/icons_cazo_cerero_hd.png" alt="" class="icono" data-src="../assets/icons/cazo_cerero.png" loading="lazy"></figure>
+<blockquote><p><em>El cazo de hierro con el que el Cerero Mayor vertía la cera sobre los Insomnes. Sigue caliente; lo estará siempre. Prende lo que toca.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Maza</td><td style="text-align:center">44</td><td>Fue <strong>A</strong> (1,05) · Des –</td><td>Fue 18</td><td style="text-align:center">28</td><td style="text-align:center">31</td><td style="text-align:center">×2,5</td><td style="text-align:center">7</td></tr></tbody></table>
+<p><strong>Fuego:</strong> 8 de daño por segundo durante 3 s.</p>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>vertical · tajo</td><td>×1,0 · ×1,0</td><td>0,30 · 0,28 s</td><td>frontal · ancho</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×2,0</td><td>0,58 s</td><td>frontal, largo, hiperarmadura</td></tr><tr><td>Carrera</td><td>giro</td><td>×1,3</td><td>0,26 s</td><td>360°</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,22 s</td><td>ancho</td></tr></tbody></table>
+<p>El mayor daño base del juego y el fuego más fuerte. Pide la Fuerza más alta.</p>
+<p><strong>Firma · Cera vertida.</strong> <strong>Todo</strong> golpe fuerte vuelca un <strong>charco de cera ardiente</strong> donde cae, que prende a quien lo pisa durante unos segundos (con el fuerte cargado al máximo, el charco es mayor). Nunca quema al Insomne, ni siquiera la suya; hay un máximo de charcos a la vez.</p>
+<p><strong>Dónde:</strong> fragua de Anselmo, tras vencer al <strong>Cerero Mayor</strong> · 5000 de Ceniza y 4 esquirlas.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="pala-de-odo">Pala de Odo</h3>
+<figure class="retrato"><img src="img/icons_pala_odo_hd.png" alt="" class="icono" data-src="../assets/icons/pala_odo.png" loading="lazy"></figure>
+<blockquote><p><em>La pala con la que Odo cavó para los demás todas las tumbas del Barrio, y al final la suya.</em> <em>El filo está gastado de tanto decir que no a la tierra.</em></p></blockquote>
+<table class="cols-8"><thead><tr><th>Tipo</th><th style="text-align:center">Daño</th><th>Escalado</th><th>Requisitos</th><th style="text-align:center">Aguante</th><th style="text-align:center">Alcance</th><th style="text-align:center">Crítico</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Lanza</td><td style="text-align:center">25</td><td>Fue <strong>C</strong> (0,7) · Des <strong>D</strong> (0,3)</td><td>Fue 12</td><td style="text-align:center">19</td><td style="text-align:center">36</td><td style="text-align:center">×3,0</td><td style="text-align:center">5</td></tr></tbody></table>
+<table class="cols-5"><thead><tr><th>Movimiento</th><th>Gesto</th><th>Daño</th><th>Arranque</th><th>Barrido</th></tr></thead><tbody><tr><td>Ligero (2)</td><td>estocada · tajo</td><td>×1,0 · ×1,15</td><td>0,16 · 0,20 s</td><td>en línea · ancho (corto)</td></tr><tr><td>Fuerte</td><td>vertical</td><td>×1,8</td><td>0,42 s</td><td>frontal</td></tr><tr><td>Carrera</td><td>estocada</td><td>×1,4</td><td>0,12 s</td><td>en línea, embiste muy largo</td></tr><tr><td>Tras rodar</td><td>tajo</td><td>×1,1</td><td>0,13 s</td><td>ancho</td></tr></tbody></table>
+<p>Una lanza de Fuerza: estocada, paletada y un golpe de arriba como quien clava la pala en la tierra.</p>
+<p><strong>Dónde:</strong> regalo de <strong>Odo el Sepulturero</strong> al entregarle la tercera <strong>Lápida sin Nombre</strong>.</p>
+</article>
+<hr>
+<h2 id="5--escudos">5 · Escudos</h2>
+<table class="cols-6"><thead><tr><th>Escudo</th><th style="text-align:center">Bloqueo</th><th style="text-align:center">Estabilidad</th><th style="text-align:center">Aguante por punto parado</th><th style="text-align:center">Parry</th><th style="text-align:center">Peso</th></tr></thead><tbody><tr><td>Escudo-lápida</td><td style="text-align:center">100 %</td><td style="text-align:center">77</td><td style="text-align:center">0,35</td><td style="text-align:center">—</td><td style="text-align:center">12</td></tr><tr><td>Escudo alto</td><td style="text-align:center">100 %</td><td style="text-align:center">75</td><td style="text-align:center">0,38</td><td style="text-align:center">—</td><td style="text-align:center">8</td></tr><tr><td>Pavés de la guardia</td><td style="text-align:center">100 %</td><td style="text-align:center">73</td><td style="text-align:center">0,40</td><td style="text-align:center">0,07 s</td><td style="text-align:center">8</td></tr><tr><td>Escudo heráldico</td><td style="text-align:center">100 %</td><td style="text-align:center">63</td><td style="text-align:center">0,55</td><td style="text-align:center">0,10 s</td><td style="text-align:center">5</td></tr><tr><td>Escudo redondo</td><td style="text-align:center">85 %</td><td style="text-align:center">53</td><td style="text-align:center">0,70</td><td style="text-align:center">0,16 s</td><td style="text-align:center">4</td></tr><tr><td>Rodela de ascua</td><td style="text-align:center">75 %</td><td style="text-align:center">43</td><td style="text-align:center">0,85</td><td style="text-align:center">0,20 s</td><td style="text-align:center">3</td></tr><tr><td>Broquel</td><td style="text-align:center">60 %</td><td style="text-align:center">33</td><td style="text-align:center">1,00</td><td style="text-align:center">0,22 s</td><td style="text-align:center">2</td></tr><tr><td>Tabla podrida</td><td style="text-align:center">50 %</td><td style="text-align:center">13</td><td style="text-align:center">1,30</td><td style="text-align:center">0,12 s</td><td style="text-align:center">3</td></tr></tbody></table>
+<p>Regla general: <strong>cuanto más para, menos desvía</strong>. Los escudos grandes aguantan todo y no dejan hacer parry; los pequeños dejan pasar daño pero abren la ventana más larga.</p>
+<h3 id="guardia-con-el-arma-sin-escudo">Guardia con el arma (sin escudo)</h3>
+<p>Sin escudo, el Insomne se cubre con el arma a dos manos. Para menos y cansa más que cualquier escudo decente. En táctil, el botón dice GUARDIA.</p>
+<table class="cols-4"><thead><tr><th>Familia</th><th style="text-align:center">Bloqueo</th><th style="text-align:center">Estabilidad</th><th style="text-align:center">Parry</th></tr></thead><tbody><tr><td>Mandoble · Hacha · Maza</td><td style="text-align:center">60 %</td><td style="text-align:center">33</td><td style="text-align:center">—</td></tr><tr><td>Espada</td><td style="text-align:center">55 %</td><td style="text-align:center">27</td><td style="text-align:center">—</td></tr><tr><td>Lanza</td><td style="text-align:center">50 %</td><td style="text-align:center">23</td><td style="text-align:center">—</td></tr><tr><td>Báculo</td><td style="text-align:center">45 %</td><td style="text-align:center">17</td><td style="text-align:center">—</td></tr><tr><td>Daga</td><td style="text-align:center">40 %</td><td style="text-align:center">13</td><td style="text-align:center">0,16 s</td></tr></tbody></table>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="escudo-heráldico">Escudo heráldico</h3>
+<figure class="retrato"><img src="img/icons_escudo_heraldico_hd.png" alt="" class="icono" data-src="../assets/icons/escudo_heraldico.png" loading="lazy"></figure>
+<blockquote><p><em>Blasón de la Casa del Párpado: un ojo cerrado sobre campo de ceniza.</em> <em>Alguien raspó el ojo hasta abrirlo.</em></p></blockquote>
+<p>Para todo y aún deja hacer un parry ajustado. El escudo de quien sabe esperar.</p>
+<p><strong>Dónde:</strong> escudo inicial del Caballero del Párpado · cofre en el <strong>Barrio de los Veladores</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="escudo-redondo">Escudo redondo</h3>
+<figure class="retrato"><img src="img/icons_escudo_redondo_hd.png" alt="" class="icono" data-src="../assets/icons/escudo_redondo.png" loading="lazy"></figure>
+<blockquote><p><em>Madera reforzada con aros de hierro.</em> <em>En el reverso, el dibujo infantil de una cama.</em> <em>Lo hizo un hijo que ya no recuerda a su padre.</em></p></blockquote>
+<p>El término medio: para casi todo y desvía con holgura.</p>
+<p><strong>Dónde:</strong> escudo inicial del Guerrero · cofre en el <strong>Camposanto del Relevo</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="broquel">Broquel</h3>
+<figure class="retrato"><img src="img/icons_broquel_hd.png" alt="" class="icono" data-src="../assets/icons/broquel.png" loading="lazy"></figure>
+<blockquote><p><em>Rodela pequeña para desviar, no para aguantar.</em> <em>Los ladrones de Hondavela lo pulían como un espejo.</em> <em>Ningún Desvelado soporta ver sus propios ojos.</em></p></blockquote>
+<p>La ventana de parry más larga del juego. Parar con él es pagar caro.</p>
+<p><strong>Dónde:</strong> escudo inicial del Ladrón · cofre en el <strong>Osario</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="escudo-alto">Escudo alto</h3>
+<figure class="retrato"><img src="img/icons_escudo_alto_hd.png" alt="" class="icono" data-src="../assets/icons/escudo_alto.png" loading="lazy"></figure>
+<blockquote><p><em>Pavés de muralla, alto como un hombre.</em> <em>Los centinelas dormían a su sombra en el cambio de guardia.</em> <em>El relevo no llegó nunca.</em></p></blockquote>
+<p>Una muralla portátil. No desvía.</p>
+<p><strong>Dónde:</strong> escudo inicial del Lancero · cofre en las <strong>Criptas de la Guardia</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="tabla-podrida">Tabla podrida</h3>
+<figure class="retrato"><img src="img/icons_tabla_podrida_hd.png" alt="" class="icono" data-src="../assets/icons/tabla_podrida.png" loading="lazy"></figure>
+<blockquote><p><em>Trozo de puerta arrancado de su marco.</em> <em>Todavía conserva un pestillo echado por dentro.</em> <em>Alguien quiso encerrarse con su último sueño.</em></p></blockquote>
+<p>Peor que la guardia de un mandoble. Se lleva porque no hay otra cosa.</p>
+<p><strong>Dónde:</strong> escudo inicial del Paria · cadáver en la <strong>Fosa de los Veladores</strong> (Barrio de los Veladores), junto a la tumba vacía de Odo: alguien la usó de tapa.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="escudo-lápida">Escudo-lápida</h3>
+<figure class="retrato"><img src="img/icons_escudo_lapida_hd.png" alt="" class="icono" data-src="../assets/icons/escudo_lapida.png" loading="lazy"></figure>
+<blockquote><p><em>Una lápida sin nombre con dos asas de hierro. Un Velador la arrancó del Camposanto para cubrirse cuando cayó la cadena.</em> <em>No le sirvió. A ti quizá sí: no hay golpe que la parta, aunque cueste moverla.</em></p></blockquote>
+<p>La mejor estabilidad del juego y el escudo más pesado (12). Con poca Resistencia, hunde la rodada a pesada.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Camposanto del Relevo</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="rodela-de-ascua">Rodela de ascua</h3>
+<figure class="retrato"><img src="img/icons_rodela_ascua_hd.png" alt="" class="icono" data-src="../assets/icons/rodela_ascua.png" loading="lazy"></figure>
+<blockquote><p><em>Escudo pequeño de hierro ennegrecido, aún tibio. Lo llevaba el cuidador de la perrera para apartar las brasas que escupía el Sabueso.</em> <em>Ligero y vivo: desvía mejor de lo que aguanta.</em></p></blockquote>
+<p>Casi la ventana del broquel, parando bastante más.</p>
+<p><strong>Dónde:</strong> cadáver en el <strong>Barrio de los Veladores</strong>.</p>
+</article>
+<hr>
+<article class="ficha ficha-arma">
+<h3 id="pavés-de-la-guardia">Pavés de la guardia</h3>
+<figure class="retrato"><img src="img/icons_escudo_capitan_hd.png" alt="" class="icono" data-src="../assets/icons/escudo_capitan.png" loading="lazy"></figure>
+<blockquote><p><em>Escudo alto de la guardia del relevo, con la cruz de turno pintada y repintada cada cambio de guardia. Lo enterraron puesto con su dueño, por si había que volver.</em> <em>Aguanta todo y cansa poco. Para desviar un golpe hay que saber muy bien cuándo.</em></p></blockquote>
+<p>El escudo alto que, a duras penas, desvía: 0,07 s, la ventana más corta del juego.</p>
+<p><strong>Dónde:</strong> cadáver en las <strong>Criptas de la Guardia</strong>.</p>
+</article>
+<hr>
+<h2 id="6--consumibles-materiales-y-milagros">6 · Consumibles, materiales y milagros</h2>
+<p><em>Un consumible se elige en el menú del personaje y se usa con el botón OBJETO. Los cadáveres los dan por lotes (columna «Hallazgo»). La Buhonera los vende cuando la marca indicada se ha cumplido.</em></p>
+<table class="cols-5"><thead><tr><th>Objeto</th><th>Efecto (números del juego)</th><th style="text-align:center">Precio</th><th style="text-align:center">Hallazgo</th><th>En la Buhonera</th></tr></thead><tbody><tr><td>Cuchillo de hueso</td><td>Línea recta · daño 30 · alcance 230 · 8 de aguante</td><td style="text-align:center">30</td><td style="text-align:center">×5</td><td>desde el principio</td></tr><tr><td>Bomba de brea</td><td>Arco · estalla en llamas · daño 90 en radio 36 · alcance 110 · 14 de aguante · también te daña</td><td style="text-align:center">140</td><td style="text-align:center">×2</td><td>tras Ser Aldric, Rey del Túmulo</td></tr><tr><td>Incienso amargo</td><td>Apaga el fuego encima y protege de las llamas 25 s</td><td style="text-align:center">90</td><td style="text-align:center">×2</td><td>desde el principio</td></tr><tr><td>Musgo de tumba</td><td>Cura 45 de vida en 8 s · no gasta la Vasija</td><td style="text-align:center">120</td><td style="text-align:center">×2</td><td>tras Ser Aldric</td></tr><tr><td>Nana embotellada</td><td>Aturde 2,5 s a todo en radio 90 · no afecta a jefes</td><td style="text-align:center">220</td><td style="text-align:center">×1</td><td>tras el Campanero Ahorcado</td></tr><tr><td>Ascua viva</td><td>Te aviva (vida máx. ×1,3 hasta morir) o aviva una hoguera</td><td style="text-align:center">2500</td><td style="text-align:center">×1</td><td>tras el Campanero Ahorcado</td></tr></tbody></table>
+<hr>
+<p><strong>Cuchillo de hueso</strong></p>
+<blockquote><p><em>Tallado de una costilla que nadie reclamó. Los veladores los llevaban al cinto para cortar mechas, no gargantas; la necesidad enseña otros usos.</em></p></blockquote>
+<p>Se encuentra en el Camposanto, el Osario y las Criptas.</p>
+<p><strong>Bomba de brea</strong></p>
+<blockquote><p><em>Brea de pira y una mecha corta en un tarro de barro. En el Barrio las arrojaban a las casas de los que se dormían; luego ya no hizo falta.</em></p></blockquote>
+<p>Se encuentra en la Pira del Velador (el tutorial), el Camposanto, el Campanario, el Horno y el Desván. Con un enemigo a la vista, la bomba cae a sus pies.</p>
+<p><strong>Incienso amargo</strong></p>
+<blockquote><p><em>Resina de los árboles de lámpara, quemada con sal. Su humo apaga lo que arde y no deja que prenda de nuevo, como si el fuego también tuviera sueño.</em></p></blockquote>
+<p>Se encuentra en el Barrio de los Veladores.</p>
+<p><strong>Musgo de tumba</strong></p>
+<blockquote><p><em>Crece solo sobre losas sin nombre. Masticarlo sabe a tierra mojada y a algo que se recuerda a medias.</em></p></blockquote>
+<p>Se encuentra en el Camposanto, la Cisterna y el Desván. A veces lo sueltan los Desvelados.</p>
+<p><strong>Nana embotellada</strong></p>
+<blockquote><p><em>Una canción de cuna atrapada en una botella sellada con lacre del Párpado. Al romperla, la canción escapa y dura un suspiro. Los Desvelados que la oyen se detienen, como si recordaran algo. Luego recuerdan que no pueden.</em></p></blockquote>
+<p>Se encuentra en el Horno de Velas.</p>
+<p><strong>Ascua viva</strong></p>
+<blockquote><p><em>Brasa que late como un corazón pequeño. Los Veladores la arrancaban de los élites caídos y discutían qué hacer con ella: quemarla en el pecho o en la hoguera.</em> <em>El pecho da fuerza hasta la próxima muerte. La hoguera, una Vasija más honda para siempre.</em></p></blockquote>
+<p>Usada en el pecho: Avivado, +30 % de vida máxima hasta morir (vencer a un jefe también aviva). Usada en la hoguera: Avivar, +1 carga de Vasija cada vez que se descanse en esa hoguera, hasta +2. Un élite de cada tres la suelta (35 %).</p>
+<hr>
+<h3 id="materiales">Materiales</h3>
+<table class="cols-4"><thead><tr><th>Material</th><th>Uso</th><th style="text-align:center">Precio</th><th>Dónde</th></tr></thead><tbody><tr><td>Esquirla de reja</td><td>Refundir armas y forjar armas de jefe con Anselmo</td><td style="text-align:center">400</td><td>Cadáveres de casi todas las zonas · 2 por jefe · a menudo de los élites · Buhonera tras la Plañidera Mayor (máx. 6)</td></tr><tr><td>Esquirla de vasija</td><td>En la hoguera: Reforzar Vasija, +1 carga</td><td style="text-align:center">1500</td><td>1 por jefe · Buhonera tras el Campanero Ahorcado (máx. 2)</td></tr><tr><td>Hueso de velador</td><td>En la hoguera: Quemar hueso, la Vasija cura más</td><td style="text-align:center">900</td><td>Élites (40 %) · Buhonera tras Ser Aldric (máx. 3)</td></tr></tbody></table>
+<blockquote><p><em>Esquirla de reja.</em> — <em>Hierro de las rejas que cerraban los dormitorios. Lo que guardó tanto tiempo un sueño todavía sabe cortar.</em></p></blockquote>
+<blockquote><p><em>Esquirla de vasija.</em> — <em>Un trozo de barro cocido con la boca aún tiznada. Los Veladores enterraban a sus muertos con su vasija rota, para que no bebieran más.</em> <em>Pegada a la tuya en la hoguera, el barro guarda un trago más.</em></p></blockquote>
+<blockquote><p><em>Hueso de velador.</em> — <em>Hueso de un Velador que se durmió de pie, tan seco que arde sin llama. Quemado en la hoguera, su ceniza cae en la Vasija y la espesa.</em> <em>Nadie sabe a quién perteneció. Él tampoco lo recordaría.</em></p></blockquote>
+<h3 id="la-refundición-de-anselmo">La refundición de Anselmo</h3>
+<p>Cada arma se refunde por separado, hasta <strong>+5</strong>. Cada nivel suma <strong>+8 %</strong> de daño a esa arma (+40 % en total).</p>
+<table class="cols-3"><thead><tr><th style="text-align:center">Paso</th><th style="text-align:center">Esquirlas</th><th style="text-align:center">Ceniza</th></tr></thead><tbody><tr><td style="text-align:center">+0 → +1</td><td style="text-align:center">1</td><td style="text-align:center">300</td></tr><tr><td style="text-align:center">+1 → +2</td><td style="text-align:center">2</td><td style="text-align:center">600</td></tr><tr><td style="text-align:center">+2 → +3</td><td style="text-align:center">3</td><td style="text-align:center">900</td></tr><tr><td style="text-align:center">+3 → +4</td><td style="text-align:center">4</td><td style="text-align:center">1200</td></tr><tr><td style="text-align:center">+4 → +5</td><td style="text-align:center">5</td><td style="text-align:center">1500</td></tr><tr><td style="text-align:center"><strong>Total</strong></td><td style="text-align:center"><strong>15</strong></td><td style="text-align:center"><strong>4500</strong></td></tr></tbody></table>
+<hr>
+<h3 id="milagros">Milagros</h3>
+<p><em>No se gastan: cuestan aguante y tienen recarga. Ambos proceden de la Hermana Lumbre, y en una misma partida solo se obtiene uno de los dos.</em></p>
+<table class="cols-5"><thead><tr><th>Milagro</th><th>Efecto</th><th style="text-align:center">Aguante</th><th style="text-align:center">Recarga</th><th>Origen</th></tr></thead><tbody><tr><td>Llamarada</td><td>Cono de fuego delante · daño 34 · alcance 58 · prende</td><td style="text-align:center">32</td><td style="text-align:center">1,2 s</td><td>Fuelle de Lumbre</td></tr><tr><td>Llama azul</td><td>Cura 35 de vida en 7 s</td><td style="text-align:center">45</td><td style="text-align:center">14 s</td><td>Fuego azul</td></tr></tbody></table>
+<blockquote><p><em>Llamarada.</em> — <em>El fuelle de Lumbre aún sopla. Lo que avivaba las piras ahora aviva tus manos: un aliento de brasa que no pregunta de quién es la carne.</em></p></blockquote>
+<blockquote><p><em>Llama azul.</em> — <em>Un rescoldo de la hoguera donde ardió Lumbre. Calienta sin quemar, como ella decía que debían calentar todas.</em></p></blockquote>
+<hr>
+<h2 id="7--la-vasija-de-ceniza">7 · La Vasija de Ceniza</h2>
+<blockquote><p><em>Vasija de barro de las hogueras, con ceniza que aún no se ha enfriado del todo.</em> <em>Beber su calor cierra las heridas y aplaza el cansancio.</em> <em>Se vuelve a llenar al descansar junto al fuego.</em> <em>Sabe a nana olvidada.</em></p></blockquote>
+<table class="cols-2"><thead><tr><th></th><th>Valor</th></tr></thead><tbody><tr><td>Cargas al empezar</td><td>3 (4 con la estirpe Hondavelano llano)</td></tr><tr><td>Máximo con esquirlas</td><td>10 cargas</td></tr><tr><td>Curación base</td><td>45 % de la vida máxima por trago</td></tr><tr><td>Nivel (Huesos de velador)</td><td>+5 % por nivel, hasta +5 (70 % en total)</td></tr><tr><td>Duración del trago</td><td>1 s; la vida sube a los 0,55 s</td></tr></tbody></table>
+<p><strong>Cómo crece la Vasija</strong></p>
+<ul><li><strong>Esquirla de vasija</strong> (Reforzar Vasija en la hoguera): +1 carga, hasta 10. Cada jefe deja una; la Buhonera vende dos.</li><li><strong>Hueso de velador</strong> (Quemar hueso en la hoguera): +5 % de curación, hasta +5.</li><li><strong>Lágrima de la Guardia Perpetua</strong>: +1 carga.</li><li><strong>Avivar una hoguera</strong> con Ascua viva: +1 carga al descansar en ella, hasta +2.</li><li><strong>Reliquias que suman curación</strong> (se suman a la base): Brasa de Velador +5 %, Hoguera Avivada +10 %, Fuego azul +15 % <em>o</em> Fuelle de Lumbre +5 %, Pluma consumida +5 %.</li><li><strong>Lo que la multiplica:</strong> Lágrima espesa ×1,35 · Hondavelano llano ×0,9 · Cereño ×0,85.</li></ul>
+<hr>
+<h2 id="8--amuletos">8 · Amuletos</h2>
+<p><em>Dos huecos. Cada amuleto pesa 0,5. Casi todos cobran algo a cambio. Tres los vende la Buhonera (uno de cada); el resto lo sueltan los élites, la mitad de las veces, siempre uno que aún no tengas.</em></p>
+<table class="cols-4"><thead><tr><th>Amuleto</th><th>Ventaja</th><th>Coste</th><th>Dónde</th></tr></thead><tbody><tr><td>Ceniza ávida</td><td>Ceniza ganada +30 %</td><td>Daño recibido +10 %</td><td>Buhonera · 700 · desde el principio</td></tr><tr><td>Hueso hueco</td><td>Aguante al rodar −30 %</td><td>Vida máxima −10 %</td><td>Buhonera · 900 · tras Ser Aldric</td></tr><tr><td>Lágrima espesa</td><td>Curación de la Vasija +35 %</td><td>Recuperación de aguante −15 %</td><td>Buhonera · 1100 · tras el Campanero</td></tr><tr><td>Ascua rencorosa</td><td>Daño +35 % con menos del 35 % de vida</td><td>—</td><td>élites</td></tr><tr><td>Reja mordida</td><td>Daño +12 %</td><td>Daño recibido +12 %</td><td>élites</td></tr><tr><td>Campana rajada</td><td>Ventana de parry +0,05 s</td><td>Vida máxima −8 %</td><td>élites</td></tr><tr><td>Cera fría</td><td>Daño del fuego −70 % · aguante +5 %</td><td>—</td><td>cadáver en el <strong>Desván Tejido</strong> · élites</td></tr><tr><td>Vela quieta</td><td>Recuperación de aguante +25 %</td><td>Daño −7 %</td><td>élites</td></tr><tr><td>Losa cargada</td><td>Daño recibido −15 %</td><td>Aguante al rodar +25 %</td><td>élites</td></tr></tbody></table>
+<hr>
+<p><strong>Ceniza ávida</strong></p>
+<blockquote><p><em>Amuleto de los recaudadores del Relevo, que cobraban el diezmo de los muertos antes de que se enfriaran.</em> <em>La ceniza acude a él como a una boca abierta. Lo que no explica es por qué duele más cada golpe.</em></p></blockquote>
+<p><strong>Hueso hueco</strong></p>
+<blockquote><p><em>Falange de un Velador que aprendió a no pesar. Dicen que al final ya no proyectaba sombra.</em> <em>Rodar cansa menos. Vivir, un poco más.</em></p></blockquote>
+<p><strong>Lágrima espesa</strong></p>
+<blockquote><p><em>Una gota de ascua que no quiso caer y se cuajó en el barro.</em> <em>La Vasija cura más con ella al cuello, pero el aliento tarda en volver, como después de llorar.</em></p></blockquote>
+<p><strong>Ascua rencorosa</strong></p>
+<blockquote><p><em>Brasa que un élite guardó en el pecho hasta el final. Arde más cuanto más cerca está de apagarse.</em> <em>Los viejos Veladores la llamaban «la última palabra».</em></p></blockquote>
+<p><strong>Reja mordida</strong></p>
+<blockquote><p><em>Eslabón de una verja que alguien intentó abrir con los dientes.</em> <em>Quien lo lleva pega con esa misma desesperación, y con ese mismo descuido.</em></p></blockquote>
+<p><strong>Campana rajada</strong></p>
+<blockquote><p><em>Badajo diminuto de una campana de mano, rajado por tocar a muerto demasiadas veces.</em> <em>Su sonido llega un instante antes que el golpe. El cuerpo lo paga.</em></p></blockquote>
+<p><strong>Cera fría</strong></p>
+<blockquote><p><em>Pellizco de cera de un cirio que nunca se encendió. En el Horno lo usaban para tocar el crisol sin quemarse.</em> <em>El fuego resbala sobre quien lo lleva.</em></p></blockquote>
+<p><strong>Vela quieta</strong></p>
+<blockquote><p><em>Cabo de vela que ardió años sin moverse, en una celda donde nadie respiraba.</em> <em>Enseña a esperar. Esperar no hiere a nadie.</em></p></blockquote>
+<p><strong>Losa cargada</strong></p>
+<blockquote><p><em>Esquirla de lápida que alguien llevó a cuestas por una promesa que ya nadie recuerda.</em> <em>Los golpes pesan menos. Todo lo demás, más.</em></p></blockquote>
+<hr>
+<h2 id="9--reliquias-y-objetos-de-misión">9 · Reliquias y objetos de misión</h2>
+<p><em>Las reliquias actúan solas, para siempre, desde que se recogen. No ocupan hueco ni pesan.</em></p>
+<h3 id="reliquias-de-jefe">Reliquias de jefe</h3>
+<table class="cols-3"><thead><tr><th>Reliquia</th><th>Efecto</th><th>La deja</th></tr></thead><tbody><tr><td>Cuerno de la Retorta</td><td>Vida máxima +15</td><td>El Precipitado de la Retorta</td></tr><tr><td>Lágrima de la Guardia Perpetua</td><td>+1 carga de Vasija</td><td>Ser Aldric, Rey del Túmulo</td></tr><tr><td>Soga del Campanero</td><td>Aguante máximo +15</td><td>El Campanero Ahorcado</td></tr><tr><td>Collar del Sabueso</td><td>Aguante máximo +10</td><td>El Sabueso de las Piras</td></tr><tr><td>Sudario de Odo</td><td>Daño recibido −10 %</td><td>Odo el Enterrado</td></tr><tr><td>Perla negra</td><td>Daño recibido −5 % · vida máxima +10</td><td>La Madre de las Charcas</td></tr><tr><td>Mecha del Cerero</td><td>Todas las armas +10 % de daño · vida máxima +10</td><td>El Cerero Mayor</td></tr><tr><td>Insignia del Capitán</td><td>Vida máxima +15 · parry +0,02 s</td><td>El Capitán del Relevo</td></tr><tr><td>Pluma consumida</td><td>Vida +10 · aguante +10 · Vasija +5 %</td><td>El Alado de Hollín</td></tr><tr><td>Vestigio de la Plañidera</td><td>Todas las armas +10 % de daño</td><td>La Plañidera Mayor</td></tr></tbody></table>
+<hr>
+<p><strong>Cuerno de la Retorta</strong></p>
+<blockquote><p><em>Cuerno retorcido, todavía tibio. El Alquimista del Relevo quiso destilar un fuego que no se apagara nunca, para que ningún Velador tuviera que volver a velar. Echó en la retorta la ceniza de los muertos, y luego la suya.</em> <em>Llevarlo encima recuerda al cuerpo que aún arde por dentro.</em></p></blockquote>
+<p><strong>Lágrima de la Guardia Perpetua</strong></p>
+<blockquote><p><em>Una gota de cera endurecida que Ser Aldric guardaba bajo el yelmo. No la lloró él: la recogió de la mejilla del último centinela que se durmió en su turno, antes de colgarlo.</em> <em>Al apretarla contra la Vasija de Ceniza, el barro se ensancha para una brasa más.</em></p></blockquote>
+<p><strong>Soga del Campanero</strong></p>
+<blockquote><p><em>Cuerda de campanario trenzada con cabello. El campanero mayor la ató a la viga y a su cuello la misma noche: no quería volver a tocar a muerto por nadie.</em> <em>Quien la lleva respira hondo entre golpe y golpe.</em></p></blockquote>
+<p><strong>Collar del Sabueso</strong></p>
+<blockquote><p><em>Cuero tostado con una campanilla sin badajo. Los Veladores ataban al perro a la pira para que olfateara a los que fingían dormir.</em> <em>El Sabueso nunca dejó de buscar. Su collar todavía tira hacia delante.</em></p></blockquote>
+<p><strong>Sudario de Odo</strong></p>
+<blockquote><p><em>Mortaja de tierra apelmazada que Odo se cosió encima para dormir bajo el suelo. No durmió. La tierra no da sueño: solo peso.</em> <em>Quien la viste encaja mejor los golpes, como quien ya está enterrado.</em></p></blockquote>
+<p><strong>Perla negra</strong></p>
+<blockquote><p><em>Se formó en la garganta de la Madre de las Charcas con todo lo que no llegó a decir antes de hundirse.</em> <em>Pesa más de lo que debería. Quien la lleva siente el agua cerrarse por encima, y aguanta.</em></p></blockquote>
+<p><strong>Mecha del Cerero</strong></p>
+<blockquote><p><em>El pabilo que ardía en la coronilla del Cerero Mayor. Fundió a tantos que al final la cera le creció por dentro, y la mecha fue lo único que le quedó de cabeza.</em></p></blockquote>
+<p><strong>Insignia del Capitán</strong></p>
+<blockquote><p><em>Distintivo de quien mandaba el relevo. El Capitán bajó a las criptas a contar a sus hombres una última vez, y se quedó contándolos.</em> <em>Quien la lleva sabe cuándo levantar el escudo.</em></p></blockquote>
+<p><strong>Pluma consumida</strong></p>
+<blockquote><p><em>Pluma de hollín del custodio del primer fuego. Al tocarla deja los dedos negros y tibios.</em> <em>El Alado llevó la antorcha hasta el Lecho la primera noche, y desde entonces nadie le dijo que podía soltarla.</em></p></blockquote>
+<p><strong>Vestigio de la Plañidera</strong></p>
+<blockquote><p><em>Un párpado de cera del tamaño de una puerta, todavía caliente, con las puntadas de hilo de campana arrancadas. Lloró por cada vela de Hondavela. Nadie lloró por ella.</em> <em>Refundido en tu arma, el filo recuerda cada golpe que no pudo evitar.</em></p></blockquote>
+<hr>
+<h3 id="reliquias-de-los-rincones">Reliquias de los rincones</h3>
+<table class="cols-3"><thead><tr><th>Reliquia</th><th>Efecto</th><th>Dónde</th></tr></thead><tbody><tr><td>Brasa de Velador</td><td>Vasija +5 %</td><td>cadáver en el <strong>Camposanto del Relevo</strong></td></tr><tr><td>Eco de campana</td><td>Parry +0,03 s · aguante +5</td><td>cadáver tras un muro del <strong>Campanario Hendido</strong></td></tr><tr><td>Sello del Relevo</td><td>Aguante +10 · daño recibido −2 %</td><td>cadáver en las <strong>Criptas de la Guardia</strong></td></tr><tr><td>Capullo de seda</td><td>Daño recibido −3 %</td><td>cadáver en el <strong>Desván Tejido</strong></td></tr><tr><td>Puñado de Ceniza de Vela</td><td>+800 de Ceniza al recogerlo</td><td>cadáveres en el Camposanto, el Barrio y la Cisterna</td></tr></tbody></table>
+<p><strong>Brasa de Velador</strong></p>
+<blockquote><p><em>Ascua que los Veladores llevaban en un relicario de hierro, tomada de la primera pira. Quien la lleva cerca del pecho siente la Vasija más tibia.</em> <em>El relicario todavía tiene grabado un nombre. Es el tuyo.</em></p></blockquote>
+<p><strong>Eco de campana</strong></p>
+<blockquote><p><em>Una campanilla de bronce del tamaño de una uña, escondida tras el muro donde resonaba la campana grande. Quien la oculta allí quería oír algo que no fuera su propia respiración.</em> <em>Al agitarla no suena. Se oye después, cuando ya nadie la mueve.</em></p></blockquote>
+<p><strong>Sello del Relevo</strong></p>
+<blockquote><p><em>Lacre con el sello de la guardia. Con él se firmaba el juramento: «velaré hasta que me releven». Nadie juró qué pasaría si nadie venía.</em> <em>Los que lo llevaban no se cansaban antes de tiempo.</em></p></blockquote>
+<p><strong>Capullo de seda</strong></p>
+<blockquote><p><em>Seda de Tejedora que envolvía a un Velador. Por dentro aún estaba caliente.</em> <em>Las arañas no lo mataron: lo guardaron, como se guarda una vela para la noche siguiente.</em></p></blockquote>
+<p><strong>Puñado de Ceniza de Vela</strong></p>
+<blockquote><p><em>Lo que queda de un Insomne en el fondo de una pira. Pesa más de lo que debería.</em> <em>Los Veladores la vendían como reliquia. Los compradores la usaban para no dormir.</em></p></blockquote>
+<hr>
+<h3 id="reliquias-de-las-sombras">Reliquias de las Sombras</h3>
+<p><em>Dos veces, una Sombra del Insomne entra en el mundo. Lo que deja al caer se queda contigo.</em></p>
+<table class="cols-3"><thead><tr><th>Reliquia</th><th>Efecto</th><th>Dónde</th></tr></thead><tbody><tr><td>Reflejo de Velador</td><td>Parry +0,03 s · vida máxima +10</td><td>la Sombra del <strong>Horno de Velas</strong></td></tr><tr><td>Ceniza propia</td><td>Aguante +15 · daño recibido −3 %</td><td>la Sombra del <strong>Dormitorio Mayor</strong></td></tr></tbody></table>
+<p><strong>Reflejo de Velador</strong></p>
+<blockquote><p><em>Lo que quedó de la Sombra al caer: una lámina de ceniza pulida, como un espejo pequeño. En ella no se ve tu cara. Se ve la de quien eras antes de arrancarte los párpados.</em></p></blockquote>
+<p><strong>Ceniza propia</strong></p>
+<blockquote><p><em>La Sombra del Dormitorio llevaba tu nombre grabado en el yelmo, por dentro. Al caer se deshizo en una ceniza que reconoces: es tuya. No preguntes de qué ciclo.</em></p></blockquote>
+<hr>
+<h3 id="reliquias-de-los-que-esperan">Reliquias de los que esperan</h3>
+<p><em>Recompensas de los NPCs con desenlace. Algunas se excluyen entre sí: elegir una cierra la otra en esa partida. El ciclo siguiente conserva lo obtenido.</em></p>
+<table class="cols-3"><thead><tr><th>Reliquia</th><th>Efecto</th><th>Cómo</th></tr></thead><tbody><tr><td>Hoguera Avivada</td><td>Vasija +10 %</td><td>Llevar 3 Ceras de Vigilia a la Hermana Lumbre</td></tr><tr><td>Fuego azul</td><td>Vasija +15 % · milagro <strong>Llama azul</strong></td><td>Mostrar las Actas de la Pira a la Hermana Lumbre</td></tr><tr><td>Fuelle de Lumbre</td><td>Vasija +5 % · aguante +10 · milagro <strong>Llamarada</strong></td><td>Lo suelta la Hermana Lumbre si acaba Desvelada</td></tr><tr><td>Campanilla de Ilse</td><td>Parry +0,04 s</td><td>Devolverle el Badajo Perdido a Ilse</td></tr><tr><td>Lazo de Ilse</td><td>Vida máxima +10 · aguante +5</td><td>Silenciar la campana grande cuando Ilse lo pregunta</td></tr><tr><td>Pala de Odo <em>(arma)</em></td><td>—</td><td>Entregar 3 Lápidas sin Nombre a Odo</td></tr></tbody></table>
+<p><em>Excluyentes:</em> <strong>Fuego azul</strong> o <strong>Fuelle de Lumbre</strong> · <strong>Lazo de Ilse</strong> solo si se silencia la campana.</p>
+<p><strong>Hoguera Avivada</strong></p>
+<blockquote><p><em>La Hermana Lumbre fundió la cera en su fuego. La llama crece, y por un momento casi parece que calienta de verdad.</em> <em>Calienta, ¿verdad? Siempre calentamos.</em></p></blockquote>
+<p><strong>Fuego azul</strong></p>
+<blockquote><p><em>La hoguera del Barrio arde azul desde la noche en que la Hermana Lumbre leyó las Actas. No da más calor. Da otro.</em> <em>En las llamas se ve una silueta que atiza, atiza, atiza.</em></p></blockquote>
+<p><strong>Fuelle de Lumbre</strong></p>
+<blockquote><p><em>Fuelle de cuero fino, demasiado fino, con costuras como de párpado. La Hermana Lumbre avivó con él cuarenta piras y una hoguera.</em> <em>Todavía sopla solo, de vez en cuando, como quien suspira.</em></p></blockquote>
+<p><strong>Campanilla de Ilse</strong></p>
+<blockquote><p><em>Una campanita de latón que Ilse llevaba al cuello para no dormirse nunca. Te la da sin soltarla del todo, como quien entrega un juguete.</em> <em>Su tintineo llega un instante antes que el golpe.</em></p></blockquote>
+<p><strong>Lazo de Ilse</strong></p>
+<blockquote><p><em>Cinta de lana roja que Ilse ataba a la cuerda de la campana para encontrarla a oscuras. Ya no la necesita: duerme.</em> <em>Es la única muerte en paz de Hondavela. Pesa como si no lo fuera.</em></p></blockquote>
+<hr>
+<h3 id="objetos-de-misión-y-objetos-clave">Objetos de misión y objetos clave</h3>
+<table class="cols-3"><thead><tr><th>Objeto</th><th>Para qué</th><th>Dónde</th></tr></thead><tbody><tr><td>Cera de Vigilia (×3)</td><td>La Hermana Lumbre la necesita para su hoguera</td><td>cadáveres en el Barrio, el Osario y el Campanario</td></tr><tr><td>Badajo Perdido</td><td>Ilse lo busca desde hace años</td><td>cadáver en el <strong>Osario</strong></td></tr><tr><td>Lápida sin Nombre (×3)</td><td>Para Odo el Sepulturero (200 de Ceniza cada una)</td><td>cadáveres en el Camposanto, el Barrio y el Osario</td></tr><tr><td>Llave del Laboratorio</td><td>Abre la puerta del laboratorio del Camposanto</td><td>cadáver en el <strong>Camposanto del Relevo</strong></td></tr><tr><td>Actas de la Pira</td><td>Quien atiza el fuego querría leerlo</td><td>cadáver en el <strong>Osario</strong></td></tr><tr><td>Vela de Edda</td><td>Algo que llevar hasta el Lecho</td><td>el crisol del <strong>Horno de Velas</strong></td></tr></tbody></table>
+<p><strong>Cera de Vigilia</strong></p>
+<blockquote><p><em>Gotas endurecidas al pie de las piras de velas. Tibias aún, aunque lleven años en el suelo.</em> <em>Hay quien jura que, si se aprietan contra el oído, se escucha a alguien rezar para no despertar.</em></p></blockquote>
+<p><strong>Badajo Perdido</strong></p>
+<blockquote><p><em>El corazón de hierro de la campana grande del Campanario. Alguien lo arrancó y lo bajó a los muertos para que la torre callara.</em> <em>Pesa como una promesa rota.</em></p></blockquote>
+<p><strong>Lápida sin Nombre</strong></p>
+<blockquote><p><em>Losa pequeña, lisa, sin una sola letra. Odo las colecciona. Dice que algún día recordará qué escribir en ellas.</em></p></blockquote>
+<p><strong>Llave del Laboratorio</strong></p>
+<blockquote><p><em>Llave de hierro negro con la cabeza en forma de retorta. El Alquimista del Relevo se la confió a la guardia del adarve: que nadie bajara mientras destilaba.</em> <em>Nadie bajó. Él tampoco volvió a subir.</em></p></blockquote>
+<p><strong>Actas de la Pira</strong></p>
+<blockquote><p><em>Registro encuadernado en piel con la cuenta de cada Insomne quemado en el Barrio: nombre, edad, hora. Al margen, con otra letra: «la hoguera no mejoró». Cuarenta veces. «No mejoró.»</em> <em>Alguien debería saber lo que dice. O nadie.</em></p></blockquote>
+<p><strong>Vela de Edda</strong></p>
+<blockquote><p><em>Una vela pequeña, tibia todavía, con una cara apenas marcada en la cera. El Cerero la guardaba aparte, en su crisol, envuelta en un trapo limpio. Nadie guarda así lo que va a fundir.</em></p></blockquote>
+<hr>
+<h2 id="10--orígenes">10 · Orígenes</h2>
+<p><em>Seis comienzos. Los atributos son los del origen; la estirpe suma los suyos encima (sección 11). La vida, el aguante y el daño de esta tabla son sin estirpe.</em></p>
+<table class="cols-12"><thead><tr><th>Origen</th><th style="text-align:center">Nivel</th><th style="text-align:center">Vigor</th><th style="text-align:center">Resist.</th><th style="text-align:center">Fuerza</th><th style="text-align:center">Destreza</th><th style="text-align:center">Vida</th><th style="text-align:center">Aguante</th><th>Arma</th><th>Escudo</th><th style="text-align:center">Daño inicial</th><th>Rodada</th></tr></thead><tbody><tr><td>Caballero del Párpado</td><td style="text-align:center">9</td><td style="text-align:center">12</td><td style="text-align:center">11</td><td style="text-align:center">11</td><td style="text-align:center">10</td><td style="text-align:center">112</td><td style="text-align:center">100</td><td>Espada larga</td><td>Escudo heráldico</td><td style="text-align:center">32</td><td>media (9 / 35,2)</td></tr><tr><td>Guerrero</td><td style="text-align:center">8</td><td style="text-align:center">12</td><td style="text-align:center">10</td><td style="text-align:center">13</td><td style="text-align:center">8</td><td style="text-align:center">112</td><td style="text-align:center">96</td><td>Hacha de leñador</td><td>Escudo redondo</td><td style="text-align:center">45</td><td>media (10 / 34)</td></tr><tr><td>Ladrón</td><td style="text-align:center">6</td><td style="text-align:center">9</td><td style="text-align:center">11</td><td style="text-align:center">8</td><td style="text-align:center">14</td><td style="text-align:center">94</td><td style="text-align:center">100</td><td>Daga</td><td>Broquel</td><td style="text-align:center">20</td><td>ligera (4 / 35,2)</td></tr><tr><td>Lancero</td><td style="text-align:center">7</td><td style="text-align:center">11</td><td style="text-align:center">12</td><td style="text-align:center">9</td><td style="text-align:center">12</td><td style="text-align:center">106</td><td style="text-align:center">104</td><td>Asta de centinela</td><td>Escudo alto</td><td style="text-align:center">35</td><td>media (13 / 36,4)</td></tr><tr><td>Bárbaro</td><td style="text-align:center">8</td><td style="text-align:center">13</td><td style="text-align:center">11</td><td style="text-align:center">15</td><td style="text-align:center">9</td><td style="text-align:center">118</td><td style="text-align:center">100</td><td>Mandoble</td><td>—</td><td style="text-align:center">59</td><td>media (9 / 35,2)</td></tr><tr><td>Paria</td><td style="text-align:center">1</td><td style="text-align:center">8</td><td style="text-align:center">8</td><td style="text-align:center">8</td><td style="text-align:center">8</td><td style="text-align:center">88</td><td style="text-align:center">88</td><td>Garrote</td><td>Tabla podrida</td><td style="text-align:center">21</td><td>media (10 / 31,6)</td></tr></tbody></table>
+<p><em>Vida = 40 + Vigor × 6. Aguante = 56 + Resistencia × 4.</em></p>
+<hr>
+<p><strong>Caballero del Párpado</strong></p>
+<blockquote><p><em>Juró velar el sueño de la Durmiente y ahora vela su ausencia.</em> <em>Su escudo aguanta lo que su paciencia no; quien espera tras él rara vez cae primero.</em></p></blockquote>
+<p><strong>Guerrero</strong></p>
+<blockquote><p><em>Taló los bosques de lámparas cuando aún se dormía en Hondavela.</em> <em>No esquiva lo que puede partir de un hachazo.</em></p></blockquote>
+<p><strong>Ladrón</strong></p>
+<blockquote><p><em>Robaba en las casas mientras sus dueños dormían. Ya nadie duerme.</em> <em>Aprendió a desviar el filo ajeno y a hundir el propio en el hueco que deja.</em></p></blockquote>
+<p><strong>Lancero</strong></p>
+<blockquote><p><em>Guardó las murallas en el turno de noche, el que nunca terminó.</em> <em>Prefiere que el enemigo muera a un brazo y medio de distancia.</em></p></blockquote>
+<p><strong>Bárbaro</strong></p>
+<blockquote><p><em>Bajó de las montañas cuando dejó de soñar con ellas.</em> <em>No carga escudo: confía en que el mandoble llegue antes que el golpe.</em></p></blockquote>
+<p><strong>Paria</strong></p>
+<blockquote><p><em>Nadie recuerda su nombre, ni siquiera él. Durmió en la calle hasta que no hubo sueño.</em> <em>Empieza sin nada; todo lo que tenga lo habrá arrancado.</em></p></blockquote>
+<hr>
+<h2 id="11--estirpes">11 · Estirpes</h2>
+<p><em>Cinco linajes que la vigilia deformó. Se combinan con cualquier origen: suman atributos al crear el personaje y llevan una pasiva fija, como un amuleto que no ocupa hueco. La <strong>afinidad</strong> da +10 % de daño y −10 % de aguante por golpe con esas familias de arma.</em></p>
+<table class="cols-5"><thead><tr><th>Estirpe</th><th>Atributos</th><th>Ventaja</th><th>Coste</th><th>Afinidad</th></tr></thead><tbody><tr><td>Hondavelano llano</td><td>Vig +1 · Res +1 · Des +1</td><td>+1 carga de Vasija</td><td>la Vasija cura ×0,9</td><td>—</td></tr><tr><td>Sangre del Párpado</td><td>Des +2 · Res +1</td><td>ventana de parry +0,04 s</td><td>vida máxima ×0,9</td><td>espadas, báculos</td></tr><tr><td>Cereño</td><td>Res +2 · Fue +1</td><td>daño del fuego ×0,3</td><td>la Vasija cura ×0,85</td><td>mazas, mandobles</td></tr><tr><td>Charqueño</td><td>Vig +2 · Des +1</td><td>el agua y el pasto no frenan · rodar cuesta ×0,9</td><td>daño del fuego ×1,5</td><td>lanzas, dagas</td></tr><tr><td>Enterrado</td><td>Fue +2 · Vig +1</td><td>cada enemigo muerto cura el 4 % de la vida máxima (como mucho una vez cada 0,5 s)</td><td>recuperación de aguante ×0,9</td><td>hachas, mazas</td></tr></tbody></table>
+<hr>
+<p><strong>Hondavelano llano</strong></p>
+<blockquote><p><em>Gente sin oficio que veló porque no quedaba otra cosa que hacer.</em> <em>Empieza con una carga más de Vasija, aunque cada trago cura algo menos.</em></p></blockquote>
+<p><strong>Sangre del Párpado</strong></p>
+<blockquote><p><em>Primos lejanos de la Durmiente: duermen con un ojo y pelean con el otro.</em> <em>Su parry dura más; su cuerpo aguanta menos.</em></p></blockquote>
+<p><strong>Cereño</strong></p>
+<blockquote><p><em>Fundidores del Horno, medio cera de tanto mirar el crisol.</em> <em>Apenas arde; la Vasija le calienta mal y cura menos.</em></p></blockquote>
+<p><strong>Charqueño</strong></p>
+<blockquote><p><em>Barqueros de la Cisterna, que aprendieron a no hundirse.</em> <em>El agua y el pasto no lo frenan y rueda más ligero; arde como yesca.</em></p></blockquote>
+<p><strong>Enterrado</strong></p>
+<blockquote><p><em>La Casa los enterró vivos; salieron arañando, con hambre.</em> <em>Cada enemigo que mata le devuelve un poco de vida; recupera el aguante más despacio.</em></p></blockquote>
+<hr>
+<h2 id="12--lista-de-verificación-del-coleccionista">12 · Lista de verificación del coleccionista</h2>
+<p><em>Marca cada casilla al obtenerlo.</em></p>
+<h3 id="armas-21">Armas (21)</h3>
+<table class="cols-4"><thead><tr><th style="text-align:center">☐</th><th>Arma</th><th>Tipo</th><th>Dónde</th></tr></thead><tbody><tr><td style="text-align:center">☐</td><td>Espada larga</td><td>Espada</td><td>Caballero · cofre del Osario</td></tr><tr><td style="text-align:center">☐</td><td>Hacha de leñador</td><td>Hacha</td><td>Guerrero · cofre del Barrio de los Veladores</td></tr><tr><td style="text-align:center">☐</td><td>Daga</td><td>Daga</td><td>Ladrón · cofre del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Asta de centinela</td><td>Lanza</td><td>Lancero · cofre de la Cisterna</td></tr><tr><td style="text-align:center">☐</td><td>Mandoble</td><td>Mandoble</td><td>Bárbaro · cofre del Campanario</td></tr><tr><td style="text-align:center">☐</td><td>Garrote</td><td>Maza</td><td>Paria · cofre del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Estoque de Velador</td><td>Espada</td><td>cadáver del Osario</td></tr><tr><td style="text-align:center">☐</td><td>Hoz de la Plañidera</td><td>Hacha</td><td>cadáver del Dormitorio Mayor</td></tr><tr><td style="text-align:center">☐</td><td>Campana rota</td><td>Maza</td><td>cadáver del Campanario</td></tr><tr><td style="text-align:center">☐</td><td>Espada del Velador</td><td>Espada</td><td>cadáver del Horno de Velas</td></tr><tr><td style="text-align:center">☐</td><td>Báculo de Vela</td><td>Báculo</td><td>Buhonera (600)</td></tr><tr><td style="text-align:center">☐</td><td>Garfio del ahogado</td><td>Hacha</td><td>cadáver de la Cisterna</td></tr><tr><td style="text-align:center">☐</td><td>Lanza de muralla</td><td>Lanza</td><td>cadáver del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Lanza de Aldric</td><td>Lanza</td><td>Anselmo · Ser Aldric</td></tr><tr><td style="text-align:center">☐</td><td>Badajo del Campanero</td><td>Maza</td><td>Anselmo · Campanero Ahorcado</td></tr><tr><td style="text-align:center">☐</td><td>Colmillo del Sabueso</td><td>Daga</td><td>Anselmo · Sabueso de las Piras</td></tr><tr><td style="text-align:center">☐</td><td>Espada del Capitán</td><td>Espada</td><td>Anselmo · Capitán del Relevo</td></tr><tr><td style="text-align:center">☐</td><td>Remo de la Madre</td><td>Mandoble</td><td>Anselmo · Madre de las Charcas</td></tr><tr><td style="text-align:center">☐</td><td>Espada del Alado</td><td>Espada</td><td>Anselmo · Alado de Hollín</td></tr><tr><td style="text-align:center">☐</td><td>Cazo del Cerero</td><td>Maza</td><td>Anselmo · Cerero Mayor</td></tr><tr><td style="text-align:center">☐</td><td>Pala de Odo</td><td>Lanza</td><td>Odo · 3 Lápidas sin Nombre</td></tr></tbody></table>
+<h3 id="escudos-8">Escudos (8)</h3>
+<table class="cols-3"><thead><tr><th style="text-align:center">☐</th><th>Escudo</th><th>Dónde</th></tr></thead><tbody><tr><td style="text-align:center">☐</td><td>Escudo heráldico</td><td>Caballero · cofre del Barrio de los Veladores</td></tr><tr><td style="text-align:center">☐</td><td>Escudo redondo</td><td>Guerrero · cofre del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Broquel</td><td>Ladrón · cofre del Osario</td></tr><tr><td style="text-align:center">☐</td><td>Escudo alto</td><td>Lancero · cofre de las Criptas</td></tr><tr><td style="text-align:center">☐</td><td>Tabla podrida</td><td>Paria · cadáver del Barrio de los Veladores (Fosa de Odo)</td></tr><tr><td style="text-align:center">☐</td><td>Escudo-lápida</td><td>cadáver del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Rodela de ascua</td><td>cadáver del Barrio de los Veladores</td></tr><tr><td style="text-align:center">☐</td><td>Pavés de la guardia</td><td>cadáver de las Criptas</td></tr></tbody></table>
+<h3 id="amuletos-9">Amuletos (9)</h3>
+<table class="cols-3"><thead><tr><th style="text-align:center">☐</th><th>Amuleto</th><th>Dónde</th></tr></thead><tbody><tr><td style="text-align:center">☐</td><td>Ceniza ávida</td><td>Buhonera (700)</td></tr><tr><td style="text-align:center">☐</td><td>Hueso hueco</td><td>Buhonera (900), tras Ser Aldric</td></tr><tr><td style="text-align:center">☐</td><td>Lágrima espesa</td><td>Buhonera (1100), tras el Campanero</td></tr><tr><td style="text-align:center">☐</td><td>Ascua rencorosa</td><td>élites</td></tr><tr><td style="text-align:center">☐</td><td>Reja mordida</td><td>élites</td></tr><tr><td style="text-align:center">☐</td><td>Campana rajada</td><td>élites</td></tr><tr><td style="text-align:center">☐</td><td>Cera fría</td><td>cadáver del Desván Tejido · élites</td></tr><tr><td style="text-align:center">☐</td><td>Vela quieta</td><td>élites</td></tr><tr><td style="text-align:center">☐</td><td>Losa cargada</td><td>élites</td></tr></tbody></table>
+<h3 id="milagros-2">Milagros (2)</h3>
+<table class="cols-3"><thead><tr><th style="text-align:center">☐</th><th>Milagro</th><th>Dónde</th></tr></thead><tbody><tr><td style="text-align:center">☐</td><td>Llamarada</td><td>Fuelle de Lumbre</td></tr><tr><td style="text-align:center">☐</td><td>Llama azul</td><td>Fuego azul</td></tr></tbody></table>
+<h3 id="reliquias-20">Reliquias (20)</h3>
+<table class="cols-3"><thead><tr><th style="text-align:center">☐</th><th>Reliquia</th><th>Dónde</th></tr></thead><tbody><tr><td style="text-align:center">☐</td><td>Cuerno de la Retorta</td><td>El Precipitado de la Retorta</td></tr><tr><td style="text-align:center">☐</td><td>Lágrima de la Guardia Perpetua</td><td>Ser Aldric, Rey del Túmulo</td></tr><tr><td style="text-align:center">☐</td><td>Soga del Campanero</td><td>El Campanero Ahorcado</td></tr><tr><td style="text-align:center">☐</td><td>Collar del Sabueso</td><td>El Sabueso de las Piras</td></tr><tr><td style="text-align:center">☐</td><td>Sudario de Odo</td><td>Odo el Enterrado</td></tr><tr><td style="text-align:center">☐</td><td>Perla negra</td><td>La Madre de las Charcas</td></tr><tr><td style="text-align:center">☐</td><td>Mecha del Cerero</td><td>El Cerero Mayor</td></tr><tr><td style="text-align:center">☐</td><td>Insignia del Capitán</td><td>El Capitán del Relevo</td></tr><tr><td style="text-align:center">☐</td><td>Pluma consumida</td><td>El Alado de Hollín</td></tr><tr><td style="text-align:center">☐</td><td>Vestigio de la Plañidera</td><td>La Plañidera Mayor</td></tr><tr><td style="text-align:center">☐</td><td>Brasa de Velador</td><td>cadáver del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Eco de campana</td><td>tras un muro del Campanario</td></tr><tr><td style="text-align:center">☐</td><td>Sello del Relevo</td><td>cadáver de las Criptas</td></tr><tr><td style="text-align:center">☐</td><td>Capullo de seda</td><td>cadáver del Desván Tejido</td></tr><tr><td style="text-align:center">☐</td><td>Reflejo de Velador</td><td>la Sombra del Horno</td></tr><tr><td style="text-align:center">☐</td><td>Ceniza propia</td><td>la Sombra del Dormitorio</td></tr><tr><td style="text-align:center">☐</td><td>Hoguera Avivada</td><td>Hermana Lumbre · 3 Ceras</td></tr><tr><td style="text-align:center">☐</td><td>Fuego azul <em>o</em> Fuelle de Lumbre</td><td>Hermana Lumbre · desenlace</td></tr><tr><td style="text-align:center">☐</td><td>Campanilla de Ilse</td><td>Ilse · Badajo Perdido</td></tr><tr><td style="text-align:center">☐</td><td>Lazo de Ilse</td><td>Ilse · silenciar la campana</td></tr></tbody></table>
+<h3 id="objetos-clave-3">Objetos clave (3)</h3>
+<table class="cols-3"><thead><tr><th style="text-align:center">☐</th><th>Objeto</th><th>Dónde</th></tr></thead><tbody><tr><td style="text-align:center">☐</td><td>Llave del Laboratorio</td><td>cadáver del Camposanto</td></tr><tr><td style="text-align:center">☐</td><td>Actas de la Pira</td><td>cadáver del Osario</td></tr><tr><td style="text-align:center">☐</td><td>Vela de Edda</td><td>crisol del Horno de Velas</td></tr></tbody></table>
+<hr>
+<blockquote><p><em>Cuando ya no te quede nada que recoger, mira lo que llevas.</em> <em>Cada pieza fue de alguien que esperaba un relevo.</em></p></blockquote>
+</section>
+<div class="navpie"><a href="01b_cronica.html">← Libro I·b · Crónica y atlas de Hondavela</a><span></span><a href="03_personajes_y_bestiario.html">Libro III · Personajes, bestiario y jefes →</a></div>
+</main>
+<script src="sitio.js"></script>
+</body>
+</html>

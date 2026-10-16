@@ -1,0 +1,479 @@
+/* Códice del Velador — estilo de lectura e impresión (A4) y base del sitio web.
+   Pergamino claro con tinta sepia, títulos góticos (Jacquard 12) y texto en EB Garamond (ambas OFL, assets/fonts/).
+   tools/wiki_pdf.sh incrusta las fuentes y las imágenes: el HTML resultante es un solo archivo. El PDF lo imprime
+   Chrome sin ventana (131+: cajas de margen @top-center/@bottom-center y páginas con nombre por capítulo, que
+   tools/wiki_md.py genera: @page capNN { @top-center { content: "Libro …" } }). */
+
+@font-face {
+  font-family: "Jacquard 12";
+  src: url("fonts/Jacquard12-Regular.ttf") format("truetype");
+  font-display: block;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/EBGaramond.ttf") format("truetype");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --pergamino: #f2e8d3;
+  --pergamino-hondo: #e7d9bb;
+  --tinta: #2a2019;
+  --tinta-suave: #5b4a3b;
+  --sangre: #6b1d14;
+  --oro: #a47a2c;
+  --oro-claro: #c9a45a;
+  --filete: #cdb88f;
+  --noche: #15110e;
+  --brasa: #e0a04a;
+  --ceniza: #9a9087;
+}
+
+/* ---------- Página ---------- */
+@page {
+  size: A4;
+  margin: 19mm 18mm 21mm 18mm;
+  background: var(--pergamino);
+  @top-center {
+    content: "";
+    font-family: "EB Garamond", Georgia, serif;
+    font-variant: small-caps;
+    letter-spacing: 0.12em;
+    font-size: 9pt;
+    color: #8a7558;
+    vertical-align: bottom;
+    padding-bottom: 4mm;
+  }
+  @bottom-center {
+    content: "— " counter(page) " —";
+    font-family: "EB Garamond", Georgia, serif;
+    font-size: 9.5pt;
+    color: #8a7558;
+    vertical-align: top;
+    padding-top: 3mm;
+  }
+}
+@page portada {
+  margin: 0;
+  background: var(--noche);
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+@page indice {
+  @top-center { content: "Índice"; }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  background: var(--pergamino);
+  color: var(--tinta);
+  font-family: "EB Garamond", "Garamond", Georgia, serif;
+  font-size: 11.5pt;
+  line-height: 1.5;
+  hyphens: auto;
+  font-variant-numeric: oldstyle-nums;
+  font-kerning: normal;
+}
+
+/* En pantalla (codice.html): una columna de libro, centrada. */
+@media screen {
+  body {
+    background: #d9c9a6 radial-gradient(ellipse at center, var(--pergamino) 0%, #d8c6a0 100%) fixed;
+    padding: 24px 16px;
+  }
+  .capitulo {
+    max-width: 780px;
+    margin: 0 auto 48px;
+    padding: 48px clamp(18px, 6vw, 64px);
+    background: var(--pergamino);
+    box-shadow: 0 2px 18px rgba(60, 40, 20, 0.25), inset 0 0 80px rgba(150, 110, 60, 0.12);
+    border: 1px solid var(--filete);
+  }
+}
+
+/* Cada libro empieza en página nueva. */
+.capitulo { break-before: page; }
+.capitulo:first-child { break-before: auto; }
+.indice { page: indice; }
+
+/* ---------- Títulos ---------- */
+h1, h2, h3, h4 {
+  font-family: "Jacquard 12", "EB Garamond", serif;
+  font-weight: normal;
+  color: var(--sangre);
+  line-height: 1.05;
+  break-after: avoid;
+  hyphens: none;
+}
+h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin: 0.2em 0 0.35em;
+  letter-spacing: 0.01em;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 46%;
+  height: 10px;
+  margin: 0.25em auto 0;
+  background:
+    linear-gradient(var(--oro), var(--oro)) center 4px / 100% 1px no-repeat,
+    radial-gradient(circle, var(--oro) 0 3px, transparent 3.5px) center / 10px 10px no-repeat;
+}
+/* Los «Libro I · …» que abren capítulo: más aire */
+.capitulo > h1:first-child { margin-top: 1.1em; font-size: 44pt; }
+/* H1 internos (partes del Libro I): nueva página */
+.capitulo > h1:not(:first-child) { break-before: page; margin-top: 0.6em; }
+
+h2 {
+  font-size: 26pt;
+  margin: 1.3em 0 0.35em;
+  border-bottom: 1px solid var(--filete);
+  padding-bottom: 0.1em;
+}
+h3 {
+  font-size: 20pt;
+  margin: 1.2em 0 0.25em;
+  color: #4c1a12;
+}
+h4 {
+  font-size: 15pt;
+  margin: 1em 0 0.2em;
+  color: var(--tinta-suave);
+}
+h5, h6 {
+  font-family: "EB Garamond", serif;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-size: 11.5pt;
+  margin: 1em 0 0.2em;
+  color: var(--tinta-suave);
+}
+/* Subtítulo en cursiva justo bajo un jefe */
+h3 + p > em:only-child { color: var(--tinta-suave); font-size: 12.5pt; }
+
+p { margin: 0.45em 0 0.6em; orphans: 3; widows: 3; text-align: justify; }
+strong { font-weight: 650; color: #1f1510; }
+em { font-style: italic; }
+a { color: var(--sangre); text-decoration: none; border-bottom: 1px dotted var(--oro); }
+code {
+  font-family: "EB Garamond", serif;
+  font-variant: small-caps;
+  background: rgba(164, 122, 44, 0.12);
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+pre {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 8.5pt;
+  line-height: 1.3;
+  background: rgba(164, 122, 44, 0.08);
+  border: 1px solid var(--filete);
+  padding: 0.6em 0.8em;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+hr {
+  border: 0;
+  height: 14px;
+  margin: 1.6em auto;
+  width: 60%;
+  background:
+    linear-gradient(90deg, transparent, var(--oro-claro) 30%, var(--oro-claro) 70%, transparent) center / 100% 1px no-repeat,
+    radial-gradient(circle, var(--oro) 0 2.5px, transparent 3px) center / 14px 14px no-repeat;
+}
+
+.espacio { height: 0.6em; }
+
+/* ---------- Listas ---------- */
+ul, ol { margin: 0.4em 0 0.7em; padding-left: 1.4em; }
+li { margin: 0.18em 0; }
+ul > li::marker { content: "✦  "; color: var(--oro); font-size: 0.75em; }
+ol > li::marker { color: var(--sangre); font-weight: 600; }
+
+/* ---------- Tablas ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.7em 0 1em;
+  font-size: 10.5pt;
+  line-height: 1.35;
+  break-inside: auto;
+}
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th {
+  font-family: "EB Garamond", serif;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-align: left;
+  color: var(--sangre);
+  border-bottom: 1.5px solid var(--oro);
+  padding: 0.3em 0.55em;
+  hyphens: none;
+}
+td {
+  border-bottom: 1px solid rgba(164, 122, 44, 0.28);
+  padding: 0.32em 0.55em;
+  vertical-align: top;
+}
+tbody tr:nth-child(even) td { background: rgba(164, 122, 44, 0.06); }
+td, th { overflow-wrap: anywhere; }
+/* Tablas anchas (muchas columnas, p. ej. orígenes del Arsenal): letra menor y celdas que pueden partirse,
+   para que nunca desborden la página (Chrome encogería todo el PDF). */
+table.cols-7, table.cols-8, table.cols-9 { font-size: 9pt; }
+table.cols-10, table.cols-11, table.cols-12 { font-size: 8pt; }
+table.cols-7 th, table.cols-8 th, table.cols-9 th, table.cols-10 th, table.cols-11 th, table.cols-12 th { letter-spacing: 0; padding: 0.25em 0.3em; }
+table.cols-7 td, table.cols-8 td, table.cols-9 td, table.cols-10 td, table.cols-11 td, table.cols-12 td { padding: 0.25em 0.3em; }
+
+/* ---------- Citas ---------- */
+blockquote {
+  margin: 0.9em 0;
+  padding: 0.35em 1em 0.35em 1.1em;
+  border-left: 3px solid var(--oro);
+  background: linear-gradient(90deg, rgba(164, 122, 44, 0.10), transparent 85%);
+  color: #3c2f24;
+  font-style: italic;
+}
+blockquote p { margin: 0.3em 0; text-align: left; }
+blockquote strong { font-style: normal; }
+
+/* Epígrafe al abrir capítulo */
+blockquote.epigrafe {
+  border: 0;
+  background: none;
+  text-align: center;
+  font-size: 13pt;
+  color: var(--tinta-suave);
+  margin: 0.4em auto 1.4em;
+  max-width: 85%;
+}
+blockquote.epigrafe p { text-align: center; }
+
+/* ⚠ Revelación: papel más oscuro, filete rojo */
+blockquote.revelacion {
+  font-style: normal;
+  background: #e6d3b1;
+  border-left: 4px solid var(--sangre);
+  outline: 1px solid rgba(107, 29, 20, 0.25);
+  outline-offset: -1px;
+  padding: 0.6em 1.1em;
+  break-inside: auto;
+}
+blockquote.revelacion > p:first-child strong { color: var(--sangre); letter-spacing: 0.04em; }
+
+/* Notas y pistas */
+blockquote.nota { font-style: normal; background: rgba(164, 122, 44, 0.13); }
+blockquote.pistas { font-style: normal; border-left-style: double; border-left-width: 5px; }
+blockquote.pistas p + p { border-top: 1px dashed var(--filete); padding-top: 0.35em; }
+blockquote.epigrafe, blockquote.nota { break-inside: avoid; }
+
+/* ---------- Imágenes (pixel art) ---------- */
+img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0.9em auto 1em;
+  text-align: center;
+  break-inside: avoid;
+}
+figure img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid var(--filete);
+  background: #1b1612;
+  padding: 6px;
+  box-shadow: 0 1px 6px rgba(40, 25, 10, 0.25);
+}
+figcaption {
+  font-size: 9.5pt;
+  font-style: italic;
+  color: var(--tinta-suave);
+  margin-top: 0.35em;
+  text-align: center;
+}
+/* Retratos de sprites (68 px, incrustados ×6): a la derecha del texto */
+figure:has(img.sprite) {
+  float: right;
+  margin: 0.2em 0 0.6em 1.2em;
+  width: 150px;
+}
+figure img.sprite {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  padding: 0;
+  background: radial-gradient(circle at 50% 60%, #3a2c20 0%, #16110d 75%);
+}
+/* Jefes con sprite pequeño: más grandes */
+figure img.boss-small { width: 210px; height: 210px; }
+/* Imágenes de jefe (128-144 px, incrustadas ×6) */
+figure img.boss {
+  width: 288px;
+  height: 288px;
+  object-fit: contain;
+  padding: 0;
+  background: radial-gradient(circle at 50% 55%, #3d2a1c 0%, #120e0b 72%);
+}
+/* Iconos de armas y escudos (64 px, incrustados ×6) */
+figure img.icono {
+  width: 96px;
+  height: 96px;
+  padding: 4px;
+  background: radial-gradient(circle at 50% 50%, #2e2419 0%, #16110d 80%);
+}
+/* Mapas de las zonas (capturas con --overview): a toda la anchura */
+figure:has(img.mapa) { margin: 1em 0 1.2em; break-inside: avoid; }
+figure img.mapa { width: 100%; padding: 3px; background: #000; }
+/* Diagramas SVG (mapa esquemático, cronología, lazos) */
+figure.diagrama { margin: 1em 0 1.2em; break-inside: avoid; }
+figure.diagrama svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--filete);
+  box-shadow: 0 1px 6px rgba(40, 25, 10, 0.25);
+}
+figure.diagrama figcaption { margin-top: 0.4em; }
+/* Mismo sprite que otro enemigo: el juego lo tiñe; aquí, una aproximación */
+img.ardiente { filter: sepia(0.6) saturate(2.4) hue-rotate(-18deg) brightness(1.15); }
+img.vela { filter: sepia(0.5) saturate(1.2) brightness(1.35); }
+img.guardia { filter: saturate(0.5) brightness(0.95) hue-rotate(190deg); }
+img.ballestero { filter: sepia(0.35) brightness(0.95); }
+img.rezadora { filter: sepia(0.45) brightness(1.1); }
+img.pesadilla { filter: brightness(0.6) saturate(0.6) hue-rotate(230deg); }
+img.sombra { filter: brightness(0.85) hue-rotate(220deg) saturate(1.4); }
+img.buhonera { filter: sepia(0.6) brightness(1.15); }
+img.anselmo { filter: brightness(0.75) sepia(0.4); }
+img.sabueso { filter: sepia(0.4) saturate(1.5) brightness(1.1); }
+img.madre { filter: hue-rotate(10deg) saturate(1.3) brightness(1.1); }
+img.capitan { filter: brightness(1.05) saturate(0.8); }
+
+/* Tras un retrato flotante, que el título siguiente no se meta al lado */
+h1, h2, h3, hr { clear: both; }
+
+/* ---------- Fichas (### título + imagen: jefes, bestiario, NPC, armas y escudos) ---------- */
+article.ficha {
+  margin: 1.1em 0 1.2em;
+  padding: 0.55em 0.95em 0.6em;
+  border: 1px solid var(--filete);
+  border-top: 3px double var(--oro);
+  background: rgba(164, 122, 44, 0.05);
+  overflow: hidden;
+}
+article.ficha::after { content: ""; display: block; clear: both; }
+article.ficha > h3 { margin-top: 0.1em; }
+article.ficha > h3 + p { margin-top: 0; }
+article.ficha figure.retrato { margin: 0.2em 0 0.5em 1.1em; float: right; }
+article.ficha-jefe figure.retrato { width: 288px; }
+article.ficha-jefe figure.retrato:has(img.boss-small) { width: 210px; }
+article.ficha-bestia figure.retrato { width: 150px; }
+article.ficha-arma figure.retrato { float: left; width: 96px; margin: 0.2em 1em 0.4em 0; }
+article.ficha-arma table { clear: both; }
+article.ficha-jefe table { clear: both; width: 100%; }
+article.ficha-jefe blockquote { font-size: 12pt; }
+/* Cada jefe abre página; el resto de fichas no se parten si caben */
+article.ficha-jefe { break-before: page; break-inside: auto; }
+article.ficha-arma, article.ficha-bestia { break-inside: avoid; }
+/* Fichas del bestiario: las tablas cortas caben junto al retrato flotante */
+article.ficha-bestia table { width: auto; min-width: 55%; }
+article.ficha-bestia th { white-space: nowrap; }
+/* Primera columna de las tablas de fases (I, II (50 %)) sin partir */
+article.ficha-jefe td:first-child strong { white-space: nowrap; }
+
+/* ---------- Portada ---------- */
+.portada {
+  page: portada;
+  background: var(--noche) radial-gradient(ellipse at 50% 38%, #2f2116 0%, var(--noche) 68%);
+  color: #e9dcc2;
+  text-align: center;
+  height: 297mm;
+  overflow: hidden;
+  padding: 14mm 18mm 8mm;
+}
+@media screen { .portada { height: auto; min-height: 0; border-color: #3b2c1f; } }
+.portada h1 {
+  color: var(--brasa);
+  font-size: 62pt;
+  margin: 0 0 0.05em;
+  text-shadow: 0 0 18px rgba(224, 140, 50, 0.45);
+}
+.portada h1::after { width: 60%; }
+.portada h2 {
+  color: #d9c08a;
+  border: 0;
+  font-size: 34pt;
+  margin: 0.15em 0 0.1em;
+}
+.portada h3, .portada h4 { color: #d9c08a; }
+.portada h3 { font-size: 22pt; margin-top: 0.4em; }
+.portada h4 { font-family: "EB Garamond", serif; font-variant: small-caps; letter-spacing: 0.08em; font-size: 12pt; margin-top: 1.2em; }
+.portada p { text-align: center; color: #cdbb98; }
+.portada strong { color: #f0d9a8; }
+.portada a { color: #f2c27a; border-bottom-color: #7a5a2a; }
+.portada figure { margin: 0.7em auto 0.5em; }
+.portada figure img.frontispicio {
+  width: 76%;
+  border: 1px solid #6d5230;
+  background: #000;
+  padding: 0;
+  box-shadow: 0 0 36px rgba(224, 140, 50, 0.28);
+}
+.portada blockquote { border: 0; background: none; color: #d9c08a; font-size: 14pt; margin: 0.3em auto; }
+.portada blockquote p { text-align: center; }
+.portada hr { width: 40%; margin: 0.7em auto; }
+.portada table { max-width: 92%; margin: 0.4em auto; font-size: 10pt; line-height: 1.3; }
+.portada th { color: #d9c08a; border-bottom-color: #7a5a2a; padding: 0.2em 0.5em; }
+.portada td { border-bottom-color: rgba(201, 164, 90, 0.25); text-align: left; color: #e3d3b4; padding: 0.25em 0.5em; }
+.portada td:first-child { font-family: "Jacquard 12", serif; font-size: 16pt; color: var(--brasa); text-align: center; width: 3.2em; white-space: nowrap; overflow-wrap: normal; }
+.portada td:nth-child(2) { white-space: nowrap; overflow-wrap: normal; }
+.portada tbody tr:nth-child(even) td { background: rgba(201, 164, 90, 0.05); }
+.portada .pie { font-size: 9.5pt; color: #9c8a6a; margin-top: 1em; }
+
+/* ---------- Índice generado ---------- */
+.indice h1 { margin-bottom: 0.5em; }
+ol.toc { list-style: none; padding: 0; margin: 0 auto; max-width: 150mm; }
+ol.toc li { margin: 0; }
+ol.toc a { display: flex; align-items: baseline; border: 0; color: var(--tinta); }
+ol.toc .t { flex: 0 1 auto; }
+ol.toc .dots { flex: 1 1 auto; border-bottom: 1px dotted var(--oro); margin: 0 0.4em; min-width: 1.5em; transform: translateY(-0.25em); }
+ol.toc .p { flex: 0 0 auto; font-variant-numeric: lining-nums; color: var(--tinta-suave); min-width: 1.6em; text-align: right; }
+ol.toc li.n0 { margin-top: 0.75em; }
+ol.toc li.n0 a { font-family: "Jacquard 12", serif; font-size: 17pt; color: var(--sangre); line-height: 1.2; }
+ol.toc li.n0 .p { font-family: "EB Garamond", serif; font-size: 11.5pt; }
+ol.toc li.n1 a { font-variant: small-caps; letter-spacing: 0.04em; font-weight: 600; padding-left: 1.2em; margin-top: 0.15em; }
+ol.toc li.n2 a { padding-left: 2.6em; font-size: 10.5pt; line-height: 1.35; }
+ol.toc li.n2 .p { font-size: 10.5pt; }
+.fin-indice { text-align: center; color: var(--oro); font-size: 9pt; margin: 1.2em 0 0.4em; letter-spacing: 0.1em; }
+.indice h4 { margin-top: 2em; }
+
+/* ---------- Móvil (codice.html en pantalla) ---------- */
+@media screen and (max-width: 600px) {
+  body { font-size: 16px; }
+  h1, .capitulo > h1:first-child { font-size: 34px; }
+  .portada h1 { font-size: 48px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 22px; }
+  figure:has(img.sprite), article.ficha-bestia figure.retrato { width: 110px; }
+  figure img.sprite { width: 110px; height: 110px; }
+  figure img.boss-small { width: 150px; height: 150px; }
+  figure img.boss, article.ficha-jefe figure.retrato { width: 200px; }
+  figure img.boss { height: 200px; }
+  table { font-size: 14px; }
+  ol.toc li.n2 a { padding-left: 1.6em; }
+}
