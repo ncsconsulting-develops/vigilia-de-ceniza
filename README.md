@@ -4,6 +4,6 @@ Sitio oficial de *Vigilia de Ceniza*, soulslike de pixel art para iPhone, iPad y
 
 - [Códice del Velador](index.html): el lore, el arsenal, el bestiario y la guía (edición pública, sin desenlaces).
 - [Política de privacidad](privacy.html): el juego no recopila datos.
-- [Soporte](support.html): ncuevas@ncsconsulting.cl
+- [Soporte](support.html): contacto@ncsconsulting.cl
 
 Sitio estático generado automáticamente; no se edita a mano.
